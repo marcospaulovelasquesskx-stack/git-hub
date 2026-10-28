@@ -234,41 +234,43 @@
   }
 
   /* ---------- Calendário ---------- */
-  const DATAS_GERAIS = [
-    { mes: 1, dia: null, titulo: "Lembá (Oxalá)", texto: "Mês de Lembá, junto da Lavagem do Bonfim, em muitas casas.", id: "lemba" },
-    { mes: 2, dia: 2, titulo: "Kaitumbá (Iemanjá)", texto: "Dia das águas do mar em muitas casas.", id: "kaitumba" },
-    { mes: 4, dia: 23, titulo: "Nkosi (Ogum)", texto: "Junto do dia de São Jorge, em muitas casas.", id: "nkosi" },
-    { mes: 5, dia: 13, titulo: "Pretos-Velhos", texto: "Memória da abolição e da liberdade conquistada.", ent: "pretos-velhos" },
-    { mes: 7, dia: 2, titulo: "Caboclos", texto: "Independência da Bahia, dia dos caboclos.", ent: "caboclos" },
-    { mes: 7, dia: 26, titulo: "Nzumbarandá (Nanã)", texto: "Dia de Sant'Ana, em muitas casas.", id: "zumbaranda" },
-    { mes: 8, dia: null, titulo: "Kavungo e Tempo", texto: "Mês de Kavungo (Omolu) e, em muitas casas de Angola, de Kitembo.", id: "kavungo" },
-    { mes: 9, dia: 27, titulo: "Erês e Vunji", texto: "Caruru de Cosme e Damião.", ent: "eres" },
-  ];
-
-  function proximaData(f, hoje) {
-    const dia = f.dia || 1;
-    let d = new Date(hoje.getFullYear(), f.mes - 1, dia);
-    const fimDoMes = new Date(hoje.getFullYear(), f.mes, 0);
-    if ((f.dia ? d : fimDoMes) < hoje) d = new Date(hoje.getFullYear() + 1, f.mes - 1, dia);
-    return d;
-  }
+  // As festas da casa são marcadas por mês: o dia muda a cada ano, o mês não.
+  const mesesAte = (mes, hoje) => (mes - 1 - hoje.getMonth() + 12) % 12;
 
   function festasOrdenadas() {
-    const hoje = new Date(); hoje.setHours(0, 0, 0, 0);
-    return [...CASA.festas.map((f) => ({ ...f, daCasa: true })), ...DATAS_GERAIS]
-      .map((f) => ({ ...f, data: proximaData(f, hoje), dias: Math.round((proximaData(f, hoje) - hoje) / 864e5) }))
-      .sort((a, b) => a.data - b.data);
+    const hoje = new Date();
+    return CASA.festas
+      .map((f) => ({ ...f, faltam: mesesAte(f.mes, hoje) }))
+      .sort((a, b) => a.faltam - b.faltam);
+  }
+
+  function quandoFesta(f) {
+    if (f.faltam === 0) return "É neste mês!";
+    if (f.faltam === 1) return "No mês que vem";
+    return `Daqui a ${f.faltam} meses`;
   }
 
   function linhaFesta(f) {
-    const quando = f.dia ? `${f.dia} de ${MESES[f.mes - 1]}` : `Mês de ${MESES[f.mes - 1]}`;
-    const falta = f.dia ? (f.dias === 0 ? "É hoje!" : `Faltam ${f.dias} dias`) : "";
-    const link = f.id ? `#/inkices/${f.id}` : f.ent ? `#/entidades/${f.ent}` : null;
-    const dentro = `<span class="data"><b>${f.dia || "&#9679;"}</b><small>${MESES[f.mes - 1].slice(0, 3)}</small></span>
-      <span class="festa-txt"><strong>${esc(f.titulo)}</strong>${f.daCasa ? ' <em class="selo">Nossa casa</em>' : ""}
-      <small>${esc(quando)}${falta ? " · " + falta : ""}</small><span>${esc(f.texto)}</span></span>`;
-    return link ? `<a class="festa${f.daCasa ? " da-casa" : ""}" href="${link}">${dentro}</a>`
-      : `<div class="festa${f.daCasa ? " da-casa" : ""}">${dentro}</div>`;
+    const link = f.id ? `#/inkices/${f.id}` : f.cab ? "#/caboclos" : null;
+    const dentro = `<span class="data"><b>${MESES[f.mes - 1].slice(0, 3)}</b></span>
+      <span class="festa-txt"><strong>${esc(f.titulo)}</strong>${f.principal ? ' <em class="selo">Principal festa da casa</em>' : ""}
+      <small>${esc(MESES[f.mes - 1][0].toUpperCase() + MESES[f.mes - 1].slice(1))} · ${quandoFesta(f)}</small><span>${esc(f.texto)}</span></span>`;
+    const cls = `festa${f.principal ? " principal" : ""}${f.faltam === 0 ? " agora" : ""}`;
+    return link ? `<a class="${cls}" href="${link}">${dentro}</a>` : `<div class="${cls}">${dentro}</div>`;
+  }
+
+  function anoDeFestas() {
+    const hoje = new Date();
+    return MESES.map((nome, i) => {
+      const doMes = CASA.festas.filter((f) => f.mes === i + 1).map((f) => ({ ...f, faltam: mesesAte(f.mes, hoje) }));
+      const datas = CASA.datas.filter((d) => d.mes === i + 1);
+      const atual = i === hoje.getMonth();
+      return `<section class="mes${atual ? " atual" : ""}${doMes.length ? "" : " vazio"}">
+        <h2>${nome[0].toUpperCase() + nome.slice(1)}${atual ? ' <em class="selo">Este mês</em>' : ""}</h2>
+        ${doMes.length ? doMes.map(linhaFesta).join("") : '<p class="sem-festa">Sem festa neste mês</p>'}
+        ${datas.map((d) => `<p class="data-lembrada">${d.dia} de ${nome}: ${esc(d.titulo)}. ${esc(d.texto)}</p>`).join("")}
+      </section>`;
+    }).join("");
   }
 
   /* ---------- Telas ---------- */
@@ -306,7 +308,13 @@
           </div>
         </section>
 
-        ${prox ? `<section class="bloco"><h2>Próxima data</h2>${linhaFesta(prox)}</section>` : ""}
+        ${prox ? `<section class="bloco"><h2>Próxima festa da casa</h2>${linhaFesta(prox)}</section>` : ""}
+
+        <section class="bloco">
+          <h2>Nossa casa em festa</h2>
+          <div class="faixa-fotos">${GALERIA.slice(0, 6).map((g, i) => `<button class="foto" data-foto="${i}"><img src="${g.foto}" alt="${esc(g.legenda)}" loading="lazy"></button>`).join("")}</div>
+          <p><a class="mais-link" href="#/galeria">Ver todas as fotos &#8250;</a></p>
+        </section>
 
         <section class="bloco">
           <h2>Conheça</h2>
@@ -318,9 +326,18 @@
             <a href="#/entidades/eres"><span>&#127880;</span>Erês e Ibejis</a>
             <a href="#/entidades/pretos-velhos"><span>&#128255;</span>Pretos-Velhos</a>
             <a href="#/casa"><span>&#127968;</span>Nossa casa</a>
+            <a href="#/galeria"><span>&#128247;</span>Fotos da casa</a>
             <a href="#/nacao"><span>&#127757;</span>Nação Angola</a>
           </div>
         </section>`;
+    },
+
+    galeria() {
+      return `<section class="bloco">
+        <h1>Fotos da casa</h1>
+        <p>Festas, cortejos e a Festa das Águas do ${esc(CASA.nome)}. Toque numa foto para ver maior.</p>
+        <div class="galeria">${GALERIA.map((g, i) => `<figure><button class="foto" data-foto="${i}"><img src="${g.foto}" alt="${esc(g.legenda)}" loading="lazy"></button><figcaption>${esc(g.legenda)}</figcaption></figure>`).join("")}</div>
+      </section>`;
     },
 
     casa() {
@@ -338,6 +355,7 @@
           <div><dt>Donos da cabeça</dt><dd>${CASA.donosDaCabeca.map((d) => `<a href="#/inkices/${d.id}">${esc(d.angola)} (${esc(d.ketu)})</a>`).join(" e ")}</dd></div>
         </dl><p>${esc(CASA.regencia)}</p></section>
         <section><h2>Caboclos da casa</h2>${cab}</section>
+        <section><h2>Fotos</h2><p><a class="botao" href="#/galeria">&#128247; Ver as fotos da casa</a></p></section>
       </article>`;
     },
 
@@ -397,11 +415,12 @@
     },
 
     calendario() {
+      const falado = "Calendário de festas da casa. " + CASA.festas.map((f) => `Em ${MESES[f.mes - 1]}: ${f.titulo}.`).join(" ");
       return `<section class="bloco">
-        <h1>Festas e datas</h1>
-        <p>As festas da nossa casa e as datas que muitas casas de Angola celebram, da mais próxima para a mais distante.</p>
-        <div class="festas">${festasOrdenadas().map(linhaFesta).join("")}</div>
-        <p class="aviso">As datas das festas da casa são confirmadas pelo Pai Adilson a cada ano.</p>
+        <h1>Festas da casa</h1>
+        <p>As festas do ${esc(CASA.nome)} ao longo do ano. O dia muda a cada ano e é confirmado pelo Pai Adilson; o mês é sempre o mesmo.</p>
+        <div class="acoes-lista">${botaoOuvir("Festas da casa", falado, "calendario", "Ouvir o calendário")}</div>
+        <div class="ano">${anoDeFestas()}</div>
       </section>`;
     },
 
@@ -486,6 +505,7 @@
     }
     if (!html) { aba = "inicio"; html = telas.inicio(); }
     if (["comparativo", "aprender"].includes(aba)) aba = "inkices";
+    if (aba === "galeria") aba = "inicio";
     if (["casa", "nacao", "glossario", "sobre"].includes(aba)) aba = aba === "casa" ? "inicio" : "mais";
 
     app.innerHTML = html;
@@ -554,6 +574,43 @@
       vel.oninput = () => { prefs.velocidade = +vel.value; salvarPrefs(); rotulo(); };
     }
   }
+
+  /* ---------- Visor de fotos ---------- */
+  const visor = document.createElement("div");
+  visor.className = "visor";
+  visor.hidden = true;
+  visor.setAttribute("role", "dialog");
+  visor.setAttribute("aria-label", "Foto");
+  visor.innerHTML = `<button class="visor-fechar" aria-label="Fechar">&#10005;</button>
+    <button class="visor-nav ant" aria-label="Foto anterior">&#8249;</button>
+    <figure><img alt=""><figcaption></figcaption></figure>
+    <button class="visor-nav prox" aria-label="Próxima foto">&#8250;</button>`;
+  document.body.appendChild(visor);
+  let fotoAtual = 0;
+  function mostrarFoto(i) {
+    fotoAtual = (i + GALERIA.length) % GALERIA.length;
+    const g = GALERIA[fotoAtual];
+    $("img", visor).src = g.foto;
+    $("img", visor).alt = g.legenda;
+    $("figcaption", visor).textContent = `${g.legenda} (${fotoAtual + 1} de ${GALERIA.length})`;
+    visor.hidden = false;
+    $(".visor-fechar", visor).focus();
+  }
+  $(".visor-fechar", visor).onclick = () => { visor.hidden = true; };
+  $(".ant", visor).onclick = () => mostrarFoto(fotoAtual - 1);
+  $(".prox", visor).onclick = () => mostrarFoto(fotoAtual + 1);
+  visor.addEventListener("click", (e) => { if (e.target === visor) visor.hidden = true; });
+  document.addEventListener("keydown", (e) => {
+    if (visor.hidden) return;
+    if (e.key === "Escape") visor.hidden = true;
+    if (e.key === "ArrowLeft") mostrarFoto(fotoAtual - 1);
+    if (e.key === "ArrowRight") mostrarFoto(fotoAtual + 1);
+  });
+  app.addEventListener("click", (e) => {
+    const b = e.target.closest("[data-foto]");
+    if (b) mostrarFoto(+b.dataset.foto);
+  });
+  window.addEventListener("hashchange", () => { visor.hidden = true; });
 
   $("#voltar").onclick = () => history.back();
   window.addEventListener("hashchange", rota);

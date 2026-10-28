@@ -29,13 +29,25 @@ window.CASA = {
     "A casa foi fundada em 1985 e, desde então, é regida por Pai Adilson, filho de Oxóssi com Iansã (Mutalambô e Matamba, na língua de Angola), com 52 anos de feitura. Nesse tempo todo não houve sucessão, e o axé da casa é o mesmo desde a sua fundação.",
     "O nome da casa já diz quem é o pai maior: o Caboclo Sete Flechas. Ao lado dele estão o Caboclo Itupiaçu de Guiné, também pai da casa, e os caboclos Pena Branca, Laje Grande, Boiadeiro, Gentil das Matas, Rei de Congo e a Cabocla Jussara. São eles que conduzem, no dia a dia, as reuniões, os toques e os festejos.",
     "O brasão da casa reúne a flecha e o arco, ligados a Mutalambô e aos caboclos caçadores, e o cálice, entre as folhas da mata.",
-    "Espaço reservado: aqui entra a história completa do terreiro, contada pelos mais velhos (dia e mês da fundação, cidade, quem iniciou o Pai Adilson, as primeiras feituras, os momentos marcantes).",
+    "A casa fica em Jiribatuba, distrito de Vera Cruz, na Ilha de Itaparica, Bahia. Tem um salão único, o barracão, onde acontecem todas as festas e cerimônias: dos orixás, dos caboclos e dos ibejis. Com tantos filhos de santo, o barracão ficou pequeno, e a casa luta hoje para crescer.",
+    "Espaço reservado: aqui entra a história completa do terreiro, contada pelos mais velhos (dia e mês da fundação, quem iniciou o Pai Adilson, as primeiras feituras, os momentos marcantes).",
   ],
   versao: "Prévia", // apague (deixe "") quando o app estiver 100% pronto para o lançamento
+  // Calendário de festas da casa, por mês. O dia muda a cada ano; o mês é sempre o mesmo.
+  // Meses sem festa ficam de fora.
   festas: [
-    { mes: 4, dia: null, titulo: "Festa de Oxóssi (Mutalambô)", texto: "Grande festa do dono da cabeça do Pai Adilson. Dia exato a confirmar com a casa.", id: "mutalambo" },
-    { mes: 11, dia: 20, titulo: "Dia da Consciência Negra", texto: "Celebração da memória e da resistência do povo negro, guardião da nossa fé." },
-    { mes: 12, dia: null, titulo: "Festa de Iansã (Matamba)", texto: "Festa da senhora dos ventos e das tempestades, dona da cabeça do Pai Adilson. Em muitas casas é no dia 4 de dezembro, dia de Santa Bárbara. Confirme a data com a casa.", id: "matamba" },
+    { mes: 1, titulo: "Festa de Oxalá (Lembá)", texto: "Abre o ano da casa, com todos de branco.", id: "lemba" },
+    { mes: 2, titulo: "Festa das Águas", texto: "Festa de Oxum e Iemanjá (Dandalunda e Kaitumbá), com cortejo, barcos e presentes entregues nas águas.", id: "dandalunda", ids: ["dandalunda", "kaitumba"] },
+    { mes: 4, titulo: "Festa de Oxóssi (Mutalambô)", texto: "Festa do dono da cabeça do Pai Adilson.", id: "mutalambo" },
+    { mes: 7, titulo: "Festa de todos os caboclos", texto: "No mês do 2 de julho, a casa celebra todos os seus caboclos, com o Caboclo Sete Flechas à frente.", cab: true },
+    { mes: 8, titulo: "Festa do Velho Obaluaê (Kavungo)", texto: "Festa do senhor da terra, da doença e da cura.", id: "kavungo" },
+    { mes: 9, titulo: "Festa dos Ibejis e erês (Nvunji)", texto: "Festa das crianças sagradas, com caruru e doces.", id: "vunji" },
+    { mes: 11, titulo: "Festa de Exu (Pambu Njila)", texto: "Marca o início das obrigações da casa e abre os caminhos para a festa de dezembro.", id: "aluvaia" },
+    { mes: 12, titulo: "Festa de Nossa Mãe Iansã (Matamba)", texto: "A principal festa do terreiro, da dona da cabeça do Pai Adilson.", id: "matamba", principal: true },
+  ],
+  // Outras datas lembradas no app (não são festas da casa).
+  datas: [
+    { mes: 11, dia: 20, titulo: "Dia da Consciência Negra", texto: "Memória e resistência do povo negro, guardião da nossa fé." },
   ],
 };
 
@@ -55,7 +67,7 @@ window.INKICES = [
     dominios: "Comunicação, movimento, abertura e fechamento de caminhos",
     folhas: ["Pimenta", "Arruda", "Comigo-ninguém-pode", "Mamona", "Folha de fogo (urtiga)"],
     oferendas: ["Farofa com dendê (padê)", "Cachaça", "Pimenta", "Bife ou carnes", "Velas vermelhas e pretas"],
-    festa: "É sempre o primeiro a ser servido, antes de qualquer festa ou obrigação.",
+    festa: "Na nossa casa: festa em novembro, que marca o início das obrigações. Ele é sempre o primeiro a ser servido.",
     historia: [
       "Na tradição banto, Pambu Njila quer dizer \"a encruzilhada do caminho\". Aluvaiá é a força que anda: sem ele, nada sai do lugar. Ele leva os pedidos dos homens e traz as respostas dos inkices.",
       "Por isso, em toda casa de Angola, ele é servido primeiro. Não por ser temido, mas por ser o dono da porteira: é ele quem deixa a festa acontecer e quem guarda a casa de quem chega com má intenção.",
@@ -95,7 +107,7 @@ window.INKICES = [
     dominios: "Fartura, sustento, conhecimento da mata, proteção da família",
     folhas: ["Alfavaca-de-caboclo", "Guiné", "Peregum", "Folha de goiabeira", "Eucalipto", "Abre-caminho"],
     oferendas: ["Milho vermelho cozido com fatias de coco (axoxô)", "Frutas da mata", "Carne de caça", "Mel", "Moranga"],
-    festa: "Na nossa casa: grande festa em abril.",
+    festa: "Na nossa casa: festa em abril.",
     destaque: "Dono da cabeça do Pai Adilson",
     historia: [
       "Mutalambô é o caçador. Mora nas matas, conhece cada folha, cada rastro e cada bicho. É ele quem garante que nunca falte comida na mesa dos seus filhos.",
@@ -137,7 +149,7 @@ window.INKICES = [
     dominios: "Saúde, cura, morte e renascimento",
     folhas: ["Canela-de-velho", "Mamona", "Velame", "Assa-peixe", "Erva-de-bicho"],
     oferendas: ["Pipoca estourada na areia ou no azeite (deburu)", "Feijão-preto", "Milho", "Coco"],
-    festa: "Em agosto, em muitas casas, com a festa da pipoca (Olubajé no Ketu).",
+    festa: "Na nossa casa: festa do Velho Obaluaê em agosto.",
     historia: [
       "Kavungo é a terra quente que esconde e guarda tudo. Ele traz a doença, mas é também o maior curador, porque só quem conhece a dor sabe como tirá-la.",
       "Ele se cobre com a palha da costa da cabeça aos pés. Dizem que é para esconder as marcas da doença; outros dizem que é porque o seu brilho é forte demais para os olhos humanos. As duas coisas ensinam a mesma lição: não se julga ninguém pela aparência.",
@@ -157,7 +169,7 @@ window.INKICES = [
     dominios: "Riqueza, movimento, ciclos, renovação",
     folhas: ["Folha de batata-doce", "Erva-de-santa-luzia", "Jiboia", "Manjericão"],
     oferendas: ["Batata-doce", "Feijão-fradinho com ovos", "Milho branco"],
-    festa: "Data varia; confirme com a casa.",
+    festa: "Não tem festa própria no calendário da casa.",
     historia: [
       "Angorô é a cobra que morde o próprio rabo: o sinal de que a vida não acaba, ela dá a volta e recomeça. Ele leva a água da terra para o céu, e o céu a devolve como chuva.",
       "Na Angola, essa força tem duas faces: Angorô, masculina, e Angoroméa, feminina. Por isso se diz que ele é ao mesmo tempo homem e mulher, ou seis meses de um e seis meses do outro.",
@@ -197,7 +209,7 @@ window.INKICES = [
     dominios: "Coragem, transformação, movimento; guia os espíritos dos mortos (vumbi)",
     folhas: ["Espada-de-santa-bárbara", "Folha de bambu", "Pinhão-roxo", "Para-raio", "Erva-prata"],
     oferendas: ["Acarajé", "Abará", "Pipoca (em algumas casas)", "Frutas vermelhas", "Champanhe ou vinho rosé"],
-    festa: "Na nossa casa: grande festa em dezembro.",
+    festa: "Na nossa casa: festa em dezembro, a principal festa do terreiro.",
     destaque: "Dona da cabeça do Pai Adilson",
     historia: [
       "Matamba é o vento que vira tempestade. Ela não pede licença para mudar as coisas de lugar: chega, sacode e deixa tudo limpo para começar de novo.",
@@ -219,7 +231,7 @@ window.INKICES = [
     dominios: "Amor, fertilidade, gestação, prosperidade, beleza",
     folhas: ["Colônia", "Oriri (alfavaquinha)", "Macaçá", "Erva-cidreira", "Folha de laranjeira"],
     oferendas: ["Omolocum (feijão-fradinho com ovos)", "Canjica amarela", "Mel", "Frutas doces", "Flores amarelas"],
-    festa: "Data varia; muitas casas a festejam em dezembro.",
+    festa: "Na nossa casa: Festa das Águas, em fevereiro, junto com Kaitumbá.",
     historia: [
       "Dandalunda é a mãe das águas doces. Onde o rio corre e a cachoeira canta, está ela, cuidando das mulheres que querem ser mães e das crianças que ainda vão nascer.",
       "É vaidosa, sim: gosta de espelho, de ouro e de perfume. Mas a sua beleza é sabedoria. Conta-se que, quando os inkices homens quiseram decidir o mundo sem as mulheres, nada deu certo até que fossem pedir a bênção a ela.",
@@ -239,7 +251,7 @@ window.INKICES = [
     dominios: "Juventude, beleza, fartura, a união da mata com as águas",
     folhas: ["Folhas de Mutalambô e de Dandalunda", "Alfavaca", "Oriri (alfavaquinha)", "Peregum"],
     oferendas: ["Axoxô (milho vermelho com coco)", "Omolocum (feijão-fradinho com ovos)", "Peixe de água doce", "Frutas", "Mel"],
-    festa: "Data varia; confirme com a casa.",
+    festa: "Não tem festa própria no calendário da casa.",
     historia: [
       "Telekompensu, também chamado Gongobira, é a força jovem que mora onde a mata encontra o rio. No Ketu, essa força é Logun Edé.",
       "Conta-se no Ketu que Logun Edé é filho de Oxóssi e Oxum: herdou do pai o arco e o faro de caçador, e da mãe a beleza e o encanto das águas doces. Por isso vive metade do tempo na mata, caçando, e metade no rio, pescando.",
@@ -259,7 +271,7 @@ window.INKICES = [
     dominios: "Maternidade, família, equilíbrio emocional, a cabeça (ori)",
     folhas: ["Colônia", "Pata-de-vaca", "Rama-de-leite", "Alfazema", "Lágrima-de-nossa-senhora"],
     oferendas: ["Manjar branco", "Arroz cozido", "Peixe", "Flores brancas", "Perfume e espelho"],
-    festa: "Em muitas casas, 2 de fevereiro ou 8 de dezembro.",
+    festa: "Na nossa casa: Festa das Águas, em fevereiro, junto com Dandalunda.",
     historia: [
       "Kaitumbá é o mar inteiro. É mãe de muitos inkices e, por isso, mãe de todos nós. Na língua de Angola, Kalunga quer dizer o mar e também a grande passagem entre este mundo e o outro.",
       "Para o povo banto que foi trazido à força pelo oceano, Kalunga era o caminho de onde se veio e para onde a alma volta. Por isso o mar é tão sagrado: ele guarda a memória dos nossos antepassados.",
@@ -319,7 +331,7 @@ window.INKICES = [
     dominios: "Paz, criação, paciência, sabedoria",
     folhas: ["Boldo (tapete-de-oxalá)", "Saião", "Algodoeiro", "Manjericão-branco", "Folha de colônia"],
     oferendas: ["Canjica branca (ebô)", "Inhame pilado", "Arroz sem sal", "Água fresca", "Flores brancas"],
-    festa: "Em muitas casas, em janeiro, junto da Lavagem do Bonfim. Às sextas-feiras se veste branco.",
+    festa: "Na nossa casa: festa em janeiro. Às sextas-feiras se veste branco.",
     historia: [
       "Lembá é o pai de todos. Foi a ele que Nzambi, o Deus supremo dos bantos, confiou a criação do mundo e das pessoas. Na língua de Angola, Lembarenganga é o grande senhor da paz.",
       "Ele aparece de duas formas: o velho que anda devagar apoiado no seu cajado, e o jovem guerreiro que come inhame pilado. Os dois ensinam que a paz é fruto de paciência e também de luta.",
@@ -339,7 +351,7 @@ window.INKICES = [
     dominios: "Alegria, inocência, renovação, a infância",
     folhas: ["Folha de goiabeira", "Alecrim", "Erva-doce", "Rosa-branca"],
     oferendas: ["Caruru", "Doces e balas", "Bolo", "Guaraná", "Frutas doces"],
-    festa: "27 de setembro, junto de São Cosme e Damião.",
+    festa: "Na nossa casa: festa dos Ibejis e erês em setembro.",
     historia: [
       "Vunji é a força criança. Na Angola, Vunji é a divindade da alegria e das crianças, e é também o nome do estado de erê que aparece nos filhos de santo depois do transe do inkice.",
       "O erê é como o filho do inkice: brinca, ri, faz travessura, mas também dá recado sério com a simplicidade de quem não tem maldade.",
@@ -372,7 +384,7 @@ window.CABOCLOS = [
     elementos: "A mata, o arco e as sete flechas",
     folhas: FOLHAS_CABOCLO,
     oferendas: OFERENDAS_CABOCLO,
-    festa: "Data da festa a confirmar com a casa.",
+    festa: "Na nossa casa: festa de todos os caboclos em julho.",
     historia: [
       "O Caboclo Sete Flechas é o pai maior da nossa casa. O seu nome está no brasão, cercado de folhas, com o arco, a flecha e o cálice.",
       "Em muitas casas se conta que Sete Flechas é um caboclo caçador da linha de Oxóssi, que conhece cada folha da mata e cada caminho. As suas sete flechas são lembradas como sete caminhos que ele abre para os seus filhos, e como a certeza de quem nunca erra o alvo.",
@@ -391,7 +403,7 @@ window.CABOCLOS = [
     elementos: "A mata e as águas",
     folhas: ["Guiné", ...FOLHAS_CABOCLO.filter((f) => f !== "Guiné")],
     oferendas: OFERENDAS_CABOCLO,
-    festa: "Data da festa a confirmar com a casa.",
+    festa: "Na nossa casa: festa de todos os caboclos em julho.",
     historia: [
       "O Caboclo Itupiaçu de Guiné é também pai da nossa casa e caminha ao lado do Caboclo Sete Flechas.",
       "O nome Itupiaçu lembra palavras do tupi: itu, que quer dizer cachoeira ou salto de água, e açu, que quer dizer grande. Guiné é o nome de uma das folhas mais fortes dos caboclos, usada para limpar e proteger, e também o nome de uma terra da África. Qual desses sentidos é o dele, os mais velhos da casa é que sabem contar.",
@@ -410,7 +422,7 @@ window.CABOCLOS = [
     elementos: "A mata, a pena branca, a fumaça do charuto",
     folhas: FOLHAS_CABOCLO,
     oferendas: OFERENDAS_CABOCLO,
-    festa: "Data da festa a confirmar com a casa.",
+    festa: "Na nossa casa: festa de todos os caboclos em julho.",
     historia: [
       "O Caboclo Pena Branca é um dos caboclos mais conhecidos e respeitados nas casas de santo. A pena branca no seu cocar é lembrada como sinal de paz e de sabedoria.",
       "Em muitas casas se conta que Pena Branca é um grande curador, que conhece as ervas e dá conselhos com calma, ensinando a resolver as coisas sem pressa e sem briga.",
@@ -428,7 +440,7 @@ window.CABOCLOS = [
     elementos: "As pedras, as lajes, as cachoeiras",
     folhas: FOLHAS_CABOCLO,
     oferendas: OFERENDAS_CABOCLO,
-    festa: "Data da festa a confirmar com a casa.",
+    festa: "Na nossa casa: festa de todos os caboclos em julho.",
     historia: [
       "Laje é a pedra grande e lisa que aparece nas serras e nas beiras de cachoeira. Um caboclo com esse nome lembra firmeza: aquilo que não se move com o vento nem com a correnteza.",
       "Texto provisório: a história do Caboclo Laje Grande na nossa casa será contada aqui pelos mais velhos.",
@@ -445,7 +457,7 @@ window.CABOCLOS = [
     elementos: "O laço, o chicote, o chapéu de couro, o sertão",
     folhas: FOLHAS_CABOCLO,
     oferendas: ["Carne seca", "Feijão-tropeiro", "Abóbora", "Cachaça ou vinho", "Fumo de rolo", "Frutas"],
-    festa: "Data da festa a confirmar com a casa.",
+    festa: "Na nossa casa: festa de todos os caboclos em julho.",
     historia: [
       "Os boiadeiros são os caboclos do sertão: vaqueiros que viveram tocando boiada pelas estradas de terra, sob sol forte, de chapéu e gibão de couro.",
       "Chegam laçando, com o chicote na mão, e são conhecidos por afastar o que é ruim com a mesma força com que conduzem o gado. São trabalhadores, alegres e muito leais aos seus.",
@@ -463,7 +475,7 @@ window.CABOCLOS = [
     elementos: "A mata fechada, as árvores, os bichos",
     folhas: FOLHAS_CABOCLO,
     oferendas: OFERENDAS_CABOCLO,
-    festa: "Data da festa a confirmar com a casa.",
+    festa: "Na nossa casa: festa de todos os caboclos em julho.",
     historia: [
       "O próprio nome já diz muito: Gentil das Matas é o caboclo que mora na mata e trata a todos com gentileza. Conhece os caminhos escondidos, as folhas e os bichos, e protege quem entra na mata com respeito.",
       "Texto provisório: a história do Caboclo Gentil das Matas na nossa casa será contada aqui pelos mais velhos.",
@@ -480,7 +492,7 @@ window.CABOCLOS = [
     elementos: "A mata, as palmeiras, as águas",
     folhas: FOLHAS_CABOCLO,
     oferendas: [...OFERENDAS_CABOCLO, "Flores"],
-    festa: "Data da festa a confirmar com a casa.",
+    festa: "Na nossa casa: festa de todos os caboclos em julho.",
     historia: [
       "Jussara, ou juçara, é o nome de uma palmeira da Mata Atlântica, de onde vêm o palmito e um fruto roxo parecido com o açaí. É uma árvore alta, elegante e generosa, que alimenta os bichos e as pessoas.",
       "A Cabocla Jussara traz essa força feminina da mata: bonita, firme e cuidadosa com os seus.",
@@ -498,7 +510,7 @@ window.CABOCLOS = [
     elementos: "A coroa, a mata, a memória dos reis",
     folhas: FOLHAS_CABOCLO,
     oferendas: OFERENDAS_CABOCLO,
-    festa: "Data da festa a confirmar com a casa.",
+    festa: "Na nossa casa: festa de todos os caboclos em julho.",
     historia: [
       "O nome Rei de Congo lembra o antigo Reino do Congo, na África central, terra dos povos bantos de onde vem a nossa nação Angola-Congo. No Brasil, a memória dos reis do Congo continua viva nas congadas e nos reinados.",
       "Um caboclo com esse nome junta as duas raízes da casa: a terra brasileira dos caboclos e a ancestralidade banto.",
@@ -518,7 +530,7 @@ window.ENTIDADES = [
     saudacao: "Okê caboclo! / Êta caboclo! (para os boiadeiros: Xetro marrumbaxetro!)",
     folhas: ["Jurema", "Alfavaca-de-caboclo", "Guiné", "Eucalipto", "Abre-caminho", "Fumo"],
     oferendas: ["Frutas da mata", "Milho cozido", "Mel", "Charuto", "Vinho ou jurema (bebida da casa)", "Abóbora"],
-    festa: "Muitas casas fazem a festa de caboclo em 2 de julho (Independência da Bahia) ou em 7 de setembro.",
+    festa: "Na nossa casa: festa de todos os caboclos em julho.",
     historia: [
       "Quando os povos bantos chegaram ao Brasil, trouxeram um ensinamento: é preciso respeitar os donos da terra onde se pisa. Em Angola, cada lugar tem os seus ancestrais. Aqui, os donos da terra eram os povos indígenas. Por isso, foi nas casas de Angola que o culto aos caboclos nasceu e cresceu.",
       "O caboclo é o espírito do indígena brasileiro, que conhece a mata, as ervas e o caminho. Há caboclos de pena, que são os guerreiros e caçadores, e há os boiadeiros, os vaqueiros do sertão que tocavam o gado.",
@@ -535,7 +547,7 @@ window.ENTIDADES = [
     saudacao: "Oni Beijada!",
     folhas: ["Alecrim", "Erva-doce", "Folha de goiabeira", "Rosa-branca"],
     oferendas: ["Caruru", "Doces", "Bolo", "Guaraná", "Pipoca com açúcar", "Brinquedos"],
-    festa: "27 de setembro, dia de São Cosme e Damião, com o caruru dos sete meninos.",
+    festa: "Na nossa casa: festa dos Ibejis e erês em setembro.",
     historia: [
       "Os Ibejis são os gêmeos sagrados. Em muitos povos da África, nascer gêmeo é sinal de bênção dupla e de sorte para a família inteira.",
       "O erê é diferente: é um estado de criança que chega depois do transe do inkice, como uma ponte entre o santo e a pessoa. Na Angola, essa força é chamada Vunji.",
@@ -618,6 +630,25 @@ window.COMPARATIVO = [
   ["Águas salgadas e oceanos", "Kaitumbá / Kaiá", "Iemanjá", "kaitumba"],
   ["Crianças, alegria e juventude", "Nvunji", "Ibeji", "vunji"],
   ["Criação, paz, equilíbrio e o branco", "Lembá Dilê / Lembá", "Oxalá", "lemba"],
+];
+
+/* Galeria: fotos do álbum da casa (festas e cortejos; nada de espaços restritos).
+   Para corrigir uma legenda, edite o texto. Para pôr outra foto, salve em img/galeria/. */
+window.GALERIA = [
+  { foto: "img/galeria/099.webp", legenda: "O barracão em dia de festa" },
+  { foto: "img/galeria/097.webp", legenda: "Os atabaques (ngoma) tocando no barracão" },
+  { foto: "img/galeria/044.webp", legenda: "Altar enfeitado com girassóis e folhas" },
+  { foto: "img/galeria/277.webp", legenda: "Festa no barracão" },
+  { foto: "img/galeria/005.webp", legenda: "O Velho Obaluaê no barracão" },
+  { foto: "img/galeria/110.webp", legenda: "Cortejo pelas ruas, com a bandeira e os presentes" },
+  { foto: "img/galeria/001.webp", legenda: "Filhos e filhas da casa à beira-mar" },
+  { foto: "img/galeria/258.webp", legenda: "Festa das Águas: cortejo com os presentes de Oxum e Iemanjá" },
+  { foto: "img/galeria/143.webp", legenda: "Festa das Águas: reunidos antes da saída" },
+  { foto: "img/galeria/147.webp", legenda: "Festa das Águas: saída pela praia" },
+  { foto: "img/galeria/175.webp", legenda: "Festa das Águas: a travessia de barco" },
+  { foto: "img/galeria/241.webp", legenda: "Festa das Águas: barcos levando os presentes" },
+  { foto: "img/galeria/205.webp", legenda: "Festa das Águas: presentes entregues nas águas" },
+  { foto: "img/galeria/255.webp", legenda: "Festa das Águas: a volta para a praia" },
 ];
 
 window.GLOSSARIO = [
