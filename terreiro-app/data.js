@@ -65,7 +65,7 @@ window.INKICES = [
   {
     id: "nkosi",
     nome: "Nkosi",
-    outros: ["Roxi Mukumbe", "Nkosi Mukumbe", "Inkossi"],
+    outros: ["Incosse", "Roxi Mukumbe", "Nkosi Mukumbe", "Inkossi"],
     ketu: "Ogum",
     resumo: "O guerreiro, senhor do ferro, das estradas e da tecnologia que abre o mundo.",
     cores: [["Azul-escuro", "#1f3b73"], ["Verde", "#2e7d32"]],
@@ -85,7 +85,7 @@ window.INKICES = [
   {
     id: "mutalambo",
     nome: "Mutalambô",
-    outros: ["Mutakalambô", "Gongobira (jovem)", "Kabila (o pastor)"],
+    outros: ["Kabila (o pastor)", "Mutakalambô"],
     ketu: "Oxóssi",
     resumo: "O caçador das matas, senhor da fartura. Dono da cabeça do nosso Pai Adilson.",
     cores: [["Azul-turquesa", "#1b8a8f"], ["Verde", "#3a7d2c"]],
@@ -100,7 +100,7 @@ window.INKICES = [
     historia: [
       "Mutalambô é o caçador. Mora nas matas, conhece cada folha, cada rastro e cada bicho. É ele quem garante que nunca falte comida na mesa dos seus filhos.",
       "Conta-se que, quando o povo passava fome, só um caçador teve a paciência e a precisão de acertar o alvo com uma única flecha. Aquele que tem uma flecha só não pode errar, e por isso ele é o senhor da concentração e da certeza.",
-      "Na Angola aparecem várias faces dessa mesma força. Gongobira é o caçador jovem, ligado às águas doces e aos peixes. Kabila é o pastor, que cuida dos rebanhos. Mutakalambô é o grande caçador das matas fechadas.",
+      "Na Angola aparecem várias faces dessa mesma força. Kabila é o pastor, que cuida dos rebanhos. Mutakalambô é o grande caçador das matas fechadas. O caçador jovem das águas doces, Telekompensu ou Gongobira, tem a sua própria página neste app.",
       "Para a nossa casa, Mutalambô tem um lugar especial: é o dono da cabeça do Pai Adilson. É ele quem, há 52 anos, abre as matas para que o axé da casa siga crescendo.",
     ],
   },
@@ -127,7 +127,7 @@ window.INKICES = [
   {
     id: "kavungo",
     nome: "Kavungo",
-    outros: ["Kafunjê", "Nsumbu", "Kingongo", "Kavungo Kaviungo"],
+    outros: ["Kaviungo", "Kafunjê", "Nsumbu", "Kingongo"],
     ketu: "Omolu / Obaluaê",
     resumo: "O senhor da terra, da doença e da cura. Quem conhece a dor sabe curar.",
     cores: [["Preto", "#1b1b1b"], ["Branco", "#f2efe6"], ["Vermelho", "#9c2a1e"]],
@@ -147,7 +147,7 @@ window.INKICES = [
   {
     id: "angoro",
     nome: "Angorô",
-    outros: ["Angoroméa (forma feminina)", "Hongolo"],
+    outros: ["Hongolo", "Angoroméa (forma feminina)"],
     ketu: "Oxumarê",
     resumo: "A serpente e o arco-íris, a ligação entre o céu e a terra, a continuidade da vida.",
     cores: [["Amarelo", "#e3b505"], ["Verde", "#2e8b57"]],
@@ -167,7 +167,7 @@ window.INKICES = [
   {
     id: "nzazi",
     nome: "Nzazi",
-    outros: ["Loango", "Kambaranguanje", "Zazi"],
+    outros: ["Zaze", "Loango", "Kambaranguanje"],
     ketu: "Xangô",
     resumo: "O senhor do trovão, do raio e da justiça.",
     cores: [["Vermelho", "#a32020"], ["Branco", "#f2efe6"]],
@@ -187,8 +187,8 @@ window.INKICES = [
   {
     id: "matamba",
     nome: "Matamba",
-    outros: ["Bamburucema", "Kaiangô", "Nunvurucemavula"],
-    ketu: "Iansã (Oyá)",
+    outros: ["Kaiangô", "Bamburucema", "Nunvurucemavula"],
+    ketu: "Iansã / Oyá",
     resumo: "A senhora dos ventos, das tempestades e dos raios. Dona da cabeça do nosso Pai Adilson.",
     cores: [["Vermelho", "#b0281e"], ["Coral", "#e0643c"], ["Marrom", "#6d3b1f"]],
     dia: "Quarta-feira",
@@ -227,9 +227,29 @@ window.INKICES = [
     ],
   },
   {
+    id: "telekompensu",
+    nome: "Telekompensu",
+    outros: ["Gongobira", "Teleku-mpensu"],
+    ketu: "Logun Edé",
+    resumo: "O jovem caçador das águas doces e das matas, que une a força do caçador e a doçura do rio.",
+    cores: [["Azul-turquesa", "#1b8a8f"], ["Amarelo-ouro", "#d4a017"]],
+    dia: "Quinta-feira (confirme com a casa)",
+    saudacao: "Em casas Ketu: Logun ô akofá! Na Angola, confira com a casa.",
+    elementos: "A beira do rio, onde a mata encontra a água; o arco e o espelho",
+    dominios: "Juventude, beleza, fartura, a união da mata com as águas",
+    folhas: ["Folhas de Mutalambô e de Dandalunda", "Alfavaca", "Oriri (alfavaquinha)", "Peregum"],
+    oferendas: ["Axoxô (milho vermelho com coco)", "Omolocum (feijão-fradinho com ovos)", "Peixe de água doce", "Frutas", "Mel"],
+    festa: "Data varia; confirme com a casa.",
+    historia: [
+      "Telekompensu, também chamado Gongobira, é a força jovem que mora onde a mata encontra o rio. No Ketu, essa força é Logun Edé.",
+      "Conta-se no Ketu que Logun Edé é filho de Oxóssi e Oxum: herdou do pai o arco e o faro de caçador, e da mãe a beleza e o encanto das águas doces. Por isso vive metade do tempo na mata, caçando, e metade no rio, pescando.",
+      "É lembrado como um príncipe jovem, alegre e encantador, que ensina que força e delicadeza podem andar juntas.",
+    ],
+  },
+  {
     id: "kaitumba",
     nome: "Kaitumbá",
-    outros: ["Mikaia", "Kukuetu", "Kokueto", "Kalunga"],
+    outros: ["Kaiá", "Mikaia", "Kukuetu", "Kalunga"],
     ketu: "Iemanjá",
     resumo: "A grande mãe das águas salgadas, mãe de muitos inkices.",
     cores: [["Azul-claro", "#6fa8dc"], ["Branco", "#f2efe6"], ["Prata", "#b8c4cc"]],
@@ -249,8 +269,8 @@ window.INKICES = [
   {
     id: "zumbaranda",
     nome: "Nzumbarandá",
-    outros: ["Zumbá", "Kaiá", "Nanã Buruquê (no Ketu e no Jeje)"],
-    ketu: "Nanã",
+    outros: ["Zumbarandá", "Zumbá"],
+    ketu: "Nanã Buruku",
     resumo: "A mais velha das águas, senhora da lama, do barro e da memória.",
     cores: [["Lilás", "#7e57c2"], ["Branco", "#f2efe6"], ["Azul", "#3f51b5"]],
     dia: "Segunda-feira (em algumas casas, sábado)",
@@ -270,8 +290,8 @@ window.INKICES = [
     id: "kitembo",
     nome: "Kitembo",
     outros: ["Tempo", "Zara Tempo", "Tempo Diala", "Kindembo"],
-    ketu: "Não tem correspondente direto (algumas casas aproximam de Iroko)",
-    resumo: "O Tempo: o inkice mais característico da nação Angola, senhor das estações e do céu.",
+    ketu: "Tempo / Oyá Igbalé",
+    resumo: "O Tempo: o inkice mais característico da nação Angola, senhor do clima, das estações e da ancestralidade.",
     cores: [["Verde", "#3d7a3d"], ["Branco", "#f2efe6"], ["Marrom", "#7a5230"]],
     dia: "Varia de casa para casa; confira com a casa",
     saudacao: "Muitas casas saúdam: Tempo ê! Kitembo ê!",
@@ -281,7 +301,7 @@ window.INKICES = [
     oferendas: ["Frutas variadas", "Comidas da roça", "Bebidas fortes", "Fumo"],
     festa: "Muitas casas de Angola o festejam em agosto. Confira com a casa.",
     historia: [
-      "Se tem um inkice que mostra que uma casa é de Angola, é o Tempo. No Ketu não há um orixá igual a ele. Ele é o dono do clima, do vento que muda, das estações, do sol e da chuva.",
+      "Se tem um inkice que mostra que uma casa é de Angola, é o Tempo. Ele é o dono do clima, do vento que muda, das estações, do sol e da chuva, e guarda a ancestralidade. No Ketu, quem mais se aproxima dele é Oyá Igbalé, e muitas casas Ketu também cultuam Tempo com o mesmo nome, herança da Angola.",
       "Na entrada de muitas casas de Angola há um mastro com uma bandeira branca, plantado ao pé de uma árvore grande. Aquela bandeira é de Tempo e mostra a todos que ali tem casa de santo.",
       "Tempo ensina a paciência. Tudo tem a sua hora: plantar, colher, nascer, partir. Quem respeita o Tempo não se apressa e não se atrasa.",
     ],
@@ -289,7 +309,7 @@ window.INKICES = [
   {
     id: "lemba",
     nome: "Lembá",
-    outros: ["Lembarenganga", "Lembá Dilê", "Kassuté Lembá", "Lembá Furamã"],
+    outros: ["Lembá Dilê", "Lembarenganga", "Kassuté Lembá", "Lembá Furamã"],
     ketu: "Oxalá (Oxalufã e Oxaguiã)",
     resumo: "O pai maior, senhor do branco, da paz e da criação.",
     cores: [["Branco", "#f7f5ee"], ["Prata", "#c0c6cc"]],
@@ -308,9 +328,9 @@ window.INKICES = [
   },
   {
     id: "vunji",
-    nome: "Vunji",
-    outros: ["Vunje", "Os erês da Angola"],
-    ketu: "Ibeji / Erês",
+    nome: "Nvunji",
+    outros: ["Vunji", "Vunje", "Os erês da Angola"],
+    ketu: "Ibeji",
     resumo: "A força criança, da alegria, da inocência e da renovação.",
     cores: [["Colorido", "#f48fb1"], ["Azul", "#64b5f6"], ["Rosa", "#f06292"]],
     dia: "Domingo",
@@ -550,11 +570,18 @@ window.NACAO = [
     ],
   },
   {
-    titulo: "Inkice não é orixá",
+    titulo: "Nkisi e orixá",
     texto: [
-      "No Ketu, de origem iorubá, as divindades se chamam orixás. No Jeje, voduns. Na Angola, inkices (do quimbundo nkisi), que quer dizer força sagrada.",
+      "No candomblé, nkisis e orixás têm o mesmo papel no mundo, mas vêm de culturas e línguas totalmente diferentes. A nação Ketu cultua os orixás, de origem iorubá. A nação Angola cultua os nkisis, ou inquices, de origem banto. No Jeje, as divindades são os voduns.",
       "Os inkices são as próprias forças da natureza: o vento, o raio, a mata, o rio, o tempo. Acima de todos está Nzambi (ou Nzambi Mpungu), o Deus supremo, criador de tudo.",
       "Com o tempo, como as nações conviviam nos mesmos bairros e às vezes nas mesmas famílias, muitas casas de Angola passaram a chamar os inkices pelos nomes do Ketu. É por isso que dizemos Oxóssi quando a força é Mutalambô, e Iansã quando a força é Matamba. Este app traz os dois nomes, para que ninguém perca a raiz.",
+    ],
+  },
+  {
+    titulo: "O candomblé de caboclo",
+    texto: [
+      "Uma marca fundamental da nação Angola é o candomblé de caboclo. No Ketu, o culto aos espíritos indígenas, os caboclos, costuma acontecer em sessões separadas ou fica com a Umbanda.",
+      "Na Angola é diferente: os caboclos fazem parte da base e da sustentação do terreiro. Eles são cultuados junto com os inkices, como a ancestralidade da terra brasileira. É por isso que a nossa casa leva o nome de um caboclo, o Caboclo Sete Flechas, nosso pai maior.",
     ],
   },
   {
@@ -572,6 +599,25 @@ window.NACAO = [
       "Os nomes podem variar de casa para casa. Pergunte aos mais velhos como cada cargo é chamado na nossa casa.",
     ],
   },
+];
+
+/* Tabela comparativa: Angola (Nkisi) e Ketu (Orixá). "id" liga a linha à página do inkice. */
+window.COMPARATIVO = [
+  ["Caminhos, encruzilhadas e mensagens", "Pambu Njila / Aluvaiá", "Exu", "aluvaia"],
+  ["Caminhos, ferro, guerra e tecnologia", "Nkosi / Incosse", "Ogum", "nkosi"],
+  ["Caça, florestas e fartura", "Mutalambô / Kabila", "Oxóssi", "mutalambo"],
+  ["Folhas sagradas e medicina", "Katendê", "Ossaim", "katende"],
+  ["Tempo, ancestralidade e clima", "Kitembo / Tempo", "Tempo / Oyá Igbalé", "kitembo"],
+  ["Justiça, fogo e trovão", "Nzazi / Zaze", "Xangô", "nzazi"],
+  ["Ventos, raios, tempestades e mortos", "Matamba / Kaiangô", "Iansã / Oyá", "matamba"],
+  ["Águas doces, ouro e fertilidade", "Ndanda Lunda / Kisimbi", "Oxum", "dandalunda"],
+  ["Águas doces e matas (criança)", "Telekompensu / Gongobira", "Logun Edé", "telekompensu"],
+  ["Arco-íris, movimento e transformação", "Hongolo / Angorô", "Oxumarê", "angoro"],
+  ["Terra, pestes e cura das doenças", "Kaviungo / Kafunjê", "Omolu / Obaluaiê", "kavungo"],
+  ["Lama, pântanos e ancestralidade velha", "Nzumbarandá / Zumbarandá", "Nanã Buruku", "zumbaranda"],
+  ["Águas salgadas e oceanos", "Kaitumbá / Kaiá", "Iemanjá", "kaitumba"],
+  ["Crianças, alegria e juventude", "Nvunji", "Ibeji", "vunji"],
+  ["Criação, paz, equilíbrio e o branco", "Lembá Dilê / Lembá", "Oxalá", "lemba"],
 ];
 
 window.GLOSSARIO = [

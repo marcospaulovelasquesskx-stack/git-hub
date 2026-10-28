@@ -264,3 +264,38 @@ main { max-width: 760px; margin: 0 auto; outline: none; }
 .cantiga { background: var(--cartao); border-radius: 14px; padding: 0.8rem 1rem; margin-bottom: 0.8rem; }
 .cantiga h3 { font-size: 1.05rem; margin-bottom: 0.3rem; }
 .cantiga p { margin: 0; font-style: italic; }
+
+/* ---------- Angola e Ketu ---------- */
+.acoes-lista { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-bottom: 1rem; }
+.botao {
+  display: inline-flex; align-items: center; justify-content: center; gap: 0.4rem; min-height: 3rem;
+  padding: 0.6rem 1.1rem; border-radius: 999px; border: 2px solid var(--folha); background: var(--cartao);
+  color: var(--folha); font-weight: 800; text-decoration: none;
+}
+.comparativo { display: grid; gap: 0.5rem; }
+.comp-cabeca, .comp-linha { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); column-gap: 0.8rem; }
+.comp-cabeca { padding: 0 1rem; font-size: 0.75rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: var(--suave); }
+.comp-linha {
+  padding: 0.7rem 1rem; border-radius: 14px; background: var(--cartao); border: 1px solid var(--linha);
+  border-left: 5px solid var(--ouro); text-decoration: none; align-items: baseline;
+}
+.comp-dom { grid-column: 1 / -1; color: var(--suave); font-size: 0.82rem; }
+.comp-ang { font-family: "Fraunces", serif; font-size: 1.2rem; color: var(--folha); overflow-wrap: anywhere; }
+.comp-ket { color: var(--suave); font-weight: 600; overflow-wrap: anywhere; }
+
+.quiz-placar { color: var(--suave); font-size: 0.9rem; }
+.quiz-pergunta { font-size: 1.25rem; }
+.quiz-pergunta b { font-family: "Fraunces", serif; color: var(--folha); }
+.quiz-opcoes { display: grid; gap: 0.6rem; }
+.quiz-op {
+  min-height: 3.2rem; padding: 0.6rem 1rem; border-radius: 14px; text-align: left; font-weight: 700;
+  border: 2px solid var(--linha); background: var(--papel); color: var(--tinta);
+}
+.quiz-op.certa { border-color: var(--folha); background: var(--folha-clara); }
+.quiz-op.certa::after { content: "  ✓"; color: var(--folha); }
+.quiz-op.errada { border-color: #b3261e; opacity: 0.75; }
+.quiz-op.errada::after { content: "  ✗"; color: #b3261e; }
+.quiz-op:disabled { cursor: default; }
+.quiz-resposta { margin-top: 1rem; }
+.quiz-acoes { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 0.8rem; }
+@media (min-width: 640px) { .quiz-opcoes { grid-template-columns: 1fr 1fr; } }

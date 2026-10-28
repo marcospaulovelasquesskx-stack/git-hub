@@ -312,6 +312,8 @@
           <h2>Conheça</h2>
           <div class="atalhos">
             <a href="#/inkices"><span>&#10024;</span>Inkices</a>
+            <a href="#/comparativo"><span>&#8646;</span>Angola e Ketu</a>
+            <a href="#/aprender"><span>&#127919;</span>Aprenda os nomes</a>
             <a href="#/caboclos"><span>&#127993;</span>Caboclos da casa</a>
             <a href="#/entidades/eres"><span>&#127880;</span>Erês e Ibejis</a>
             <a href="#/entidades/pretos-velhos"><span>&#128255;</span>Pretos-Velhos</a>
@@ -343,9 +345,41 @@
       return `<section class="bloco">
         <h1>Inkices</h1>
         <p>As divindades da nação Angola-Congo, com o nome correspondente no Ketu, que é como muitas vezes chamamos na casa.</p>
+        <div class="acoes-lista">
+          <a class="botao" href="#/comparativo">&#8646; Tabela Angola e Ketu</a>
+          <a class="botao" href="#/aprender">&#127919; Aprenda os nomes</a>
+        </div>
         <label class="busca"><span class="sr">Buscar</span>
           <input type="search" id="busca" placeholder="Buscar: Oxóssi, Matamba, sábado, mel..." autocomplete="off"></label>
         <div class="lista" id="lista">${INKICES.map((i) => cartao(i, "#/inkices/" + i.id)).join("")}</div>
+      </section>`;
+    },
+
+    comparativo() {
+      const falado = "Tabela comparativa entre Angola e Ketu. " +
+        COMPARATIVO.map(([dom, ang, ket]) => `${ket}, no Ketu, na nossa nação Angola é ${ang.replace(" / ", " ou ")}. Domínio: ${dom}.`).join(" ");
+      return `<section class="bloco">
+        <h1>Angola e Ketu</h1>
+        <p>Nkisis e orixás têm o mesmo papel no mundo, mas vêm de raízes diferentes: os nkisis são bantos, da nação Angola; os orixás são iorubás, da nação Ketu. Para chamar cada força pelo nome da nossa nação, veja abaixo o nome em Angola e o nome que se usa no Ketu.</p>
+        <div class="acoes-lista">${botaoOuvir("Angola e Ketu", falado, "comparativo", "Ouvir a tabela")}
+          <a class="botao" href="#/aprender">&#127919; Aprenda os nomes</a></div>
+        <div class="comparativo">
+          <div class="comp-cabeca" aria-hidden="true"><span>Na Angola (nkisi)</span><span>No Ketu (orixá)</span></div>
+          ${COMPARATIVO.map(([dom, ang, ket, id]) => `<a class="comp-linha" href="#/inkices/${id}">
+            <small class="comp-dom">${esc(dom)}</small>
+            <strong class="comp-ang">${esc(ang)}</strong>
+            <span class="comp-ket"><span class="sr">No Ketu: </span>${esc(ket)}</span>
+          </a>`).join("")}
+        </div>
+        <p class="aviso">Na Angola, os caboclos também fazem parte da base do terreiro, cultuados junto com os nkisis como ancestralidade da terra brasileira. <a href="#/nacao">Leia mais sobre a nação Angola.</a></p>
+      </section>`;
+    },
+
+    aprender() {
+      return `<section class="bloco">
+        <h1>Aprenda os nomes</h1>
+        <p>Aparece o nome usado no Ketu. Toque no nome certo da nossa nação Angola.</p>
+        <div id="quiz" class="caixa quiz"></div>
       </section>`;
     },
 
@@ -451,6 +485,7 @@
       html = telas[aba]();
     }
     if (!html) { aba = "inicio"; html = telas.inicio(); }
+    if (["comparativo", "aprender"].includes(aba)) aba = "inkices";
     if (["casa", "nacao", "glossario", "sobre"].includes(aba)) aba = aba === "casa" ? "inicio" : "mais";
 
     app.innerHTML = html;
@@ -460,7 +495,47 @@
     ligarEventos();
   }
 
+  /* ---------- Exercício: do nome do Ketu para o nome em Angola ---------- */
+  const quiz = { acertos: 0, feitas: 0, atual: null };
+  const embaralhar = (arr) => arr.map((v) => [Math.random(), v]).sort((a, b) => a[0] - b[0]).map((x) => x[1]);
+
+  function novaPergunta() {
+    const el = $("#quiz");
+    if (!el) return;
+    const certa = COMPARATIVO[Math.floor(Math.random() * COMPARATIVO.length)];
+    const erradas = embaralhar(COMPARATIVO.filter((c) => c !== certa)).slice(0, 3);
+    quiz.atual = certa;
+    el.innerHTML = `<p class="quiz-placar">${quiz.feitas ? `Acertos: <b>${quiz.acertos}</b> de ${quiz.feitas}` : "Vamos começar"}</p>
+      <p class="quiz-pergunta">No Ketu se diz <b>${esc(certa[2])}</b>.<br>Na nossa nação Angola, quem é?</p>
+      <div class="quiz-opcoes">${embaralhar([certa, ...erradas]).map((c) =>
+        `<button class="quiz-op" data-op="${esc(c[3])}">${esc(c[1])}</button>`).join("")}</div>
+      <p class="quiz-resposta" id="quiz-resposta" aria-live="polite"></p>`;
+    el.querySelectorAll(".quiz-op").forEach((b) => { b.onclick = () => responder(b); });
+  }
+
+  function responder(botao) {
+    const el = $("#quiz");
+    const certa = quiz.atual;
+    const acertou = botao.dataset.op === certa[3];
+    quiz.feitas++;
+    if (acertou) quiz.acertos++;
+    el.querySelectorAll(".quiz-op").forEach((b) => {
+      b.disabled = true;
+      if (b.dataset.op === certa[3]) b.classList.add("certa");
+      else if (b === botao) b.classList.add("errada");
+    });
+    const frase = `${certa[2]}, na Angola, é ${certa[1].replace(" / ", " ou ")}.`;
+    $("#quiz-resposta").innerHTML = `<b>${acertou ? "Isso mesmo!" : "Quase!"}</b> ${esc(frase)}
+      <span class="quiz-acoes"><button class="ouvir" id="quiz-ouvir">&#128266; Ouvir</button>
+      <a class="botao" href="#/inkices/${certa[3]}">Ver a história</a>
+      <button class="botao" id="quiz-prox">Próxima &#8250;</button></span>`;
+    $("#quiz-ouvir").onclick = () => ouvir("Aprenda os nomes", (acertou ? "Isso mesmo! " : "Quase! ") + frase);
+    $("#quiz-prox").onclick = novaPergunta;
+    $("#quiz-prox").focus();
+  }
+
   function ligarEventos() {
+    if ($("#quiz")) novaPergunta();
     const busca = $("#busca");
     if (busca) {
       const norm = (s) => s.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
