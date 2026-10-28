@@ -381,7 +381,8 @@
     // Barracão com o mastro e a bandeira branca de Tempo
     terreiro: () => svg('<path d="M6 24 21 12l15 12"/><path d="M9 22v18h24V22"/><path d="M18 40v-9h6v9"/><path d="M41 40V8"/><path d="M41 9h-8l3 4-3 4h8" fill="#fff"/>'),
     // Mosaico com fotos de verdade
-    fotos: () => `<span class="mosaico" aria-hidden="true">${GALERIA.slice(0, 4).map((g) => `<img src="${g.foto}" alt="" loading="lazy">`).join("")}</span>`,
+    // Porta-retrato com coqueiro e sol, como a beira-mar de Jiribatuba
+    fotos: () => svg('<rect x="6" y="9" width="36" height="30" rx="3"/><circle cx="33" cy="17" r="3"/><path d="M6 33c8-3 14-3 22 0s12 2 14 0" stroke-width="1.8"/><path d="M17 33c0-6 1-11 3-15"/><path d="M20 18c-3-3-7-3-9-1M20 18c3-3 7-3 9-1M20 18c-1-3-4-5-7-5M20 18c1-3 4-4 7-4" stroke-width="1.8"/>'),
     // Baobá
     nacao: () => svg('<path d="M20 42c1-8 1-14-1-20h10c-2 6-2 12-1 20"/><path d="M19 22c-4-1-8-4-9-9M29 22c4-1 8-4 9-9M22 22c-1-5-1-10 2-14M26 22c1-5 2-9 5-11"/><path d="M8 13c2-3 6-3 7 0M33 13c2-3 6-3 7 0M20 9c2-3 6-3 8 0" stroke-width="1.8"/><path d="M6 42h36"/>'),
     // Livro aberto
@@ -395,6 +396,9 @@
     ajustes: () => svg('<circle cx="24" cy="24" r="6"/><path d="M24 6v6M24 36v6M6 24h6M36 24h6M11 11l4 4M33 33l4 4M37 11l-4 4M15 33l-4 4"/>'),
   };
   const atalho = (href, icone, texto) => `<a href="${href}"><span class="icone">${ICONES[icone]()}</span>${texto}</a>`;
+
+  const gradeFotos = (lista, album) => `<div class="galeria">${lista.map((g, i) =>
+    `<figure><button class="foto" data-album="${album}" data-foto="${i}"><img src="${g.foto}" alt="${esc(g.legenda)}" loading="lazy"></button><figcaption>${esc(g.legenda)}</figcaption></figure>`).join("")}</div>`;
 
   /* ---------- Telas ---------- */
   const telas = {
@@ -440,7 +444,7 @@
 
         <section class="bloco">
           <h2>Nosso terreiro em festa</h2>
-          <div class="faixa-fotos">${GALERIA.slice(0, 6).map((g, i) => `<button class="foto" data-foto="${i}"><img src="${g.foto}" alt="${esc(g.legenda)}" loading="lazy"></button>`).join("")}</div>
+          <div class="faixa-fotos">${GALERIA.slice(0, 6).map((g, i) => `<button class="foto" data-album="destaques" data-foto="${i}"><img src="${g.foto}" alt="${esc(g.legenda)}" loading="lazy"></button>`).join("")}</div>
           <p><a class="mais-link" href="#/galeria">Ver todas as fotos &#8250;</a></p>
         </section>
 
@@ -462,10 +466,33 @@
     },
 
     galeria() {
+      const pasta = (a) => {
+        const capa = a.fotos[0];
+        return `<a class="pasta${a.fotos.length ? "" : " vazia"}" href="#/galeria/${a.id}">
+          <span class="pasta-capa">${capa ? `<img src="${capa.foto}" alt="" loading="lazy">` : ICONES.fotos()}</span>
+          <span class="pasta-txt"><small>${MESES[a.mes - 1]}</small><strong>${esc(a.titulo)}</strong>
+          <span>${a.fotos.length ? `${a.fotos.length} fotos` : "Ainda sem fotos"}</span></span>
+        </a>`;
+      };
       return `<section class="bloco">
         <h1>Fotos do terreiro</h1>
-        <p>Festas, cortejos e a Festa das Águas do ${esc(CASA.nome)}. Toque numa foto para ver maior.</p>
-        <div class="galeria">${GALERIA.map((g, i) => `<figure><button class="foto" data-foto="${i}"><img src="${g.foto}" alt="${esc(g.legenda)}" loading="lazy"></button><figcaption>${esc(g.legenda)}</figcaption></figure>`).join("")}</div>
+        <p>Uma pasta para cada festa do ${esc(CASA.nome)}, na ordem do calendário.</p>
+        <div class="pastas">${ALBUNS.map(pasta).join("")}</div>
+        <h2 class="destaques-titulo">Destaques</h2>
+        ${gradeFotos(GALERIA, "destaques")}
+      </section>`;
+    },
+
+    album(id) {
+      const a = ALBUNS.find((x) => x.id === id);
+      if (!a) return null;
+      return `<section class="bloco">
+        <p class="pasta-mes">${MESES[a.mes - 1]}</p>
+        <h1>${esc(a.titulo)}</h1>
+        ${a.sub ? `<p>${esc(a.sub)}</p>` : ""}
+        ${a.fotos.length ? gradeFotos(a.fotos, a.id)
+          : `<div class="caixa"><p>Ainda não há fotos desta festa no app. Quando a festa acontecer, mande as melhores fotos que elas entram aqui.</p></div>`}
+        <p><a class="mais-link" href="#/galeria">&#8249; Todas as pastas</a></p>
       </section>`;
     },
 
@@ -694,6 +721,9 @@
     } else if (secao === "caboclos") {
       html = telas.entidades();
       aba = "entidades";
+    } else if (secao === "galeria" && id) {
+      html = telas.album(id);
+      aba = "galeria";
     } else if (secao === "entidades" && id) {
       const item = ENTIDADES.find((i) => i.id === id);
       html = item ? detalhe(item, ENTIDADES, "#/entidades") : null;
@@ -896,12 +926,13 @@
     <button class="visor-nav prox" aria-label="Próxima foto">&#8250;</button>`;
   document.body.appendChild(visor);
   let fotoAtual = 0;
+  let fotosVisor = GALERIA;
   function mostrarFoto(i) {
-    fotoAtual = (i + GALERIA.length) % GALERIA.length;
-    const g = GALERIA[fotoAtual];
+    fotoAtual = (i + fotosVisor.length) % fotosVisor.length;
+    const g = fotosVisor[fotoAtual];
     $("img", visor).src = g.foto;
     $("img", visor).alt = g.legenda;
-    $("figcaption", visor).textContent = `${g.legenda} (${fotoAtual + 1} de ${GALERIA.length})`;
+    $("figcaption", visor).textContent = `${g.legenda} (${fotoAtual + 1} de ${fotosVisor.length})`;
     visor.hidden = false;
     $(".visor-fechar", visor).focus();
   }
@@ -917,7 +948,10 @@
   });
   app.addEventListener("click", (e) => {
     const b = e.target.closest("[data-foto]");
-    if (b) mostrarFoto(+b.dataset.foto);
+    if (!b) return;
+    const album = ALBUNS.find((a) => a.id === b.dataset.album);
+    fotosVisor = album ? album.fotos : GALERIA;
+    mostrarFoto(+b.dataset.foto);
   });
   window.addEventListener("hashchange", () => { visor.hidden = true; });
 

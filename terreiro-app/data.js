@@ -718,6 +718,40 @@ window.GALERIA = [
   { foto: "img/galeria/255.webp", legenda: "Festa das Águas: a volta para a praia" },
 ];
 
+/* Álbuns de fotos de cada festa, por mês. As fotos vêm do álbum do terreiro
+   (as de dezembro, julho e parte de agosto são imagens tiradas dos vídeos).
+   Uma pasta sem fotos aparece como "ainda sem fotos". */
+const fotoDestaque = (n, legenda) => ({ foto: `img/galeria/${n}.webp`, legenda });
+const fotoFesta = (pasta, n, legenda) => ({ foto: `img/festas/${pasta}/${n}.webp`, legenda });
+window.ALBUNS = [
+  { id: "oxala", mes: 1, titulo: "Festa de Oxalá (Lembá)", fotos: [] },
+  { id: "aguas", mes: 2, titulo: "Festa das Águas", sub: "Oxum e Iemanjá · fevereiro de 2025", fotos: [
+    fotoDestaque("258", "Cortejo com os presentes de Oxum e Iemanjá"), fotoDestaque("110", "Cortejo pelas ruas, com a bandeira e os presentes"),
+    fotoDestaque("143", "Reunidos antes da saída"), fotoDestaque("147", "Saída pela praia"), fotoDestaque("175", "A travessia de barco"),
+    fotoDestaque("241", "Barcos levando os presentes"), fotoDestaque("205", "Presentes entregues nas águas"), fotoDestaque("255", "A volta para a praia"),
+  ] },
+  { id: "bori", mes: 2, titulo: "Bori das águas", sub: "fevereiro de 2025", fotos: [
+    fotoDestaque("099", "Bori das águas de um abiã"), fotoFesta("bori-aguas", "096", "O barracão no dia do bori"), fotoDestaque("097", "Os atabaques tocando"),
+  ] },
+  { id: "mutalambo", mes: 4, titulo: "Festa de Oxóssi (Mutalambô)", fotos: [] },
+  { id: "caboclos", mes: 7, titulo: "Festa dos Caboclos", sub: "julho de 2025", fotos: [
+    fotoFesta("caboclos", "047", "Caboclo no barracão"), fotoFesta("caboclos", "032", "O barracão enfeitado de folhas e girassóis"),
+    fotoFesta("caboclos", "038", "A roda dos caboclos"), fotoFesta("caboclos", "046", "Festa dos caboclos"), fotoFesta("caboclos", "042", "Os filhos na roda"),
+    fotoDestaque("044", "Os atabaques cobertos pelo alá"), fotoFesta("caboclos", "052", "O ogã no atabaque"), fotoFesta("caboclos", "051", "O chão coberto de folhas"),
+  ] },
+  { id: "obaluae", mes: 8, titulo: "Festa do Velho Obaluaê (Kavungo)", sub: "agosto de 2024", fotos: [
+    fotoDestaque("004", "Saída do Velho Obaluaê no barracão"), fotoFesta("obaluae", "007", "Os filhos na roda"), fotoFesta("obaluae", "008", "O barracão em festa"),
+    fotoFesta("obaluae", "010", "A roda no barracão"), fotoFesta("obaluae", "011", "Os filhos em festa"),
+  ] },
+  { id: "ibejis", mes: 9, titulo: "Festa dos Ibejis e erês (Nvunji)", fotos: [] },
+  { id: "exu", mes: 11, titulo: "Festa de Exu (Pambu Njila)", fotos: [] },
+  { id: "iansa", mes: 12, titulo: "Festa de Nossa Mãe Iansã (Matamba)", sub: "dezembro de 2025", fotos: [
+    fotoFesta("iansa", "025", "Iansã no barracão"), fotoFesta("iansa", "017", "A festa de dezembro"), fotoFesta("iansa", "015", "A roda em festa"),
+    fotoFesta("iansa", "021", "Os orixás no barracão"), fotoFesta("iansa", "018", "O barracão cheio"), fotoFesta("iansa", "029", "A festa principal da casa"),
+    fotoFesta("iansa", "027", "Dança no barracão"),
+  ] },
+];
+
 /* Dicionário Angola-Congo. "cat" é o assunto; "fonte: cartilha" marca as palavras do
    vocabulário bantu do Unzó Maiala (cartilha Nação Angola). Para incluir uma palavra,
    copie uma linha e troque o texto. Assuntos: casa, culinaria, bichos, natureza, cargos,

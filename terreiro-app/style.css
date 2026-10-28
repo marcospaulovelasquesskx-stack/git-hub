@@ -416,3 +416,18 @@ main { max-width: 760px; margin: 0 auto; outline: none; }
 .abas a span svg { width: 1.7rem; height: 1.7rem; display: block; }
 .abas a span { color: var(--suave); }
 .abas a.ativa span { color: var(--folha); }
+
+/* ---------- Pastas de fotos ---------- */
+.pastas { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.8rem; }
+.pasta { display: flex; flex-direction: column; text-decoration: none; border-radius: var(--raio); overflow: hidden; background: var(--cartao); border: 1px solid var(--linha); box-shadow: var(--sombra); }
+.pasta-capa { aspect-ratio: 4 / 3; display: grid; place-items: center; background: var(--mata); color: var(--ouro-claro); }
+.pasta-capa img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.pasta-capa svg { width: 3rem; height: 3rem; opacity: 0.85; }
+.pasta-txt { display: flex; flex-direction: column; padding: 0.6rem 0.8rem 0.8rem; line-height: 1.3; }
+.pasta-txt small { text-transform: capitalize; color: var(--folha); font-weight: 800; font-size: 0.8rem; }
+.pasta-txt strong { font-size: 0.98rem; }
+.pasta-txt span { color: var(--suave); font-size: 0.85rem; margin-top: 0.2rem; }
+.pasta.vazia .pasta-txt span { font-style: italic; }
+.destaques-titulo { margin-top: 1.6rem; }
+.pasta-mes { text-transform: capitalize; color: var(--folha); font-weight: 800; margin-bottom: 0.2rem; }
+@media (min-width: 640px) { .pastas { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
