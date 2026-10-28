@@ -1,5 +1,5 @@
 // Guarda o app no aparelho para funcionar sem internet.
-const VERSAO = "sete-flechas-v9";
+const VERSAO = "sete-flechas-v10";
 const ARQUIVOS = ["./", "index.html", "style.css", "app.js", "data.js", "cantigas.js", "manifest.webmanifest", "img/logo.png", "img/logo-192.png"];
 
 self.addEventListener("install", (e) => {
