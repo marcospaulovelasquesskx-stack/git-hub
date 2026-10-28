@@ -404,3 +404,15 @@ main { max-width: 760px; margin: 0 auto; outline: none; }
 .aprender-cartao .cantiga { font-size: 1.1rem; }
 .aprender-nav { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.5rem; }
 .aprender-nav .botao { padding: 0.5rem; }
+
+/* ---------- Ícones dos atalhos ---------- */
+.atalhos .icone {
+  width: 3.6rem; height: 3.6rem; border-radius: 50%; display: grid; place-items: center; overflow: hidden;
+  background: var(--mata); color: var(--ouro-claro); box-shadow: inset 0 0 0 2px var(--ouro); font-size: 1rem;
+}
+.atalhos .icone svg { width: 2.4rem; height: 2.4rem; }
+.mosaico { display: grid; grid-template-columns: 1fr 1fr; width: 100%; height: 100%; }
+.mosaico img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.abas a span svg { width: 1.7rem; height: 1.7rem; display: block; }
+.abas a span { color: var(--suave); }
+.abas a.ativa span { color: var(--folha); }

@@ -358,6 +358,44 @@
       `<button class="dia-chip${i === d ? " ativo" : ""}${i === hoje ? " hoje" : ""}" data-dia="${i}" aria-pressed="${i === d}">${dia.nome.slice(0, 3)}</button>`).join("")}</div>`;
   }
 
+  /* ---------- Ícones dos atalhos ----------
+     Desenhos simples ligados ao terreiro, em vez de emojis. */
+  const svg = (corpo) => `<svg viewBox="0 0 48 48" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">${corpo}</svg>`;
+  const ICONES = {
+    // A roda dos inkices: as cores de cada um em volta do centro, como no xirê
+    inkices: () => svg(INKICES.slice(0, 10).map((i, n, a) => {
+      const ang = (n / a.length) * 2 * Math.PI - Math.PI / 2;
+      return `<circle cx="${(24 + 15 * Math.cos(ang)).toFixed(1)}" cy="${(24 + 15 * Math.sin(ang)).toFixed(1)}" r="4.3" fill="${i.cores[0][1]}" stroke="#fff" stroke-width="1.2"/>`;
+    }).join("") + '<circle cx="24" cy="24" r="5" fill="currentColor" stroke="none"/>'),
+    angolaKetu: () => svg('<path d="M9 18h28m-7-7 7 7-7 7"/><path d="M39 31H11m7-7-7 7 7 7"/>'),
+    // Búzios
+    nomes: () => svg([[13, 28, -25], [24, 18, 0], [35, 28, 25]].map(([x, y, a]) =>
+      `<g transform="rotate(${a} ${x} ${y})"><ellipse cx="${x}" cy="${y}" rx="6.5" ry="9"/><path d="M${x} ${y - 6}v12M${x - 2.5} ${y - 3}h5M${x - 2.5} ${y}h5M${x - 2.5} ${y + 3}h5" stroke-width="1.6"/></g>`).join("")),
+    // Cocar de penas
+    caboclos: () => svg([-60, -30, 0, 30, 60].map((a) =>
+      `<g transform="rotate(${a} 24 36)"><path d="M24 34c-3.5-6-3.5-14 0-22 3.5 8 3.5 16 0 22z"/><path d="M24 16v16" stroke-width="1.4"/></g>`).join("") + '<path d="M10 37c9 4 19 4 28 0" stroke-width="3.2"/>'),
+    // Dois erês, os gêmeos
+    eres: () => svg('<circle cx="16" cy="15" r="5"/><path d="M8 40l3-15h10l3 15z"/><circle cx="32" cy="15" r="5"/><path d="M24 40l3-15h10l3 15z"/>'),
+    // Cachimbo do preto-velho
+    pretos: () => svg('<path d="M6 21h16v8a8 8 0 0 1-16 0z"/><path d="M22 26h12l9-7"/><path d="M11 16c-2.5-3 2.5-5 0-9M17 16c-2.5-3 2.5-5 0-9" stroke-width="2"/>'),
+    // Barracão com o mastro e a bandeira branca de Tempo
+    terreiro: () => svg('<path d="M6 24 21 12l15 12"/><path d="M9 22v18h24V22"/><path d="M18 40v-9h6v9"/><path d="M41 40V8"/><path d="M41 9h-8l3 4-3 4h8" fill="#fff"/>'),
+    // Mosaico com fotos de verdade
+    fotos: () => `<span class="mosaico" aria-hidden="true">${GALERIA.slice(0, 4).map((g) => `<img src="${g.foto}" alt="" loading="lazy">`).join("")}</span>`,
+    // Baobá
+    nacao: () => svg('<path d="M20 42c1-8 1-14-1-20h10c-2 6-2 12-1 20"/><path d="M19 22c-4-1-8-4-9-9M29 22c4-1 8-4 9-9M22 22c-1-5-1-10 2-14M26 22c1-5 2-9 5-11"/><path d="M8 13c2-3 6-3 7 0M33 13c2-3 6-3 7 0M20 9c2-3 6-3 8 0" stroke-width="1.8"/><path d="M6 42h36"/>'),
+    // Livro aberto
+    dicionario: () => svg('<path d="M24 14c-5-3-11-3-16-1v25c5-2 11-2 16 1 5-3 11-3 16-1V13c-5-2-11-2-16 1z"/><path d="M24 14v25"/>'),
+    // Atabaque (ngoma)
+    cantigas: () => svg('<ellipse cx="24" cy="10" rx="9" ry="3"/><path d="M15 10l3 31h12l3-31"/><path d="M16 17l15 8M32 17l-15 8M17 27l13 7M31 27l-13 7" stroke-width="1.4"/>'),
+    // Agogô
+    agogo: () => svg('<path d="M7 42l5-19h6l5 19z"/><path d="M28 38l4-14h4l4 14z"/><path d="M15 23c0-9 4-14 9-14s10 5 10 15"/>'),
+    // Calendário das festas
+    festas: () => svg('<rect x="8" y="11" width="32" height="29" rx="4"/><path d="M8 19h32M16 7v8M32 7v8"/><path d="M17 27h3M23 27h3M29 27h3M17 33h3M23 33h3" stroke-width="2.8"/>'),
+    ajustes: () => svg('<circle cx="24" cy="24" r="6"/><path d="M24 6v6M24 36v6M6 24h6M36 24h6M11 11l4 4M33 33l4 4M37 11l-4 4M15 33l-4 4"/>'),
+  };
+  const atalho = (href, icone, texto) => `<a href="${href}"><span class="icone">${ICONES[icone]()}</span>${texto}</a>`;
+
   /* ---------- Telas ---------- */
   const telas = {
     inicio() {
@@ -372,7 +410,7 @@
             <p><b>${CASA.fundacao}</b><span>fundação da casa</span></p>
             <p><b>${CASA.anosDeFeitura}</b><span>anos de feitura de ${esc(CASA.sacerdote)}</span></p>
           </div>
-          ${botaoOuvir("Nossa casa", textoCasa, "casa", "Ouvir a história da casa")}
+          ${botaoOuvir("Nosso terreiro", textoCasa, "casa", "Ouvir a história do terreiro")}
           ${CASA.versao ? `<p class="versao">${esc(CASA.versao)} · app em construção</p>` : ""}
         </section>
 
@@ -401,7 +439,7 @@
         ${prox ? `<section class="bloco"><h2>Próxima festa da casa</h2>${linhaFesta(prox)}</section>` : ""}
 
         <section class="bloco">
-          <h2>Nossa casa em festa</h2>
+          <h2>Nosso terreiro em festa</h2>
           <div class="faixa-fotos">${GALERIA.slice(0, 6).map((g, i) => `<button class="foto" data-foto="${i}"><img src="${g.foto}" alt="${esc(g.legenda)}" loading="lazy"></button>`).join("")}</div>
           <p><a class="mais-link" href="#/galeria">Ver todas as fotos &#8250;</a></p>
         </section>
@@ -409,22 +447,23 @@
         <section class="bloco">
           <h2>Conheça</h2>
           <div class="atalhos">
-            <a href="#/inkices"><span>&#10024;</span>Inkices</a>
-            <a href="#/comparativo"><span>&#8646;</span>Angola e Ketu</a>
-            <a href="#/aprender"><span>&#127919;</span>Aprenda os nomes</a>
-            <a href="#/caboclos"><span>&#127993;</span>Caboclos da casa</a>
-            <a href="#/entidades/eres"><span>&#127880;</span>Erês e Ibejis</a>
-            <a href="#/entidades/pretos-velhos"><span>&#128255;</span>Pretos-Velhos</a>
-            <a href="#/casa"><span>&#127968;</span>Nossa casa</a>
-            <a href="#/galeria"><span>&#128247;</span>Fotos da casa</a>
-            <a href="#/nacao"><span>&#127757;</span>Nação Angola</a>
+            ${atalho("#/inkices", "inkices", "Inkices")}
+            ${atalho("#/comparativo", "angolaKetu", "Angola e Ketu")}
+            ${atalho("#/aprender", "nomes", "Aprenda os nomes")}
+            ${atalho("#/caboclos", "caboclos", "Caboclos da casa")}
+            ${atalho("#/entidades/eres", "eres", "Erês e Ibejis")}
+            ${atalho("#/entidades/pretos-velhos", "pretos", "Pretos-Velhos")}
+            ${atalho("#/casa", "terreiro", "Nosso terreiro")}
+            ${atalho("#/galeria", "fotos", "Fotos do terreiro")}
+            ${atalho("#/nacao", "nacao", "Nação Angola")}
+            ${atalho("#/cantigas", "cantigas", "Cantigas de Angola")}
           </div>
         </section>`;
     },
 
     galeria() {
       return `<section class="bloco">
-        <h1>Fotos da casa</h1>
+        <h1>Fotos do terreiro</h1>
         <p>Festas, cortejos e a Festa das Águas do ${esc(CASA.nome)}. Toque numa foto para ver maior.</p>
         <div class="galeria">${GALERIA.map((g, i) => `<figure><button class="foto" data-foto="${i}"><img src="${g.foto}" alt="${esc(g.legenda)}" loading="lazy"></button><figcaption>${esc(g.legenda)}</figcaption></figure>`).join("")}</div>
       </section>`;
@@ -434,8 +473,8 @@
       const cab = `<div class="lista">${CABOCLOS.map((c) => cartao(c, "#/caboclos/" + c.id)).join("")}</div>`;
       return `<article class="detalhe">
         <header class="capa" style="--c1:#0b5a24;--c2:#1f8a3a"><div class="folhagem" aria-hidden="true"></div>
-          <h1>Nossa casa</h1><p class="ketu">${esc(CASA.nome)} · ${esc(CASA.nacao)}</p></header>
-        <div class="acoes">${botaoOuvir("Nossa casa", CASA.historia.join(" "), "casa", "Ouvir")}</div>
+          <h1>Nosso terreiro</h1><p class="ketu">${esc(CASA.nome)} · ${esc(CASA.nacao)}</p></header>
+        <div class="acoes">${botaoOuvir("Nosso terreiro", CASA.historia.join(" "), "casa", "Ouvir")}</div>
         <section><h2>História</h2>${CASA.historia.map((p) => `<p>${esc(p)}</p>`).join("")}</section>
         <section><h2>Zelador</h2><dl class="ficha">
           <div><dt>Nome</dt><dd>${esc(CASA.sacerdote)}</dd></div>
@@ -445,7 +484,7 @@
           <div><dt>Donos da cabeça</dt><dd>${CASA.donosDaCabeca.map((d) => `<a href="#/inkices/${d.id}">${esc(d.angola)} (${esc(d.ketu)})</a>`).join(" e ")}</dd></div>
         </dl><p>${esc(CASA.regencia)}</p></section>
         <section><h2>Caboclos da casa</h2>${cab}</section>
-        <section><h2>Fotos</h2><p><a class="botao" href="#/galeria">&#128247; Ver as fotos da casa</a></p></section>
+        <section><h2>Fotos</h2><p><a class="botao" href="#/galeria">Ver as fotos do terreiro &#8250;</a></p></section>
       </article>`;
     },
 
@@ -519,12 +558,14 @@
       return `<section class="bloco">
         <h1>Saber mais</h1>
         <div class="atalhos">
-          <a href="#/nacao"><span>&#127757;</span>A nação Angola</a>
-          <a href="#/dicionario"><span>&#128172;</span>Dicionário Angola-Congo</a>
-          <a href="#/cantigas"><span>&#127926;</span>Cantigas de Angola</a>
-          <a href="#/aprender-cantigas"><span>&#127891;</span>Aprender cantigas</a>
-          <a href="#/casa"><span>&#127968;</span>Nossa casa</a>
-          <a href="#/sobre"><span>&#9881;</span>Ajustes e ajuda</a>
+          ${atalho("#/nacao", "nacao", "A nação Angola")}
+          ${atalho("#/comparativo", "angolaKetu", "Angola e Ketu")}
+          ${atalho("#/dicionario", "dicionario", "Dicionário Angola-Congo")}
+          ${atalho("#/cantigas", "cantigas", "Cantigas de Angola")}
+          ${atalho("#/aprender-cantigas", "agogo", "Aprender cantigas")}
+          ${atalho("#/casa", "terreiro", "Nosso terreiro")}
+          ${atalho("#/galeria", "fotos", "Fotos do terreiro")}
+          ${atalho("#/sobre", "ajustes", "Ajustes e ajuda")}
         </div>
       </section>`;
     },
@@ -879,6 +920,13 @@
     if (b) mostrarFoto(+b.dataset.foto);
   });
   window.addEventListener("hashchange", () => { visor.hidden = true; });
+
+  // A barra de baixo usa os mesmos desenhos dos atalhos.
+  const ICONES_ABAS = { inicio: "terreiro", inkices: "inkices", entidades: "caboclos", calendario: "festas", mais: "dicionario" };
+  document.querySelectorAll(".abas a").forEach((a) => {
+    const nome = ICONES_ABAS[a.dataset.aba];
+    if (nome) a.querySelector("span").innerHTML = ICONES[nome]();
+  });
 
   $("#voltar").onclick = () => history.back();
   window.addEventListener("hashchange", rota);
