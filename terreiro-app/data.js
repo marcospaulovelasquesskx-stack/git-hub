@@ -9,27 +9,37 @@
  */
 
 window.CASA = {
-  nome: "Terreiro de Caboclos e Guias",
+  nome: "Centro do Caboclo Sete Flechas",
+  nomeCurto: "Caboclo Sete Flechas",
   nacao: "Nação Angola-Congo",
-  logo: "img/logo.png", // coloque a logomarca do terreiro com este nome na pasta img/
+  logo: "img/logo.png", // brasão oficial da casa
+  fundacao: 1985, // quando souber o dia e o mês, coloque aqui também: ex. "15 de março de 1985"
   sacerdote: "Pai Adilson",
   titulo: "Tata de Inkice (Babalorixá)",
   anosDeFeitura: 52,
   regencia:
-    "Há 52 anos a casa é conduzida pelo mesmo zelador, Pai Adilson, sem nenhuma sucessão. " +
-    "É meio século de axé guardado, ensinado e passado de mão em mão aos filhos da casa.",
+    "Pai Adilson tem 52 anos de feitura e conduz a casa desde a sua fundação, em 1985, sem nenhuma sucessão. " +
+    "É axé guardado, ensinado e passado de mão em mão aos filhos da casa.",
   donosDaCabeca: [
     { ketu: "Oxóssi", angola: "Mutalambô", id: "mutalambo" },
     { ketu: "Iansã", angola: "Matamba", id: "matamba" },
   ],
   historia: [
-    "O Terreiro de Caboclos e Guias é uma casa de candomblé da nação Angola-Congo, de raiz banto: a mesma tradição trazida ao Brasil pelos povos de Angola e do Congo.",
-    "A casa é regida há 52 anos por Pai Adilson, filho de Oxóssi com Iansã (Mutalambô e Matamba, na língua de Angola). Nesse tempo todo não houve sucessão, e o axé da casa é o mesmo desde a sua fundação.",
-    "Como o próprio nome diz, os caboclos e os guias têm um lugar de honra na casa. São eles que estão à frente no dia a dia, conduzindo as reuniões, os toques e os festejos.",
-    "Espaço reservado: aqui entra a história completa do terreiro, contada pelos mais velhos (ano de fundação, cidade, quem iniciou o Pai Adilson, as primeiras feituras, os momentos marcantes).",
+    "O Centro do Caboclo Sete Flechas é uma casa de candomblé da nação Angola-Congo, de raiz banto: a mesma tradição trazida ao Brasil pelos povos de Angola e do Congo.",
+    "A casa foi fundada em 1985 e, desde então, é regida por Pai Adilson, filho de Oxóssi com Iansã (Mutalambô e Matamba, na língua de Angola), com 52 anos de feitura. Nesse tempo todo não houve sucessão, e o axé da casa é o mesmo desde a sua fundação.",
+    "O nome da casa já diz quem está à frente: o Caboclo Sete Flechas. Os caboclos e os guias têm um lugar de honra aqui. São eles que conduzem, no dia a dia, as reuniões, os toques e os festejos.",
+    "O brasão da casa reúne a flecha e o arco, ligados a Mutalambô e aos caboclos caçadores, e o cálice, entre as folhas da mata.",
+    "Espaço reservado: aqui entra a história completa do terreiro, contada pelos mais velhos (dia e mês da fundação, cidade, quem iniciou o Pai Adilson, as primeiras feituras, os momentos marcantes).",
   ],
   caboclosDaCasa: [
-    // Preencha com os caboclos que estão à frente da casa. Exemplo:
+    {
+      nome: "Caboclo Sete Flechas",
+      texto:
+        "Patrono da casa, que leva o seu nome. Sete Flechas é um caboclo caçador, da linha de Oxóssi (Mutalambô): " +
+        "senhor da mata, das ervas e da cura, conhecido por acertar o alvo e abrir os caminhos dos seus filhos. " +
+        "A história dele na nossa casa será contada aqui pelos mais velhos.",
+    },
+    // Acrescente os outros caboclos que estão à frente da casa:
     // { nome: "Caboclo ...", texto: "Quem é, como chegou na casa, o que gosta..." },
   ],
   festas: [
@@ -344,7 +354,7 @@ window.ENTIDADES = [
       "Quando os povos bantos chegaram ao Brasil, trouxeram um ensinamento: é preciso respeitar os donos da terra onde se pisa. Em Angola, cada lugar tem os seus ancestrais. Aqui, os donos da terra eram os povos indígenas. Por isso, foi nas casas de Angola que o culto aos caboclos nasceu e cresceu.",
       "O caboclo é o espírito do indígena brasileiro, que conhece a mata, as ervas e o caminho. Há caboclos de pena, que são os guerreiros e caçadores, e há os boiadeiros, os vaqueiros do sertão que tocavam o gado.",
       "Na Bahia, o caboclo virou também símbolo da liberdade. No 2 de julho, dia da Independência da Bahia, o povo desfila com o Caboclo e a Cabocla, que representam o povo que expulsou o colonizador.",
-      "No Terreiro de Caboclos e Guias, eles não são visita: são liderança. São os caboclos que conduzem as reuniões e os festejos, que aconselham e que cuidam dos filhos da casa no dia a dia.",
+      "No Centro do Caboclo Sete Flechas, eles não são visita: são liderança. São os caboclos que conduzem as reuniões e os festejos, que aconselham e que cuidam dos filhos da casa no dia a dia.",
     ],
   },
   {

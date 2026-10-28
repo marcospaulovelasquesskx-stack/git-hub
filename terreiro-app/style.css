@@ -1,37 +1,44 @@
 :root {
   --escala: 1.15;
-  --mata: #1e3a22;
-  --folha: #3f7f34;
-  --folha-clara: #dfe9d3;
-  --terra: #6d3b1f;
-  --ouro: #d9a62e;
-  --papel: #f4ede0;
-  --cartao: #fffaf1;
-  --tinta: #24201b;
-  --suave: #5f574c;
-  --linha: #e2d6c1;
+  /* Identidade do brasão: verde-esmeralda da mata, ouro antigo e branco. */
+  --mata: #0b5a24;
+  --mata-funda: #063d17;
+  --folha: #13843a;
+  --folha-clara: #e1f0dc;
+  --terra: #063d17;
+  --ouro: #c9a23a;
+  --ouro-claro: #f3dc8f;
+  --papel: #f5f8f1;
+  --cartao: #ffffff;
+  --tinta: #17241a;
+  --suave: #4d5e50;
+  --linha: #d4e2cf;
   --sombra: 0 2px 10px rgba(40, 30, 10, 0.12);
   --raio: 18px;
 }
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --papel: #141a14;
-    --cartao: #1e261d;
-    --tinta: #f1ead9;
-    --suave: #bdb3a0;
-    --linha: #33402f;
-    --folha-clara: #263623;
+    --papel: #0c140e;
+    --cartao: #142118;
+    --tinta: #eef3e8;
+    --suave: #a9b8a8;
+    --linha: #26402c;
+    --folha: #4fbf6a;
+    --folha-clara: #1b3321;
+    color-scheme: dark;
     --sombra: 0 2px 10px rgba(0, 0, 0, 0.4);
   }
 }
 :root[data-theme="dark"] {
-  --papel: #141a14;
-  --cartao: #1e261d;
-  --tinta: #f1ead9;
-  --suave: #bdb3a0;
-  --linha: #33402f;
-  --folha-clara: #263623;
+  --papel: #0c140e;
+  --cartao: #142118;
+  --tinta: #eef3e8;
+  --suave: #a9b8a8;
+  --linha: #26402c;
+  --folha: #4fbf6a;
+  --folha-clara: #1b3321;
+  color-scheme: dark;
 }
 
 * { box-sizing: border-box; }
@@ -58,10 +65,10 @@ button { font: inherit; cursor: pointer; }
   position: sticky; top: 0; z-index: 10;
   display: flex; align-items: center; gap: 0.5rem;
   padding: 0.5rem 1rem; padding-top: calc(0.5rem + env(safe-area-inset-top));
-  background: var(--mata); color: #fff;
+  background: var(--mata); color: #fff; border-bottom: 2px solid var(--ouro);
 }
 .marca { display: flex; align-items: center; gap: 0.5rem; text-decoration: none; font-family: "Fraunces", serif; font-weight: 800; flex: 1; min-width: 0; }
-.marca img { width: 2.2rem; height: 2.2rem; border-radius: 50%; object-fit: cover; background: #fff1; }
+.marca img { width: 2.6rem; height: 2.6rem; object-fit: contain; filter: drop-shadow(0 1px 2px #0006); }
 .marca span { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .voltar, .fonte button {
   min-width: 2.75rem; height: 2.75rem; border-radius: 12px; border: 1px solid #ffffff40;
@@ -100,11 +107,16 @@ main { max-width: 760px; margin: 0 auto; outline: none; }
 .hero {
   position: relative; overflow: hidden; text-align: center; color: #fff;
   padding: 2rem 1rem 1.8rem;
-  background: radial-gradient(circle at 50% 0%, #4f8f3c 0%, var(--mata) 60%, #142817 100%);
+  background: radial-gradient(circle at 50% 30%, #1f9a45 0%, var(--mata) 55%, var(--mata-funda) 100%);
+  border-bottom: 4px solid var(--ouro);
   border-radius: 0 0 32px 32px;
 }
-.hero .logo { width: 7.5rem; height: 7.5rem; border-radius: 50%; object-fit: cover; border: 4px solid var(--ouro); background: var(--mata); position: relative; }
-.hero .nacao { margin: 0.8rem 0 0.2rem; letter-spacing: 0.15em; text-transform: uppercase; font-size: 0.8rem; color: #f0d68a; }
+.hero .logo { width: 13rem; max-width: 80%; height: auto; position: relative; filter: drop-shadow(0 8px 18px #0008); }
+.hero .nacao { margin: 0.6rem 0 0.2rem; letter-spacing: 0.15em; text-transform: uppercase; font-size: 0.8rem; color: var(--ouro-claro); position: relative; }
+.marcos { position: relative; display: flex; justify-content: center; gap: 0.8rem; margin: 0.4rem 0 1rem; }
+.marcos p { margin: 0; flex: 1; max-width: 10rem; padding: 0.5rem; border: 1px solid #ffffff40; border-radius: 14px; background: #00000026; display: flex; flex-direction: column; line-height: 1.2; }
+.marcos b { font-family: "Fraunces", serif; font-size: 1.6rem; color: var(--ouro-claro); }
+.marcos span { font-size: 0.8rem; }
 .hero h1 { font-size: 2rem; position: relative; }
 .hero .anos { position: relative; }
 .hero .anos b { font-family: "Fraunces", serif; font-size: 1.6rem; color: var(--ouro); }
@@ -211,7 +223,7 @@ main { max-width: 760px; margin: 0 auto; outline: none; }
   display: flex; flex-direction: column; align-items: center; justify-content: center; line-height: 1;
 }
 .data b { font-size: 1.3rem; font-family: "Fraunces", serif; }
-.data small { text-transform: uppercase; font-size: 0.7rem; color: #f0d68a; }
+.data small { text-transform: uppercase; font-size: 0.7rem; color: var(--ouro-claro); }
 .festa-txt { display: flex; flex-direction: column; }
 .festa-txt small { color: var(--folha); font-weight: 800; }
 .festa-txt > span { color: var(--suave); font-size: 0.92rem; }
@@ -228,7 +240,7 @@ main { max-width: 760px; margin: 0 auto; outline: none; }
   position: fixed; left: 0.6rem; right: 0.6rem; z-index: 11;
   bottom: calc(4.6rem + env(safe-area-inset-bottom));
   display: flex; align-items: center; gap: 0.6rem; padding: 0.6rem 0.8rem;
-  background: var(--terra); color: #fff; border-radius: 18px; box-shadow: 0 4px 20px #0006;
+  background: var(--terra); color: #fff; border: 2px solid var(--ouro); border-radius: 18px; box-shadow: 0 4px 20px #0006;
   max-width: 740px; margin: 0 auto;
 }
 .player-info { flex: 1; min-width: 0; display: flex; flex-direction: column; }

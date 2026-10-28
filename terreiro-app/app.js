@@ -15,12 +15,6 @@
   $("#mais").onclick = () => { prefs.fonte = Math.min(1.8, +(prefs.fonte + 0.1).toFixed(2)); aplicarFonte(); salvarPrefs(); };
   $("#menos").onclick = () => { prefs.fonte = Math.max(0.9, +(prefs.fonte - 0.1).toFixed(2)); aplicarFonte(); salvarPrefs(); };
 
-  /* ---------- Logomarca: se existir img/logo.png, ela substitui o ícone ---------- */
-  let temLogo = false;
-  const testeLogo = new Image();
-  testeLogo.onload = () => { temLogo = true; $("#logo-topo").src = CASA.logo; rota(); };
-  testeLogo.src = CASA.logo;
-
   /* ---------- Áudio ----------
      Se houver uma gravação em audio/<id>.mp3 (por exemplo, a voz do Pai Adilson
      ou de um mais velho), ela é tocada. Se não houver, o próprio aparelho lê o texto. */
@@ -280,10 +274,13 @@
       const textoCasa = [CASA.nome, CASA.nacao, ...CASA.historia.filter((p) => !p.startsWith("Espaço reservado"))].join(". ");
       return `<section class="hero">
           <div class="folhagem" aria-hidden="true"></div>
-          <img class="logo" src="${temLogo ? CASA.logo : "img/icone.svg"}" alt="Logomarca do ${esc(CASA.nome)}">
+          <img class="logo" src="${CASA.logo}" alt="Brasão do ${esc(CASA.nome)}">
           <p class="nacao">${esc(CASA.nacao)}</p>
           <h1>${esc(CASA.nome)}</h1>
-          <p class="anos"><b>${CASA.anosDeFeitura}</b> anos de axé com ${esc(CASA.sacerdote)}</p>
+          <div class="marcos">
+            <p><b>${CASA.fundacao}</b><span>fundação da casa</span></p>
+            <p><b>${CASA.anosDeFeitura}</b><span>anos de feitura de ${esc(CASA.sacerdote)}</span></p>
+          </div>
           ${botaoOuvir("Nossa casa", textoCasa, "casa", "Ouvir a história da casa")}
         </section>
 
@@ -318,13 +315,14 @@
         ? CASA.caboclosDaCasa.map((c) => `<div class="caixa"><h3>${esc(c.nome)}</h3><p>${esc(c.texto)}</p>${botaoOuvir(c.nome, c.nome + ". " + c.texto)}</div>`).join("")
         : `<p class="aviso">Em breve: os caboclos que estão à frente da nossa casa, com as suas histórias contadas pelos mais velhos.</p>`;
       return `<article class="detalhe">
-        <header class="capa" style="--c1:#1e3a22;--c2:#6d3b1f"><div class="folhagem" aria-hidden="true"></div>
+        <header class="capa" style="--c1:#0b5a24;--c2:#1f8a3a"><div class="folhagem" aria-hidden="true"></div>
           <h1>Nossa casa</h1><p class="ketu">${esc(CASA.nome)} · ${esc(CASA.nacao)}</p></header>
         <div class="acoes">${botaoOuvir("Nossa casa", CASA.historia.join(" "), "casa", "Ouvir")}</div>
         <section><h2>História</h2>${CASA.historia.map((p) => `<p>${esc(p)}</p>`).join("")}</section>
         <section><h2>Zelador</h2><dl class="ficha">
           <div><dt>Nome</dt><dd>${esc(CASA.sacerdote)}</dd></div>
           <div><dt>Cargo</dt><dd>${esc(CASA.titulo)}</dd></div>
+          <div><dt>Fundação da casa</dt><dd>${CASA.fundacao}</dd></div>
           <div><dt>Tempo de feitura</dt><dd>${CASA.anosDeFeitura} anos</dd></div>
           <div><dt>Donos da cabeça</dt><dd>${CASA.donosDaCabeca.map((d) => `<a href="#/inkices/${d.id}">${esc(d.angola)} (${esc(d.ketu)})</a>`).join(" e ")}</dd></div>
         </dl><p>${esc(CASA.regencia)}</p></section>
@@ -395,7 +393,7 @@
           <h2>Velocidade da voz</h2>
           <input type="range" id="vel" min="0.6" max="1.3" step="0.05" value="${prefs.velocidade}" aria-label="Velocidade da voz">
           <p><span id="vel-txt"></span></p>
-          ${botaoOuvir("Teste", "Kiuá! Este é um teste da voz do aplicativo do Terreiro de Caboclos e Guias.", null, "Testar voz")}
+          ${botaoOuvir("Teste", "Kiuá! Este é um teste da voz do aplicativo do Centro do Caboclo Sete Flechas.", null, "Testar voz")}
         </div>
         <div class="caixa">
           <h2>Tamanho da letra</h2>

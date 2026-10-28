@@ -1,4 +1,4 @@
-# App do Terreiro de Caboclos e Guias
+# App do Centro do Caboclo Sete Flechas
 
 Aplicativo para ler e **ouvir** as histórias dos inkices da nação Angola-Congo (com o nome correspondente no Ketu), dos caboclos, erês, ibejis e pretos-velhos, além da história da casa, do calendário de festas e de um glossário.
 
@@ -18,7 +18,7 @@ Depois abra `http://localhost:8000`. Para todos da casa usarem, publique a pasta
 
 ## Como personalizar
 
-- **Logomarca:** salve a imagem como `img/logo.png`.
+- **Logomarca:** o brasão oficial está em `img/logo.png` (e `img/logo-192.png` para o ícone).
 - **Textos:** tudo fica em `data.js` (história da casa, caboclos da casa, festas, inkices, guias, glossário).
 - **Gravações:** veja `audio/LEIAME.md`.
 

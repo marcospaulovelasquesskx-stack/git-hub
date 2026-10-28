@@ -1,6 +1,6 @@
 // Guarda o app no aparelho para funcionar sem internet.
-const VERSAO = "caboclos-guias-v1";
-const ARQUIVOS = ["./", "index.html", "style.css", "app.js", "data.js", "manifest.webmanifest", "img/icone.svg"];
+const VERSAO = "sete-flechas-v2";
+const ARQUIVOS = ["./", "index.html", "style.css", "app.js", "data.js", "manifest.webmanifest", "img/logo.png", "img/logo-192.png"];
 
 self.addEventListener("install", (e) => {
   e.waitUntil(caches.open(VERSAO).then((c) => c.addAll(ARQUIVOS)).then(() => self.skipWaiting()));
