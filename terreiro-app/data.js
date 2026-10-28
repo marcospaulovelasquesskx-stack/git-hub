@@ -27,21 +27,11 @@ window.CASA = {
   historia: [
     "O Centro do Caboclo Sete Flechas é uma casa de candomblé da nação Angola-Congo, de raiz banto: a mesma tradição trazida ao Brasil pelos povos de Angola e do Congo.",
     "A casa foi fundada em 1985 e, desde então, é regida por Pai Adilson, filho de Oxóssi com Iansã (Mutalambô e Matamba, na língua de Angola), com 52 anos de feitura. Nesse tempo todo não houve sucessão, e o axé da casa é o mesmo desde a sua fundação.",
-    "O nome da casa já diz quem está à frente: o Caboclo Sete Flechas. Os caboclos e os guias têm um lugar de honra aqui. São eles que conduzem, no dia a dia, as reuniões, os toques e os festejos.",
+    "O nome da casa já diz quem é o pai maior: o Caboclo Sete Flechas. Ao lado dele estão o Caboclo Itupiaçu de Guiné, também pai da casa, e os caboclos Pena Branca, Laje Grande, Boiadeiro, Gentil das Matas, Rei de Congo e a Cabocla Jussara. São eles que conduzem, no dia a dia, as reuniões, os toques e os festejos.",
     "O brasão da casa reúne a flecha e o arco, ligados a Mutalambô e aos caboclos caçadores, e o cálice, entre as folhas da mata.",
     "Espaço reservado: aqui entra a história completa do terreiro, contada pelos mais velhos (dia e mês da fundação, cidade, quem iniciou o Pai Adilson, as primeiras feituras, os momentos marcantes).",
   ],
-  caboclosDaCasa: [
-    {
-      nome: "Caboclo Sete Flechas",
-      texto:
-        "Patrono da casa, que leva o seu nome. Sete Flechas é um caboclo caçador, da linha de Oxóssi (Mutalambô): " +
-        "senhor da mata, das ervas e da cura, conhecido por acertar o alvo e abrir os caminhos dos seus filhos. " +
-        "A história dele na nossa casa será contada aqui pelos mais velhos.",
-    },
-    // Acrescente os outros caboclos que estão à frente da casa:
-    // { nome: "Caboclo ...", texto: "Quem é, como chegou na casa, o que gosta..." },
-  ],
+  versao: "Prévia", // apague (deixe "") quando o app estiver 100% pronto para o lançamento
   festas: [
     { mes: 4, dia: null, titulo: "Festa de Oxóssi (Mutalambô)", texto: "Grande festa do dono da cabeça do Pai Adilson. Dia exato a confirmar com a casa.", id: "mutalambo" },
     { mes: 11, dia: 20, titulo: "Dia da Consciência Negra", texto: "Celebração da memória e da resistência do povo negro, guardião da nossa fé." },
@@ -338,6 +328,165 @@ window.INKICES = [
   },
 ];
 
+/* Os caboclos da nossa roça.
+   Cada um tem a sua página. Os textos marcados como provisórios trazem o que se
+   conta em geral sobre caboclos com esse nome e devem ser trocados pelas histórias
+   contadas pelos mais velhos da casa.
+
+   Para colocar um cântico, escreva a letra em "cantigas", por exemplo:
+     cantigas: [{ titulo: "Chegada", letra: "Primeiro verso\nSegundo verso" }],
+   e grave o áudio como audio/<id>-cantiga.mp3 (ex.: audio/sete-flechas-cantiga.mp3). */
+const OFERENDAS_CABOCLO = ["Frutas da mata", "Milho verde cozido", "Mel", "Charuto", "Jurema ou vinho (bebida da casa)", "Abóbora, cana e coco"];
+const FOLHAS_CABOCLO = ["Jurema", "Guiné", "Alfavaca-de-caboclo", "Eucalipto", "Abre-caminho", "Fumo"];
+
+window.CABOCLOS = [
+  {
+    id: "sete-flechas",
+    nome: "Caboclo Sete Flechas",
+    destaque: "Nosso pai maior",
+    linha: "Linha de Oxóssi (Mutalambô), caboclo de pena",
+    resumo: "O pai maior da casa, que dá nome ao Centro do Caboclo Sete Flechas. Caçador, curador e guia dos seus filhos.",
+    cores: [["Verde", "#0b5a24"], ["Branco", "#f2efe6"], ["Ouro", "#c9a23a"]],
+    dia: "Quinta-feira",
+    saudacao: "Okê caboclo! (confira a saudação usada na casa)",
+    elementos: "A mata, o arco e as sete flechas",
+    folhas: FOLHAS_CABOCLO,
+    oferendas: OFERENDAS_CABOCLO,
+    festa: "Data da festa a confirmar com a casa.",
+    historia: [
+      "O Caboclo Sete Flechas é o pai maior da nossa casa. O seu nome está no brasão, cercado de folhas, com o arco, a flecha e o cálice.",
+      "Em muitas casas se conta que Sete Flechas é um caboclo caçador da linha de Oxóssi, que conhece cada folha da mata e cada caminho. As suas sete flechas são lembradas como sete caminhos que ele abre para os seus filhos, e como a certeza de quem nunca erra o alvo.",
+      "Texto provisório: a história do Caboclo Sete Flechas na nossa casa, como ele chegou, o que ele ensina e as suas passagens marcantes, será contada aqui pelos mais velhos.",
+    ],
+  },
+  {
+    id: "itupiacu",
+    nome: "Caboclo Itupiaçu de Guiné",
+    destaque: "Pai da casa",
+    linha: "A confirmar com a casa",
+    resumo: "Também pai da casa, ao lado do Caboclo Sete Flechas.",
+    cores: [["Verde", "#13843a"], ["Branco", "#f2efe6"]],
+    dia: "A confirmar com a casa",
+    saudacao: "Confira a saudação usada na casa",
+    elementos: "A mata e as águas",
+    folhas: ["Guiné", ...FOLHAS_CABOCLO.filter((f) => f !== "Guiné")],
+    oferendas: OFERENDAS_CABOCLO,
+    festa: "Data da festa a confirmar com a casa.",
+    historia: [
+      "O Caboclo Itupiaçu de Guiné é também pai da nossa casa e caminha ao lado do Caboclo Sete Flechas.",
+      "O nome Itupiaçu lembra palavras do tupi: itu, que quer dizer cachoeira ou salto de água, e açu, que quer dizer grande. Guiné é o nome de uma das folhas mais fortes dos caboclos, usada para limpar e proteger, e também o nome de uma terra da África. Qual desses sentidos é o dele, os mais velhos da casa é que sabem contar.",
+      "Texto provisório: a história do Caboclo Itupiaçu de Guiné na nossa casa será contada aqui pelos mais velhos.",
+    ],
+  },
+  {
+    id: "pena-branca",
+    nome: "Caboclo Pena Branca",
+    destaque: "Muito importante na casa",
+    linha: "Em muitas casas, linha de Oxóssi (algumas ligam a Oxalá)",
+    resumo: "Caboclo sábio e curador, de muita paz e muito conselho.",
+    cores: [["Branco", "#f2efe6"], ["Verde", "#2e7d32"]],
+    dia: "Quinta-feira (confirme com a casa)",
+    saudacao: "Okê caboclo! (confira a saudação usada na casa)",
+    elementos: "A mata, a pena branca, a fumaça do charuto",
+    folhas: FOLHAS_CABOCLO,
+    oferendas: OFERENDAS_CABOCLO,
+    festa: "Data da festa a confirmar com a casa.",
+    historia: [
+      "O Caboclo Pena Branca é um dos caboclos mais conhecidos e respeitados nas casas de santo. A pena branca no seu cocar é lembrada como sinal de paz e de sabedoria.",
+      "Em muitas casas se conta que Pena Branca é um grande curador, que conhece as ervas e dá conselhos com calma, ensinando a resolver as coisas sem pressa e sem briga.",
+      "Texto provisório: a história do Caboclo Pena Branca na nossa casa, e por que ele é tão importante para nós, será contada aqui pelos mais velhos.",
+    ],
+  },
+  {
+    id: "laje-grande",
+    nome: "Caboclo Laje Grande",
+    linha: "A confirmar com a casa (o nome lembra as pedreiras, ligadas a Xangô)",
+    resumo: "Caboclo firme como a pedra, ligado às lajes e às pedreiras.",
+    cores: [["Verde", "#2f6b2f"], ["Marrom", "#7a5230"]],
+    dia: "A confirmar com a casa",
+    saudacao: "Confira a saudação usada na casa",
+    elementos: "As pedras, as lajes, as cachoeiras",
+    folhas: FOLHAS_CABOCLO,
+    oferendas: OFERENDAS_CABOCLO,
+    festa: "Data da festa a confirmar com a casa.",
+    historia: [
+      "Laje é a pedra grande e lisa que aparece nas serras e nas beiras de cachoeira. Um caboclo com esse nome lembra firmeza: aquilo que não se move com o vento nem com a correnteza.",
+      "Texto provisório: a história do Caboclo Laje Grande na nossa casa será contada aqui pelos mais velhos.",
+    ],
+  },
+  {
+    id: "boiadeiro",
+    nome: "Boiadeiro",
+    linha: "Caboclo boiadeiro (vaqueiro do sertão)",
+    resumo: "O vaqueiro do sertão, que toca a boiada e reúne os seus como reúne o gado.",
+    cores: [["Marrom", "#6d3b1f"], ["Couro", "#a0703a"], ["Branco", "#f2efe6"]],
+    dia: "A confirmar com a casa",
+    saudacao: "Xetro marrumbaxetro! (confira a saudação usada na casa)",
+    elementos: "O laço, o chicote, o chapéu de couro, o sertão",
+    folhas: FOLHAS_CABOCLO,
+    oferendas: ["Carne seca", "Feijão-tropeiro", "Abóbora", "Cachaça ou vinho", "Fumo de rolo", "Frutas"],
+    festa: "Data da festa a confirmar com a casa.",
+    historia: [
+      "Os boiadeiros são os caboclos do sertão: vaqueiros que viveram tocando boiada pelas estradas de terra, sob sol forte, de chapéu e gibão de couro.",
+      "Chegam laçando, com o chicote na mão, e são conhecidos por afastar o que é ruim com a mesma força com que conduzem o gado. São trabalhadores, alegres e muito leais aos seus.",
+      "Texto provisório: a história do Boiadeiro da nossa casa, com o seu nome completo e as suas passagens, será contada aqui pelos mais velhos.",
+    ],
+  },
+  {
+    id: "gentil-das-matas",
+    nome: "Caboclo Gentil das Matas",
+    linha: "Linha de Oxóssi (confirme com a casa)",
+    resumo: "Caboclo das matas, de nome gentil e coração protetor.",
+    cores: [["Verde", "#2e7d32"], ["Branco", "#f2efe6"]],
+    dia: "Quinta-feira (confirme com a casa)",
+    saudacao: "Okê caboclo! (confira a saudação usada na casa)",
+    elementos: "A mata fechada, as árvores, os bichos",
+    folhas: FOLHAS_CABOCLO,
+    oferendas: OFERENDAS_CABOCLO,
+    festa: "Data da festa a confirmar com a casa.",
+    historia: [
+      "O próprio nome já diz muito: Gentil das Matas é o caboclo que mora na mata e trata a todos com gentileza. Conhece os caminhos escondidos, as folhas e os bichos, e protege quem entra na mata com respeito.",
+      "Texto provisório: a história do Caboclo Gentil das Matas na nossa casa será contada aqui pelos mais velhos.",
+    ],
+  },
+  {
+    id: "jussara",
+    nome: "Cabocla Jussara",
+    linha: "A confirmar com a casa",
+    resumo: "Cabocla da mata, com o nome da palmeira juçara, da Mata Atlântica.",
+    cores: [["Verde", "#2e7d32"], ["Amarelo", "#d4a017"]],
+    dia: "A confirmar com a casa",
+    saudacao: "Okê cabocla! (confira a saudação usada na casa)",
+    elementos: "A mata, as palmeiras, as águas",
+    folhas: FOLHAS_CABOCLO,
+    oferendas: [...OFERENDAS_CABOCLO, "Flores"],
+    festa: "Data da festa a confirmar com a casa.",
+    historia: [
+      "Jussara, ou juçara, é o nome de uma palmeira da Mata Atlântica, de onde vêm o palmito e um fruto roxo parecido com o açaí. É uma árvore alta, elegante e generosa, que alimenta os bichos e as pessoas.",
+      "A Cabocla Jussara traz essa força feminina da mata: bonita, firme e cuidadosa com os seus.",
+      "Texto provisório: a história da Cabocla Jussara na nossa casa será contada aqui pelos mais velhos.",
+    ],
+  },
+  {
+    id: "rei-de-congo",
+    nome: "Caboclo Rei de Congo",
+    linha: "A confirmar com a casa",
+    resumo: "Caboclo cujo nome lembra o antigo Reino do Congo, raiz da nossa nação.",
+    cores: [["Verde", "#2e7d32"], ["Vermelho", "#a32020"], ["Ouro", "#c9a23a"]],
+    dia: "A confirmar com a casa",
+    saudacao: "Confira a saudação usada na casa",
+    elementos: "A coroa, a mata, a memória dos reis",
+    folhas: FOLHAS_CABOCLO,
+    oferendas: OFERENDAS_CABOCLO,
+    festa: "Data da festa a confirmar com a casa.",
+    historia: [
+      "O nome Rei de Congo lembra o antigo Reino do Congo, na África central, terra dos povos bantos de onde vem a nossa nação Angola-Congo. No Brasil, a memória dos reis do Congo continua viva nas congadas e nos reinados.",
+      "Um caboclo com esse nome junta as duas raízes da casa: a terra brasileira dos caboclos e a ancestralidade banto.",
+      "Texto provisório: a história do Caboclo Rei de Congo na nossa casa será contada aqui pelos mais velhos.",
+    ],
+  },
+];
+
 /* Entidades que vêm à terra e conversam com a comunidade. */
 window.ENTIDADES = [
   {
@@ -346,7 +495,7 @@ window.ENTIDADES = [
     resumo: "Os donos da terra brasileira, espíritos dos indígenas e dos boiadeiros. Na nossa casa, são os guias que estão à frente.",
     cores: [["Verde", "#2e6b2e"], ["Branco", "#f2efe6"], ["Penas", "#c9a227"]],
     dia: "Quinta-feira (em muitas casas)",
-    saudacao: "Êta caboclo! / Okê caboclo! / Xetro marrombaxetro!",
+    saudacao: "Okê caboclo! / Êta caboclo! (para os boiadeiros: Xetro marrumbaxetro!)",
     folhas: ["Jurema", "Alfavaca-de-caboclo", "Guiné", "Eucalipto", "Abre-caminho", "Fumo"],
     oferendas: ["Frutas da mata", "Milho cozido", "Mel", "Charuto", "Vinho ou jurema (bebida da casa)", "Abóbora"],
     festa: "Muitas casas fazem a festa de caboclo em 2 de julho (Independência da Bahia) ou em 7 de setembro.",

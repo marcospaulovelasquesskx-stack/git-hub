@@ -125,7 +125,7 @@ main { max-width: 760px; margin: 0 auto; outline: none; }
 .donos { display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem; }
 .dono {
   text-decoration: none; color: #fff; padding: 1rem; border-radius: var(--raio);
-  background: linear-gradient(135deg, var(--c1), var(--c2)); box-shadow: var(--sombra);
+  background: var(--mata); background: linear-gradient(135deg, color-mix(in srgb, var(--c1) 72%, #08240f), color-mix(in srgb, var(--c2) 40%, #08240f)); box-shadow: var(--sombra);
   display: flex; flex-direction: column; min-height: 5.5rem; justify-content: flex-end;
   text-shadow: 0 1px 3px #0008;
 }
@@ -175,7 +175,8 @@ main { max-width: 760px; margin: 0 auto; outline: none; }
 .capa {
   position: relative; overflow: hidden; color: #fff; text-shadow: 0 1px 4px #0009;
   padding: 2.2rem 1rem 1.5rem; border-radius: 0 0 32px 32px;
-  background: linear-gradient(140deg, var(--c1), var(--c2));
+  background: var(--mata);
+  background: linear-gradient(140deg, color-mix(in srgb, var(--c1) 72%, #08240f), color-mix(in srgb, var(--c2) 40%, #08240f));
 }
 .capa h1 { font-size: 2.4rem; position: relative; }
 .capa p { position: relative; margin: 0.2rem 0; }
@@ -253,3 +254,13 @@ main { max-width: 760px; margin: 0 auto; outline: none; }
   .atalhos { grid-template-columns: repeat(3, 1fr); }
   .lista { grid-template-columns: 1fr 1fr; }
 }
+
+/* ---------- Caboclos e prévia ---------- */
+.versao {
+  position: relative; display: inline-block; margin: 0.9rem 0 0; padding: 0.2rem 0.8rem;
+  border: 1px dashed var(--ouro-claro); border-radius: 999px; font-size: 0.8rem; color: var(--ouro-claro);
+}
+.mais-link { display: inline-block; margin-top: 0.8rem; font-weight: 800; color: var(--folha); text-decoration: none; }
+.cantiga { background: var(--cartao); border-radius: 14px; padding: 0.8rem 1rem; margin-bottom: 0.8rem; }
+.cantiga h3 { font-size: 1.05rem; margin-bottom: 0.3rem; }
+.cantiga p { margin: 0; font-style: italic; }

@@ -20,6 +20,8 @@ Depois abra `http://localhost:8000`. Para todos da casa usarem, publique a pasta
 
 - **Logomarca:** o brasão oficial está em `img/logo.png` (e `img/logo-192.png` para o ícone).
 - **Textos:** tudo fica em `data.js` (história da casa, caboclos da casa, festas, inkices, guias, glossário).
+- **Caboclos da casa:** cada um tem um bloco em `window.CABOCLOS`, dentro de `data.js`. Os textos marcados como provisórios são para trocar pelas histórias contadas pelos mais velhos. Os cânticos entram no campo `cantigas` (letra) e na pasta `audio/` (gravação).
+- **Prévia:** enquanto `versao: "Prévia"` estiver em `data.js`, a tela inicial avisa que o app está em construção. Para o lançamento, deixe `versao: ""`.
 - **Gravações:** veja `audio/LEIAME.md`.
 
 ## Sobre o conteúdo

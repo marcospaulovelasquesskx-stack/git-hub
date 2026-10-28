@@ -150,6 +150,7 @@
   function textoParaOuvir(item) {
     const p = [item.nome + "."];
     if (item.ketu) p.push(`Na nação Ketu, é conhecido como ${item.ketu}.`);
+    if (item.linha) p.push(`Linha: ${item.linha}.`);
     if (item.outros && item.outros.length) p.push(`Outros nomes: ${lista(item.outros)}.`);
     p.push(item.resumo);
     p.push(...item.historia);
@@ -180,6 +181,7 @@
         ${item.destaque ? `<em class="selo">${esc(item.destaque)}</em>` : ""}
         <h1>${esc(item.nome)}</h1>
         ${item.ketu ? `<p class="ketu">No Ketu: <b>${esc(item.ketu)}</b></p>` : ""}
+        ${item.linha ? `<p class="ketu">${esc(item.linha)}</p>` : ""}
         ${item.outros && item.outros.length ? `<p class="outros">Também chamado: ${esc(lista(item.outros))}</p>` : ""}
       </header>
 
@@ -216,7 +218,9 @@
 
       <section class="cantigas">
         <h2>Cânticos</h2>
-        <p>Os cânticos são ensinados na casa, de boca a ouvido, pelos mais velhos. Este espaço é para as gravações do próprio terreiro.</p>
+        ${item.cantigas && item.cantigas.length
+          ? item.cantigas.map((c) => `<div class="cantiga"><h3>${esc(c.titulo)}</h3><p>${esc(c.letra).replace(/\n/g, "<br>")}</p></div>`).join("")
+          : `<p>Os cânticos são ensinados na casa, de boca a ouvido, pelos mais velhos. Este espaço é para as letras e as gravações do próprio terreiro.</p>`}
         ${botaoOuvir("Cântico de " + item.nome, "Ainda não há cântico gravado para " + item.nome + ". Peça aos mais velhos da casa.", item.id + "-cantiga", "Ouvir cântico da casa")}
       </section>
 
@@ -282,6 +286,13 @@
             <p><b>${CASA.anosDeFeitura}</b><span>anos de feitura de ${esc(CASA.sacerdote)}</span></p>
           </div>
           ${botaoOuvir("Nossa casa", textoCasa, "casa", "Ouvir a história da casa")}
+          ${CASA.versao ? `<p class="versao">${esc(CASA.versao)} · app em construção</p>` : ""}
+        </section>
+
+        <section class="bloco">
+          <h2>Nossos pais caboclos</h2>
+          <div class="lista">${CABOCLOS.filter((c) => ["Nosso pai maior", "Pai da casa"].includes(c.destaque)).map((c) => cartao(c, "#/caboclos/" + c.id)).join("")}</div>
+          <p><a class="mais-link" href="#/caboclos">Ver todos os caboclos da casa &#8250;</a></p>
         </section>
 
         <section class="bloco">
@@ -301,7 +312,7 @@
           <h2>Conheça</h2>
           <div class="atalhos">
             <a href="#/inkices"><span>&#10024;</span>Inkices</a>
-            <a href="#/entidades/caboclos"><span>&#127993;</span>Caboclos</a>
+            <a href="#/caboclos"><span>&#127993;</span>Caboclos da casa</a>
             <a href="#/entidades/eres"><span>&#127880;</span>Erês e Ibejis</a>
             <a href="#/entidades/pretos-velhos"><span>&#128255;</span>Pretos-Velhos</a>
             <a href="#/casa"><span>&#127968;</span>Nossa casa</a>
@@ -311,9 +322,7 @@
     },
 
     casa() {
-      const cab = CASA.caboclosDaCasa.length
-        ? CASA.caboclosDaCasa.map((c) => `<div class="caixa"><h3>${esc(c.nome)}</h3><p>${esc(c.texto)}</p>${botaoOuvir(c.nome, c.nome + ". " + c.texto)}</div>`).join("")
-        : `<p class="aviso">Em breve: os caboclos que estão à frente da nossa casa, com as suas histórias contadas pelos mais velhos.</p>`;
+      const cab = `<div class="lista">${CABOCLOS.map((c) => cartao(c, "#/caboclos/" + c.id)).join("")}</div>`;
       return `<article class="detalhe">
         <header class="capa" style="--c1:#0b5a24;--c2:#1f8a3a"><div class="folhagem" aria-hidden="true"></div>
           <h1>Nossa casa</h1><p class="ketu">${esc(CASA.nome)} · ${esc(CASA.nacao)}</p></header>
@@ -342,8 +351,13 @@
 
     entidades() {
       return `<section class="bloco">
-        <h1>Guias e entidades</h1>
-        <p>Os que vêm à terra para conversar, aconselhar e cuidar da comunidade.</p>
+        <h1>Caboclos da casa</h1>
+        <p>Os caboclos que estão à frente do ${esc(CASA.nome)}. Toque em um caboclo para ler e ouvir a sua história.</p>
+        <div class="lista">${CABOCLOS.map((c) => cartao(c, "#/caboclos/" + c.id)).join("")}</div>
+      </section>
+      <section class="bloco">
+        <h2>Guias e entidades</h2>
+        <p>Quem são os caboclos, os erês e os pretos-velhos, e como são cultuados nas casas de Angola.</p>
         <div class="lista">${ENTIDADES.map((e) => cartao(e, "#/entidades/" + e.id)).join("")}</div>
       </section>`;
     },
@@ -423,6 +437,13 @@
     if (secao === "inkices" && id) {
       const item = INKICES.find((i) => i.id === id);
       html = item ? detalhe(item, INKICES, "#/inkices") : null;
+    } else if (secao === "caboclos" && id) {
+      const item = CABOCLOS.find((i) => i.id === id);
+      html = item ? detalhe(item, CABOCLOS, "#/caboclos") : null;
+      aba = "entidades";
+    } else if (secao === "caboclos") {
+      html = telas.entidades();
+      aba = "entidades";
     } else if (secao === "entidades" && id) {
       const item = ENTIDADES.find((i) => i.id === id);
       html = item ? detalhe(item, ENTIDADES, "#/entidades") : null;
@@ -434,7 +455,7 @@
 
     app.innerHTML = html;
     document.querySelectorAll(".abas a").forEach((a) => a.classList.toggle("ativa", a.dataset.aba === aba));
-    $("#voltar").hidden = !secao || (!id && ["inkices", "entidades", "calendario", "mais"].includes(secao));
+    $("#voltar").hidden = !secao || (!id && ["inkices", "entidades", "caboclos", "calendario", "mais"].includes(secao));
     window.scrollTo(0, 0);
     ligarEventos();
   }

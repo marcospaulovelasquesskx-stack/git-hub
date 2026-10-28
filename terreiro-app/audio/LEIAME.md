@@ -10,4 +10,8 @@ Coloque aqui arquivos `.mp3` com estes nomes, e o app toca a gravação no lugar
 | `<id>-cantiga.mp3` | Cântico da casa (ex.: `matamba-cantiga.mp3`) |
 | `nacao-1.mp3` … `nacao-4.mp3` | Textos da seção "A nação Angola" |
 
-Ids: aluvaia, nkosi, mutalambo, katende, kavungo, angoro, nzazi, matamba, dandalunda, kaitumba, zumbaranda, kitembo, lemba, vunji, caboclos, eres, pretos-velhos.
+Ids dos inkices: aluvaia, nkosi, mutalambo, katende, kavungo, angoro, nzazi, matamba, dandalunda, kaitumba, zumbaranda, kitembo, lemba, vunji.
+
+Ids dos caboclos da casa: sete-flechas, itupiacu, pena-branca, laje-grande, boiadeiro, gentil-das-matas, jussara, rei-de-congo.
+
+Ids dos guias: caboclos, eres, pretos-velhos.
