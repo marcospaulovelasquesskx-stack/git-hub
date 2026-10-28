@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Terreiro de Caboclos e Guias</title>
+  <meta name="description" content="Histórias dos inkices, caboclos, erês e pretos-velhos da nação Angola-Congo, para ler e ouvir.">
+  <meta name="theme-color" content="#1e3a22">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="img/icone.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/icone.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topo">
+    <button class="voltar" id="voltar" aria-label="Voltar" hidden>&#8592;</button>
+    <a href="#/" class="marca">
+      <img src="img/icone.svg" alt="" id="logo-topo">
+      <span>Caboclos e Guias</span>
+    </a>
+    <div class="fonte">
+      <button id="menos" aria-label="Diminuir letra">A&#8722;</button>
+      <button id="mais" aria-label="Aumentar letra">A+</button>
+    </div>
+  </header>
+
+  <main id="app" tabindex="-1"></main>
+
+  <nav class="abas" aria-label="Seções">
+    <a href="#/" data-aba="inicio"><span aria-hidden="true">&#127807;</span>Início</a>
+    <a href="#/inkices" data-aba="inkices"><span aria-hidden="true">&#10024;</span>Inkices</a>
+    <a href="#/entidades" data-aba="entidades"><span aria-hidden="true">&#127993;</span>Guias</a>
+    <a href="#/calendario" data-aba="calendario"><span aria-hidden="true">&#128197;</span>Festas</a>
+    <a href="#/mais" data-aba="mais"><span aria-hidden="true">&#128214;</span>Saber</a>
+  </nav>
+
+  <div class="player" id="player" hidden>
+    <div class="player-info">
+      <strong id="player-titulo"></strong>
+      <span id="player-estado">Tocando</span>
+    </div>
+    <button id="player-pausa" class="player-btn" aria-label="Pausar">&#10074;&#10074;</button>
+    <button id="player-parar" class="player-btn" aria-label="Parar">&#9632;</button>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

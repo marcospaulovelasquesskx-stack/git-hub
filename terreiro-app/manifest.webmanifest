@@ -1,0 +1,14 @@
+{
+  "name": "Terreiro de Caboclos e Guias",
+  "short_name": "Caboclos e Guias",
+  "description": "Histórias dos inkices, caboclos, erês e pretos-velhos da nação Angola-Congo.",
+  "lang": "pt-BR",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f4ede0",
+  "theme_color": "#1e3a22",
+  "icons": [
+    { "src": "img/icone.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ]
+}
