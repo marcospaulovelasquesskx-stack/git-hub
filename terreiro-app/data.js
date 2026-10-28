@@ -702,9 +702,9 @@ window.COMPARATIVO = [
 /* Galeria: fotos do álbum da casa (festas e cortejos; nada de espaços restritos).
    Para corrigir uma legenda, edite o texto. Para pôr outra foto, salve em img/galeria/. */
 window.GALERIA = [
-  { foto: "img/galeria/099.webp", legenda: "O barracão em dia de festa" },
+  { foto: "img/galeria/099.webp", legenda: "Bori das águas de um abiã: a primeira celebração para a cabeça de quem vai se tornar filho de santo" },
   { foto: "img/galeria/097.webp", legenda: "Os atabaques (ngoma) tocando no barracão" },
-  { foto: "img/galeria/044.webp", legenda: "Altar enfeitado com girassóis e folhas" },
+  { foto: "img/galeria/044.webp", legenda: "O lugar dos atabaques e dos ogãs, com os atabaques cobertos pelo alá sagrado: eles só são descobertos em dia de festa" },
   { foto: "img/galeria/137.webp", legenda: "O barracão enfeitado no dia da Festa das Águas" },
   { foto: "img/galeria/004.webp", legenda: "Saída do Velho Obaluaê no barracão" },
   { foto: "img/galeria/110.webp", legenda: "Cortejo pelas ruas, com a bandeira e os presentes" },
@@ -805,6 +805,7 @@ window.DICIONARIO = [
   {"termo": "Nlambi nkise", "sentido": "Cozinheira do santo.", "cat": "cargos", "fonte": "cartilha"},
   {"termo": "Muzenza", "sentido": "Iniciado no nkisi.", "cat": "cargos", "fonte": "cartilha"},
   {"termo": "Ndumbi", "sentido": "O iniciante que ainda não fez nada no terreiro.", "cat": "cargos", "fonte": "cartilha"},
+  {"termo": "Abiã", "sentido": "Nome usado no Ketu, e também na nossa casa, para quem passou pelo bori das águas e se prepara para, depois de um ano, fazer a obrigação de filho de santo. Na Angola, a cartilha do Unzó Maiala chama de ndumbi quem ainda não fez nada no terreiro e de mona xikola quem já é borizado. Confira com a casa o nome usado aqui.", "cat": "cargos"},
   {"termo": "Mona xikola", "sentido": "Borizado.", "cat": "cargos", "fonte": "cartilha"},
   {"termo": "Mona", "sentido": "Filho.", "cat": "cargos", "fonte": "cartilha"},
   {"termo": "Mona nkisi", "sentido": "Filho de santo.", "cat": "cargos", "fonte": "cartilha"},
@@ -824,6 +825,8 @@ window.DICIONARIO = [
   {"termo": "Caboclo", "sentido": "Espírito indígena brasileiro ou boiadeiro, dono da terra.", "cat": "fundamento"},
   {"termo": "Cajamungonsú", "sentido": "Proteção.", "cat": "fundamento", "fonte": "cartilha"},
   {"termo": "Kufumala", "sentido": "Defumação.", "cat": "fundamento", "fonte": "cartilha"},
+  {"termo": "Bori", "sentido": "Obrigação para a cabeça. Na nossa casa, o bori das águas é a primeira celebração de quem vai se tornar filho de santo, a que faz da pessoa um abiã.", "cat": "fundamento"},
+  {"termo": "Alá", "sentido": "Pano branco sagrado. Na nossa casa, cobre os atabaques, que só são descobertos em dia de festa.", "cat": "fundamento"},
   {"termo": "Kumbi ngoma", "sentido": "Dias de toque.", "cat": "fundamento", "fonte": "cartilha"},
   {"termo": "Kizoomba", "sentido": "Festa.", "cat": "fundamento", "fonte": "cartilha"},
   {"termo": "Samba", "sentido": "Rezar.", "cat": "fundamento", "fonte": "cartilha"},
