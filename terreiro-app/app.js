@@ -163,6 +163,34 @@
     return p.join(" ");
   }
 
+  /* ---------- Cantigas ---------- */
+  const cantigasDe = (id) => (window.CANTIGAS && CANTIGAS[id]) || [];
+
+  function cartaoCantiga(c) {
+    return `<div class="cantiga${c.casa ? " da-casa" : ""}">
+      ${c.titulo ? `<h3>${esc(c.titulo)}</h3>` : ""}
+      ${c.casa ? '<em class="selo">Cantada na nossa casa</em>' : ""}
+      <p class="letra">${esc(c.letra).replace(/\n/g, "<br>")}</p>
+      ${c.nota ? `<p class="cantiga-nota">${esc(c.nota)}</p>` : ""}
+    </div>`;
+  }
+
+  function blocoCantigas(item) {
+    const proprias = (item.cantigas || []).map((c) => ({ ...c, casa: true }));
+    const lista = [...proprias, ...cantigasDe(item.id)];
+    if (!lista.length) {
+      return `<p>Os cânticos são ensinados na casa, de boca a ouvido, pelos mais velhos. Este espaço é para as letras e as gravações do próprio terreiro.</p>`;
+    }
+    const casa = lista.filter((c) => c.casa);
+    const outras = lista.filter((c) => !c.casa);
+    return `${casa.length ? casa.map(cartaoCantiga).join("") : `<p>Ainda não marcamos quais destas cantigas são cantadas na nossa casa.</p>`}
+      ${outras.length ? `<details class="mais-cantigas"${casa.length ? "" : " open"}>
+        <summary>${casa.length ? "Mais" : "Ver as"} ${outras.length} cantigas da coletânea de Angola</summary>
+        <p class="aviso">Da coletânea "Cantigas de Angola". Ainda não confirmadas como cantadas na nossa casa.</p>
+        ${outras.map(cartaoCantiga).join("")}
+      </details>` : ""}`;
+  }
+
   function detalhe(item, colecao, base) {
     const idx = colecao.indexOf(item);
     const ant = colecao[idx - 1];
@@ -216,12 +244,16 @@
         <ul class="chips oferenda">${item.oferendas.map((f) => `<li>${esc(f)}</li>`).join("")}</ul>
       </section>
 
+      ${(item.secoes || []).map((sec) => `<section>
+        <h2>${esc(sec.titulo)}</h2>
+        ${sec.texto ? `<p>${esc(sec.texto)}</p>` : ""}
+        <dl class="ficha">${sec.itens.map(([t, d]) => `<div><dt>${esc(t)}</dt><dd>${esc(d)}</dd></div>`).join("")}</dl>
+      </section>`).join("")}
+
       <section class="cantigas">
         <h2>Cânticos</h2>
-        ${item.cantigas && item.cantigas.length
-          ? item.cantigas.map((c) => `<div class="cantiga"><h3>${esc(c.titulo)}</h3><p>${esc(c.letra).replace(/\n/g, "<br>")}</p></div>`).join("")
-          : `<p>Os cânticos são ensinados na casa, de boca a ouvido, pelos mais velhos. Este espaço é para as letras e as gravações do próprio terreiro.</p>`}
-        ${botaoOuvir("Cântico de " + item.nome, "Ainda não há cântico gravado para " + item.nome + ". Peça aos mais velhos da casa.", item.id + "-cantiga", "Ouvir cântico da casa")}
+        ${blocoCantigas(item)}
+        ${botaoOuvir("Cântico de " + item.nome, "Ainda não há cântico gravado para " + item.nome + ". Peça aos mais velhos da casa.", item.id + "-cantiga", "Ouvir gravação da casa")}
       </section>
 
       <p class="aviso">Cada casa de Angola tem os seus fundamentos. Confira sempre com o Tata e os mais velhos.</p>
@@ -416,6 +448,7 @@
         <div class="acoes-lista">
           <a class="botao" href="#/comparativo">&#8646; Tabela Angola e Ketu</a>
           <a class="botao" href="#/aprender">&#127919; Aprenda os nomes</a>
+          <a class="botao" href="#/cantigas">&#127926; Cantigas</a>
         </div>
         <label class="busca"><span class="sr">Buscar</span>
           <input type="search" id="busca" placeholder="Buscar: Oxóssi, Matamba, sábado, mel..." autocomplete="off"></label>
@@ -479,7 +512,8 @@
         <h1>Saber mais</h1>
         <div class="atalhos">
           <a href="#/nacao"><span>&#127757;</span>A nação Angola</a>
-          <a href="#/glossario"><span>&#128172;</span>Palavras da Angola</a>
+          <a href="#/dicionario"><span>&#128172;</span>Dicionário Angola-Congo</a>
+          <a href="#/cantigas"><span>&#127926;</span>Cantigas de Angola</a>
           <a href="#/casa"><span>&#127968;</span>Nossa casa</a>
           <a href="#/sobre"><span>&#9881;</span>Ajustes e ajuda</a>
         </div>
@@ -491,15 +525,49 @@
         <h1>A nação Angola</h1>
         ${NACAO.map((s, i) => `<div class="caixa"><h2>${esc(s.titulo)}</h2>
           ${s.texto.map((p) => `<p>${esc(p)}</p>`).join("")}
+          ${s.fonte ? `<p class="fonte">Fonte: ${esc(s.fonte)}</p>` : ""}
           ${botaoOuvir(s.titulo, s.titulo + ". " + s.texto.join(" "), "nacao-" + (i + 1))}</div>`).join("")}
       </section>`;
     },
 
-    glossario() {
+    dicionario() {
       return `<section class="bloco">
-        <h1>Palavras da Angola</h1>
-        <p>Algumas palavras de origem banto (quimbundo e quicongo) usadas nas casas de Angola. A pronúncia e o uso podem mudar de casa para casa.</p>
-        <dl class="glossario">${GLOSSARIO.map(([t, d]) => `<div><dt>${esc(t)} ${botaoOuvir(t, t + ". " + d, null, "")}</dt><dd>${esc(d)}</dd></div>`).join("")}</dl>
+        <h1>Dicionário Angola-Congo</h1>
+        <p>${DICIONARIO.length} palavras de origem banto (kimbundu e kikongo) usadas no dia a dia das casas de Angola. A pronúncia e o uso podem mudar de casa para casa.</p>
+        <label class="busca"><span class="sr">Buscar palavra</span>
+          <input type="search" id="busca-dic" placeholder="Buscar: água, mãe, ngoma, feijão..." autocomplete="off"></label>
+        <div class="filtros" role="group" aria-label="Assunto">
+          <button class="filtro ativo" data-cat="">Todas</button>
+          ${Object.entries(ASSUNTOS).map(([k, v]) => `<button class="filtro" data-cat="${k}">${esc(v)}</button>`).join("")}
+        </div>
+        <p class="contagem" id="dic-contagem" aria-live="polite"></p>
+        <dl class="glossario" id="dic-lista"></dl>
+        <p class="aviso">As palavras marcadas com &#9670; vêm do vocabulário bantu do Unzó Maiala, publicado na cartilha "Nação Angola: das influências banto no Brasil".</p>
+      </section>`;
+    },
+
+    cantigas() {
+      const nomes = { pemba: "Pemba e rezas da casa", lugano: "Mina Lugano (Obá)", aganji: "Mina Aganji (Ewá)" };
+      const ordem = [...INKICES.map((i) => i.id), "lugano", "aganji", "pemba"].filter((id) => cantigasDe(id).length);
+      const total = ordem.reduce((n, id) => n + cantigasDe(id).length, 0);
+      const daCasa = ordem.reduce((n, id) => n + cantigasDe(id).filter((c) => c.casa).length, 0);
+      return `<section class="bloco">
+        <h1>Cantigas de Angola</h1>
+        <p>${total} cantigas da coletânea "Cantigas de Angola", separadas por inkice. As ${daCasa} marcadas como <b>cantadas na nossa casa</b> aparecem primeiro.</p>
+        <div class="acoes-lista"><button class="botao" id="so-casa" aria-pressed="false">&#9733; Mostrar só as da nossa casa</button></div>
+        <label class="busca"><span class="sr">Buscar na letra</span>
+          <input type="search" id="busca-cantiga" placeholder="Buscar na letra: Matamba, Kitembu, pemba..." autocomplete="off"></label>
+        <div id="lista-cantigas">
+        ${ordem.map((id) => {
+          const ink = INKICES.find((i) => i.id === id);
+          const titulo = ink ? `${ink.nome} (${ink.ketu.split(" (")[0]})` : nomes[id];
+          return `<section class="grupo-cantigas" data-grupo="${id}">
+            <h2>${esc(titulo)}</h2>
+            ${ink ? `<p><a class="mais-link" href="#/inkices/${id}">Ver a página de ${esc(ink.nome)} &#8250;</a></p>` : ""}
+            ${cantigasDe(id).map(cartaoCantiga).join("")}
+          </section>`;
+        }).join("")}
+        </div>
       </section>`;
     },
 
@@ -526,6 +594,11 @@
           <h2>Sobre o conteúdo</h2>
           <p>Os textos foram reunidos a partir da tradição oral e de estudos sobre o candomblé de Angola. Cada casa tem os seus fundamentos, e a palavra final é sempre do Tata e dos mais velhos.</p>
         </div>
+        <div class="caixa">
+          <h2>Fontes</h2>
+          <p><b>Cartilha "Nação Angola: das influências banto no Brasil"</b>, Coleção Saberes Pretos, KOINONIA, 2022. Redação de Mameto Laura Borges (Unzó Maiala, Salvador) e Mameto Kuangolô (Unzó Mean Dandalunda, Tombensi Filho). Licença Creative Commons BY-NC-SA 4.0. Usada no vocabulário, nos nomes dos nkisis, nos guardiões dos caminhos e na seção sobre a nação Angola.</p>
+          <p><b>"Cantigas de Angola: Coletânea de Cânticos Litúrgicos dos Inquices"</b>. As cantigas cantadas na nossa casa foram marcadas pelos filhos da casa.</p>
+        </div>
       </section>`;
     },
   };
@@ -535,7 +608,7 @@
     const partes = (location.hash.replace(/^#\/?/, "") || "").split("/");
     const [secao, id] = partes;
     let html;
-    let aba = secao || "inicio";
+    let aba = secao === "glossario" ? "dicionario" : secao || "inicio"; // endereço antigo do glossário
 
     if (secao === "inkices" && id) {
       const item = INKICES.find((i) => i.id === id);
@@ -556,7 +629,7 @@
     if (!html) { aba = "inicio"; html = telas.inicio(); }
     if (["comparativo", "aprender"].includes(aba)) aba = "inkices";
     if (aba === "galeria") aba = "inicio";
-    if (["casa", "nacao", "glossario", "sobre"].includes(aba)) aba = aba === "casa" ? "inicio" : "mais";
+    if (["casa", "nacao", "dicionario", "cantigas", "sobre"].includes(aba)) aba = aba === "casa" ? "inicio" : "mais";
 
     app.innerHTML = html;
     document.querySelectorAll(".abas a").forEach((a) => a.classList.toggle("ativa", a.dataset.aba === aba));
@@ -612,7 +685,64 @@
     $(`#do-dia [data-dia="${d}"]`).focus();
   });
 
+  function ligarDicionario() {
+    const lista = $("#dic-lista");
+    if (!lista) return;
+    const norm = (t) => t.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+    let cat = "";
+    const desenhar = () => {
+      const q = norm($("#busca-dic").value.trim());
+      const achados = DICIONARIO
+        .filter((d) => (!cat || d.cat === cat) && (!q || norm(d.termo + " " + d.sentido).includes(q)))
+        .sort((a, b) => a.termo.localeCompare(b.termo, "pt"));
+      $("#dic-contagem").textContent = `${achados.length} ${achados.length === 1 ? "palavra" : "palavras"}`;
+      lista.innerHTML = achados.length ? achados.map((d) => `<div>
+          <dt>${esc(d.termo)}${d.fonte ? ' <span class="marca-fonte" title="Cartilha Nação Angola">&#9670;</span>' : ""}
+            ${botaoOuvir(d.termo, `${d.termo}. ${d.sentido}`, null, "")}</dt>
+          <dd>${esc(d.sentido)} <small class="assunto">${esc(ASSUNTOS[d.cat])}</small></dd></div>`).join("")
+        : `<p class="aviso">Nenhuma palavra encontrada.</p>`;
+    };
+    $("#busca-dic").oninput = desenhar;
+    document.querySelectorAll(".filtro").forEach((b) => {
+      b.onclick = () => {
+        cat = b.dataset.cat;
+        document.querySelectorAll(".filtro").forEach((x) => x.classList.toggle("ativo", x === b));
+        desenhar();
+      };
+    });
+    desenhar();
+  }
+
+  function ligarCantigas() {
+    const busca = $("#busca-cantiga");
+    if (!busca) return;
+    const norm = (t) => t.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+    let soCasa = false;
+    const filtrar = () => {
+      const q = norm(busca.value.trim());
+      document.querySelectorAll(".grupo-cantigas").forEach((g) => {
+        let visiveis = 0;
+        g.querySelectorAll(".cantiga").forEach((c) => {
+          const ok = (!soCasa || c.classList.contains("da-casa")) && (!q || norm(c.textContent + " " + g.querySelector("h2").textContent).includes(q));
+          c.hidden = !ok;
+          if (ok) visiveis++;
+        });
+        g.hidden = !visiveis;
+      });
+    };
+    busca.oninput = filtrar;
+    $("#so-casa").onclick = () => {
+      soCasa = !soCasa;
+      $("#so-casa").setAttribute("aria-pressed", soCasa);
+      $("#so-casa").classList.toggle("ativo", soCasa);
+      $("#so-casa").innerHTML = soCasa ? "&#9733; Mostrando só as da nossa casa" : "&#9733; Mostrar só as da nossa casa";
+      filtrar();
+    };
+  }
+
   function ligarEventos() {
+    ligarDicionario();
+    ligarCantigas();
     if ($("#quiz")) novaPergunta();
     const busca = $("#busca");
     if (busca) {
