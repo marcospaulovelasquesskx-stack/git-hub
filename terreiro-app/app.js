@@ -273,6 +273,51 @@
     }).join("");
   }
 
+  /* ---------- Inkice do dia ---------- */
+  const acharItem = (id) => {
+    const ink = INKICES.find((i) => i.id === id);
+    if (ink) return { item: ink, href: "#/inkices/" + id };
+    const cab = CABOCLOS.find((c) => c.id === id);
+    return cab ? { item: cab, href: "#/caboclos/" + id } : null;
+  };
+
+  function cartaoDoDia(d) {
+    const hoje = new Date().getDay();
+    const dia = DIAS_DA_SEMANA[d];
+    const { item, href } = acharItem(dia.principal);
+    const outros = dia.tambem.map(acharItem).filter(Boolean);
+    const chamada = d === hoje ? `Hoje é ${dia.nome}` : `${dia.nome[0].toUpperCase() + dia.nome.slice(1)}`;
+    const falado = `${chamada}, dia de ${item.nome}${item.ketu ? `, que no Ketu é ${item.ketu}` : ""}. ` + textoParaOuvir(item);
+    return `<div class="dia-cartao" style="--c1:${cor(item)};--c2:${cor2(item)}">
+        <div class="dia-capa">
+          <div class="folhagem" aria-hidden="true"></div>
+          <p class="dia-chamada">${esc(chamada)}, dia de</p>
+          <h2>${esc(item.nome)}</h2>
+          ${item.ketu ? `<p class="dia-ketu">No Ketu: <b>${esc(item.ketu)}</b></p>` : ""}
+          <ul class="dia-cores" aria-label="Cores">${item.cores.map(([n, c]) => `<li><span style="background:${c}"></span>${esc(n)}</li>`).join("")}</ul>
+        </div>
+        <div class="dia-corpo">
+          <p class="dia-resumo">${esc(item.resumo)}</p>
+          <p class="dia-saudacao"><b>Saudação:</b> ${esc(item.saudacao)}</p>
+          <dl class="dia-ficha">
+            <div><dt>Folhas</dt><dd>${esc(lista(item.folhas.slice(0, 4)))}</dd></div>
+            <div><dt>Oferendas</dt><dd>${esc(lista(item.oferendas.slice(0, 4)))}</dd></div>
+          </dl>
+          <div class="acoes-lista">
+            ${botaoOuvir(`${item.nome}, ${dia.nome}`, falado, item.id, "Ouvir tudo")}
+            <a class="botao" href="${href}">História, cânticos e tudo sobre ${esc(item.nome)} &#8250;</a>
+          </div>
+          ${outros.length ? `<p class="dia-tambem">Também neste dia: ${outros.map((o) => `<a href="${o.href}">${esc(o.item.nome)}${o.item.ketu ? ` (${esc(o.item.ketu)})` : ""}</a>`).join(", ")}</p>` : ""}
+        </div>
+      </div>`;
+  }
+
+  function semanaDoDia(d) {
+    const hoje = new Date().getDay();
+    return `<div class="dias" role="group" aria-label="Ver outro dia da semana">${DIAS_DA_SEMANA.map((dia, i) =>
+      `<button class="dia-chip${i === d ? " ativo" : ""}${i === hoje ? " hoje" : ""}" data-dia="${i}" aria-pressed="${i === d}">${dia.nome.slice(0, 3)}</button>`).join("")}</div>`;
+  }
+
   /* ---------- Telas ---------- */
   const telas = {
     inicio() {
@@ -289,6 +334,11 @@
           </div>
           ${botaoOuvir("Nossa casa", textoCasa, "casa", "Ouvir a história da casa")}
           ${CASA.versao ? `<p class="versao">${esc(CASA.versao)} · app em construção</p>` : ""}
+        </section>
+
+        <section class="bloco do-dia" id="do-dia">
+          ${cartaoDoDia(new Date().getDay())}
+          ${semanaDoDia(new Date().getDay())}
         </section>
 
         <section class="bloco">
@@ -553,6 +603,14 @@
     $("#quiz-prox").onclick = novaPergunta;
     $("#quiz-prox").focus();
   }
+
+  app.addEventListener("click", (e) => {
+    const b = e.target.closest("[data-dia]");
+    if (!b) return;
+    const d = +b.dataset.dia;
+    $("#do-dia").innerHTML = cartaoDoDia(d) + semanaDoDia(d);
+    $(`#do-dia [data-dia="${d}"]`).focus();
+  });
 
   function ligarEventos() {
     if ($("#quiz")) novaPergunta();

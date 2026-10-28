@@ -613,6 +613,19 @@ window.NACAO = [
   },
 ];
 
+/* Regência de cada dia da semana, usada no destaque "Hoje é dia de..." da tela inicial.
+   "principal" é o inkice em destaque; "tambem" são os outros cultuados no mesmo dia.
+   Os ids podem ser de inkices ou de caboclos. Ajuste conforme o fundamento da casa. */
+window.DIAS_DA_SEMANA = [
+  { nome: "domingo", principal: "vunji", tambem: [] },
+  { nome: "segunda-feira", principal: "aluvaia", tambem: ["kavungo", "zumbaranda"] },
+  { nome: "terça-feira", principal: "nkosi", tambem: ["angoro"] },
+  { nome: "quarta-feira", principal: "matamba", tambem: ["nzazi"] },
+  { nome: "quinta-feira", principal: "mutalambo", tambem: ["katende", "telekompensu", "sete-flechas"] },
+  { nome: "sexta-feira", principal: "lemba", tambem: [] },
+  { nome: "sábado", principal: "dandalunda", tambem: ["kaitumba"] },
+];
+
 /* Tabela comparativa: Angola (Nkisi) e Ketu (Orixá). "id" liga a linha à página do inkice. */
 window.COMPARATIVO = [
   ["Caminhos, encruzilhadas e mensagens", "Pambu Njila / Aluvaiá", "Exu", "aluvaia"],
