@@ -1,0 +1,479 @@
+<title>Jiribatuba na Mão</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@400;600;700;800&display=swap">
+<style>
+/* Layout: app de celular com uma tela por seção e navegação embaixo. Nenhuma cor domina:
+   cada seção tem a sua, como as fitas do Senhor do Bonfim, e o verde fica de fora. */
+:root{
+  --fita-mar:#2F6BFF;   /* Câmara */
+  --fita-coral:#FF5A4E; /* Prefeitura */
+  --fita-sol:#FFB81C;   /* Números */
+  --fita-roxo:#8A4DFF;  /* Pauta */
+  --fita-rosa:#FF3D9A;  /* Voto consciente */
+  --tinta:#1A1C3A;
+  --tinta-2:#555875;
+  --fundo:#FFFFFF;
+  --papel:#F5F4FB;
+  --linha:#E4E2F0;
+  --chip:#ECEAF6;
+  --sobre-cor:#FFFFFF;
+  --sol-texto:#1A1C3A;
+  --display:"Baloo 2","Trebuchet MS",system-ui,sans-serif;
+  --texto:"Nunito",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --r:18px;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --fita-mar:#5B8CFF;--fita-coral:#FF7468;--fita-sol:#FFC53D;--fita-roxo:#A57BFF;--fita-rosa:#FF62AE;
+  --tinta:#F2F1FA;--tinta-2:#AFB0C9;--fundo:#15162B;--papel:#1E2040;--linha:#2E3058;--chip:#2A2C52;
+  --sobre-cor:#FFFFFF;--sol-texto:#1A1C3A;color-scheme:dark}}
+:root[data-theme="dark"]{
+  --fita-mar:#5B8CFF;--fita-coral:#FF7468;--fita-sol:#FFC53D;--fita-roxo:#A57BFF;--fita-rosa:#FF62AE;
+  --tinta:#F2F1FA;--tinta-2:#AFB0C9;--fundo:#15162B;--papel:#1E2040;--linha:#2E3058;--chip:#2A2C52;
+  --sobre-cor:#FFFFFF;--sol-texto:#1A1C3A;color-scheme:dark}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{background:var(--fundo);color:var(--tinta);font-family:var(--texto);font-size:16px;line-height:1.5}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--fundo)}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--fita-mar);outline-offset:2px;border-radius:8px}
+h1,h2,h3{font-family:var(--display);line-height:1.1;text-wrap:balance;margin:0}
+p{margin:0}
+
+.app{max-width:520px;margin:0 auto;min-height:100%;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:0 calc(96px + env(safe-area-inset-bottom,0px))}
+
+/* fita: a assinatura visual */
+.fita{display:flex;height:8px;border-radius:99px;overflow:hidden}
+.fita i{flex:1}
+.fita i:nth-child(1){background:var(--fita-mar)}.fita i:nth-child(2){background:var(--fita-coral)}
+.fita i:nth-child(3){background:var(--fita-sol)}.fita i:nth-child(4){background:var(--fita-roxo)}
+.fita i:nth-child(5){background:var(--fita-rosa)}
+
+header.topo{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--fundo);padding-block:14px 10px;display:grid;gap:10px}
+.marca{display:flex;align-items:center;gap:10px}
+.logo{width:40px;height:40px;flex:none}
+.marca b{font-family:var(--display);font-size:22px;font-weight:800;letter-spacing:-.01em;line-height:1}
+.marca small{display:block;font-size:12px;color:var(--tinta-2);font-weight:700;letter-spacing:.06em;text-transform:uppercase}
+
+.tela{display:grid;gap:18px;padding-top:8px}
+.tela[hidden]{display:none!important}
+.titulo{display:grid;gap:6px}
+.titulo .rot{font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+.titulo h1{font-size:32px;font-weight:800}
+.titulo p{color:var(--tinta-2)}
+
+.bloco{background:var(--papel);border-radius:var(--r);padding:16px;display:grid;gap:12px;min-width:0}
+.bloco h2{font-size:21px;font-weight:700}
+.bloco .sub{color:var(--tinta-2);font-size:14px}
+.nota{font-size:13px;color:var(--tinta-2)}
+
+/* hero da tela inicial */
+.hero{border-radius:24px;padding:20px;background:var(--fita-roxo);color:var(--sobre-cor);display:grid;gap:10px;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;right:-40px;top:-40px;width:160px;height:160px;border-radius:50%;background:var(--fita-sol);opacity:.9}
+.hero::before{content:"";position:absolute;right:40px;top:70px;width:70px;height:70px;border-radius:50%;background:var(--fita-rosa)}
+.hero > *{position:relative;z-index:1}
+.hero .num{font-family:var(--display);font-size:64px;font-weight:800;line-height:.9}
+.hero p{max-width:30ch;font-weight:600}
+.hero .btn{justify-self:start;background:var(--sobre-cor);color:#1A1C3A}
+
+.atalhos{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.atalho{display:grid;gap:6px;text-decoration:none;border-radius:var(--r);padding:14px;color:var(--sobre-cor);min-height:104px;align-content:space-between}
+.atalho b{font-family:var(--display);font-size:19px;line-height:1.1}
+.atalho span{font-size:13px;font-weight:700;opacity:.95}
+.c-mar{background:var(--fita-mar)}.c-coral{background:var(--fita-coral)}.c-roxo{background:var(--fita-roxo)}.c-rosa{background:var(--fita-rosa)}
+.c-sol{background:var(--fita-sol);color:var(--sol-texto)!important}
+.t-mar{color:var(--fita-mar)}.t-coral{color:var(--fita-coral)}.t-sol{color:var(--fita-sol)}.t-roxo{color:var(--fita-roxo)}.t-rosa{color:var(--fita-rosa)}
+
+.btn{border:0;cursor:pointer;font:800 15px var(--texto);padding:10px 16px;border-radius:99px;text-decoration:none;display:inline-flex;align-items:center;gap:6px}
+
+/* listas */
+.lista{display:grid;gap:0;margin:0;padding:0;list-style:none}
+.lista li{display:grid;gap:2px;padding-block:10px;border-top:1px solid var(--linha)}
+.lista li:first-child{border-top:0}
+.lista a{text-decoration:none;font-weight:700}
+.lista a:hover{text-decoration:underline}
+.lista time{font-size:12px;color:var(--tinta-2);font-weight:700}
+
+/* vereadores */
+.filtro{display:flex;gap:8px;flex-wrap:wrap}
+.filtro button{border:2px solid var(--linha);background:var(--fundo);color:var(--tinta);font:700 14px var(--texto);padding:6px 12px;border-radius:99px;cursor:pointer}
+.filtro button[aria-pressed="true"]{border-color:var(--fita-mar);background:var(--fita-mar);color:var(--sobre-cor)}
+.ver{display:grid;grid-template-columns:auto 1fr auto;gap:12px;align-items:center;padding-block:10px;border-top:1px solid var(--linha)}
+.ver:first-child{border-top:0}
+.av{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;font:800 16px var(--display);color:var(--sobre-cor)}
+.ver b{display:block;font-weight:800}
+.ver small{color:var(--tinta-2);font-size:13px}
+.chip{display:inline-block;background:var(--chip);color:var(--tinta);border-radius:6px;padding:0 6px;font-size:12px;font-weight:800;letter-spacing:.02em}
+.ver .v{text-align:right;font-variant-numeric:tabular-nums;font-weight:800}
+.ver .v small{display:block;font-weight:600}
+
+/* pessoas da prefeitura */
+.pessoa{display:grid;grid-template-columns:auto 1fr;gap:12px;align-items:center}
+.pessoa .av{width:56px;height:56px;font-size:20px}
+.grade-sec{display:flex;flex-wrap:wrap;gap:8px}
+.grade-sec span{background:var(--fundo);border:1px solid var(--linha);border-radius:10px;padding:6px 10px;font-size:14px;font-weight:700}
+.links{display:grid;gap:8px}
+.links a{display:flex;justify-content:space-between;gap:10px;background:var(--fundo);border:1px solid var(--linha);border-radius:12px;padding:12px 14px;text-decoration:none;font-weight:800}
+.links a span{color:var(--tinta-2);font-weight:600;font-size:13px;overflow-wrap:anywhere;text-align:right}
+.contato{display:grid;gap:4px;font-size:15px}
+.contato .copiar{justify-self:start;background:var(--chip);color:var(--tinta);font-size:13px;padding:6px 12px}
+
+/* números */
+.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.kpi{background:var(--fundo);border-radius:14px;padding:12px 10px;display:grid;gap:2px}
+.kpi b{font:800 26px var(--display);font-variant-numeric:tabular-nums;line-height:1}
+.kpi span{font-size:12px;font-weight:700;color:var(--tinta-2);line-height:1.25}
+.divisao{display:flex;height:34px;border-radius:10px;overflow:hidden;font-weight:800;font-size:14px}
+.divisao div{display:flex;align-items:center;padding-inline:10px;white-space:nowrap}
+.legenda{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:13px;font-weight:700;color:var(--tinta-2)}
+.legenda i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:6px;vertical-align:-1px}
+.barras{display:grid;gap:8px}
+.barra{display:grid;grid-template-columns:minmax(0,9.5em) 1fr 3.2em;gap:8px;align-items:center;font-size:14px}
+.barra .nm{font-weight:700;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.barra .tr{height:14px;background:var(--fundo);border-radius:99px;overflow:hidden}
+.barra .tr i{display:block;height:100%;border-radius:99px}
+.barra .n{text-align:right;font-variant-numeric:tabular-nums;font-weight:800}
+
+.sim{display:grid;gap:12px}
+.sim label{font-weight:800}
+.sim input[type=range]{width:100%;accent-color:var(--fita-sol)}
+.simres{background:var(--fundo);border-radius:14px;padding:14px;display:grid;gap:10px}
+.simres .grande{font:800 40px var(--display);line-height:1;font-variant-numeric:tabular-nums}
+.regua{position:relative;height:120px;border-bottom:2px solid var(--linha)}
+.regua .col{position:absolute;bottom:0;width:22%;border-radius:10px 10px 0 0;transition:height .3s}
+.regua .linha{position:absolute;left:0;right:0;border-top:2px dashed currentColor;font-size:12px;font-weight:800}
+.regua .linha span{position:absolute;right:0;top:-18px;background:var(--fundo);padding-inline:4px}
+@media (prefers-reduced-motion: reduce){.regua .col{transition:none}}
+.status{display:inline-block;border-radius:99px;padding:4px 12px;font-weight:800;font-size:14px}
+.ok{background:var(--fita-mar);color:var(--sobre-cor)}
+.nao{background:var(--fita-coral);color:var(--sobre-cor)}
+
+/* pauta */
+.opcoes{display:grid;gap:8px}
+.opcao{display:grid;grid-template-columns:1fr auto;gap:4px 10px;align-items:center;width:100%;text-align:left;border:2px solid var(--linha);background:var(--fundo);color:var(--tinta);border-radius:14px;padding:12px;font:700 15px var(--texto);cursor:pointer;position:relative;overflow:hidden}
+.opcao .p{font-variant-numeric:tabular-nums;font-weight:800}
+.opcao .fill{grid-column:1/-1;height:6px;background:var(--chip);border-radius:99px;overflow:hidden}
+.opcao .fill i{display:block;height:100%;background:var(--fita-roxo);border-radius:99px}
+.opcao[aria-pressed="true"]{border-color:var(--fita-roxo)}
+.exemplo{display:inline-block;background:var(--fita-sol);color:var(--sol-texto);font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;border-radius:6px;padding:2px 8px}
+.alerta{border-radius:var(--r);padding:16px;background:var(--fita-rosa);color:var(--sobre-cor);display:grid;gap:8px}
+.alerta h2{font-size:21px}
+.alerta .btn{justify-self:start;background:var(--sobre-cor);color:#1A1C3A}
+
+.regras{display:grid;gap:8px;margin:0;padding-left:20px}
+
+/* navegação inferior */
+nav.baixo{position:fixed;left:0;right:0;bottom:0;z-index:6;background:var(--fundo);border-top:1px solid var(--linha);padding-bottom:env(safe-area-inset-bottom,0px);padding-left:max(8px,env(safe-area-inset-left,0px));padding-right:max(8px,env(safe-area-inset-right,0px))}
+nav.baixo ul{max-width:520px;margin:0 auto;display:grid;grid-template-columns:repeat(5,1fr);list-style:none;padding:6px 0;gap:2px}
+nav.baixo a{display:grid;justify-items:center;gap:3px;text-decoration:none;font-size:11px;font-weight:800;color:var(--tinta-2);padding:6px 0;border-radius:12px}
+nav.baixo svg{width:26px;height:26px}
+nav.baixo a[aria-current="page"]{color:var(--tinta)}
+nav.baixo a[aria-current="page"] .ic{background:var(--cor);color:var(--sobre-cor)}
+nav.baixo .ic{display:grid;place-items:center;width:48px;height:30px;border-radius:99px}
+@media (max-width:360px){.kpis{grid-template-columns:1fr 1fr}.titulo h1{font-size:28px}}
+</style>
+
+<div class="app">
+  <header class="topo">
+    <div class="marca">
+      <svg class="logo" viewBox="0 0 40 40" aria-hidden="true">
+        <rect width="40" height="40" rx="12" fill="var(--tinta)"/>
+        <rect x="8" y="9" width="5" height="22" rx="2.5" fill="var(--fita-mar)"/>
+        <rect x="14.5" y="12" width="5" height="19" rx="2.5" fill="var(--fita-coral)"/>
+        <rect x="21" y="7" width="5" height="24" rx="2.5" fill="var(--fita-sol)"/>
+        <rect x="27.5" y="14" width="5" height="17" rx="2.5" fill="var(--fita-rosa)"/>
+        <circle cx="30" cy="9" r="3" fill="var(--fita-roxo)"/>
+      </svg>
+      <div><b>Jiribatuba na Mão</b><small>Câmara e Prefeitura de Vera Cruz</small></div>
+    </div>
+    <div class="fita" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+  </header>
+
+  <!-- INÍCIO -->
+  <main>
+  <section class="tela" id="tela-inicio" aria-labelledby="h-inicio">
+    <div class="titulo">
+      <span class="rot t-rosa">Olá, Jiribatuba</span>
+      <h1 id="h-inicio">O que a Câmara e a Prefeitura estão fazendo por aqui</h1>
+    </div>
+
+    <div class="hero">
+      <span class="rot" style="font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase">Eleição de 2024</span>
+      <div class="num">2.437</div>
+      <p>votos foram para 10 candidatos de Jiribatuba. Nenhum foi eleito. Os votos se dividiram.</p>
+      <a class="btn" href="#numeros">Entender por quê</a>
+    </div>
+
+    <div class="atalhos">
+      <a class="atalho c-mar" href="#camara"><b>Câmara</b><span>13 vereadores</span></a>
+      <a class="atalho c-coral" href="#prefeitura"><b>Prefeitura</b><span>Prefeito, secretarias e contas</span></a>
+      <a class="atalho c-sol" href="#numeros"><b>Jiribatuba em Números</b><span>Votos e simulador</span></a>
+      <a class="atalho c-roxo" href="#pauta"><b>Pauta do distrito</b><span>Diga o que é prioridade</span></a>
+    </div>
+
+    <div class="bloco">
+      <h2>Notícias da Prefeitura sobre Jiribatuba</h2>
+      <p class="sub">Desde janeiro de 2025 o site da Prefeitura publicou 79 notícias. Só 6 falam de Jiribatuba.</p>
+      <ul class="lista">
+        <li><time datetime="2026-09-24">24 set 2026</time><a href="https://veracruz.ba.gov.br/pavimentacao-da-rua-nova-do-campo-transforma-a-realidade-dos-moradores-de-jiribatuba" target="_blank" rel="noopener">Pavimentação da Rua Nova do Campo</a></li>
+        <li><time datetime="2026-02-12">12 fev 2026</time><a href="https://veracruz.ba.gov.br/lista-de-blocos-confira" target="_blank" rel="noopener">Lista de blocos do Carnaval</a></li>
+        <li><time datetime="2025-07-27">27 jul 2025</time><a href="https://veracruz.ba.gov.br/vera-cruz-comemora-63-anos-com-programacao-especial-e-entrega-de-obras" target="_blank" rel="noopener">Vera Cruz comemora 63 anos com entrega de obras</a></li>
+        <li><time datetime="2025-04-25">25 abr 2025</time><a href="https://veracruz.ba.gov.br/prefeitura-itinerante-chega-a-jiribatuba" target="_blank" rel="noopener">Prefeitura Itinerante chega a Jiribatuba</a></li>
+        <li><time datetime="2025-02-26">26 fev 2025</time><a href="https://veracruz.ba.gov.br/carnaval-nos-bairros-confira-a-lista-dos-blocos-ja-confirmados" target="_blank" rel="noopener">Carnaval nos bairros</a></li>
+        <li><time datetime="2025-02-08">8 fev 2025</time><a href="https://veracruz.ba.gov.br/prefeitura-entrega-sede-social-de-jirubatuba" target="_blank" rel="noopener">Prefeitura entrega sede social de Jiribatuba</a></li>
+      </ul>
+      <p class="nota">Fonte: veracruz.ba.gov.br. No app, esta lista se atualiza sozinha.</p>
+    </div>
+
+    <div class="bloco">
+      <h2>Este app é de todo mundo</h2>
+      <ul class="regras">
+        <li>Não pertence a nenhum partido, candidato ou governo.</li>
+        <li>Todo candidato aparece do mesmo jeito, com o mesmo espaço.</li>
+        <li>Partido aparece só como sigla, sem cor de partido.</li>
+        <li>Toda informação traz a fonte oficial.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- CÂMARA -->
+  <section class="tela" id="tela-camara" aria-labelledby="h-camara" hidden>
+    <div class="titulo">
+      <span class="rot t-mar">Câmara Municipal de Vera Cruz</span>
+      <h1 id="h-camara">Os 13 vereadores</h1>
+      <p>Mandato 2025 a 2028. Votos da eleição de 2024.</p>
+    </div>
+    <div class="bloco">
+      <div class="filtro" role="group" aria-label="Ordenar vereadores">
+        <button type="button" id="ord-total" aria-pressed="true">Mais votados</button>
+        <button type="button" id="ord-jiri" aria-pressed="false">Mais votados em Jiribatuba</button>
+      </div>
+      <div id="lista-ver"></div>
+      <p class="nota">"Base" é o local onde o vereador teve mais votos, não onde mora. Fonte: TSE, dados abertos 2024.</p>
+    </div>
+    <div class="bloco">
+      <h2>Em breve</h2>
+      <p class="sub">Presença nas sessões, como cada vereador votou e projetos em andamento. O site da Câmara não publica esses dados. Vamos pedir pela Lei de Acesso à Informação.</p>
+    </div>
+    <div class="bloco">
+      <h2>Fale com a Câmara</h2>
+      <div class="contato">
+        <span>Rua São Bento, 73, Centro, Mar Grande</span>
+        <span>Segunda a sexta, das 8h às 14h</span>
+        <span id="tel-camara">(71) 99109-5046</span>
+        <button type="button" class="btn copiar" data-copiar="(71) 99109-5046">Copiar telefone</button>
+      </div>
+      <div class="links"><a href="https://camaraveracruz.ba.gov.br" target="_blank" rel="noopener">Diário Oficial da Câmara <span>camaraveracruz.ba.gov.br</span></a></div>
+    </div>
+  </section>
+
+  <!-- PREFEITURA -->
+  <section class="tela" id="tela-prefeitura" aria-labelledby="h-pref" hidden>
+    <div class="titulo">
+      <span class="rot t-coral">Prefeitura de Vera Cruz</span>
+      <h1 id="h-pref">Quem governa o município</h1>
+    </div>
+    <div class="bloco">
+      <div class="pessoa"><div class="av c-coral">IP</div><div><b>Igor Pinho Santos</b><br><small class="nota">Prefeito · <span class="chip">MDB</span> · eleito em 2024 com 66,15% dos votos válidos</small></div></div>
+      <div class="pessoa"><div class="av c-mar">MS</div><div><b>Emerson Souza de Santana, "Mecinho Santana"</b><br><small class="nota">Vice-prefeito · <span class="chip">PDT</span></small></div></div>
+    </div>
+    <div class="bloco">
+      <h2>Secretarias</h2>
+      <div class="grade-sec">
+        <span>Saúde</span><span>Educação</span><span>Fazenda</span><span>Infraestrutura</span><span>Administração</span><span>Promoção Social</span><span>Cultura e Turismo</span><span>Sucom</span><span>Trânsito</span><span>Procuradoria</span><span>Controladoria</span>
+      </div>
+    </div>
+    <div class="bloco">
+      <h2>Acompanhe o dinheiro público</h2>
+      <div class="links">
+        <a href="https://baveracruz.dcfiorilli.com.br:879/transparencia/" target="_blank" rel="noopener">Portal da Transparência <span>despesas, contratos</span></a>
+        <a href="https://pmveracruzba.imprensaoficial.org/" target="_blank" rel="noopener">Diário Oficial <span>leis e decretos</span></a>
+        <a href="https://veracruz.ba.gov.br/esic?p=novo-pedido" target="_blank" rel="noopener">Pedir informação (e-SIC) <span>Lei de Acesso</span></a>
+        <a href="https://ouvidoria.acessoinformacao.com.br/ba/veracruz" target="_blank" rel="noopener">Ouvidoria <span>reclamar ou sugerir</span></a>
+      </div>
+    </div>
+    <div class="bloco">
+      <h2>Atendimento</h2>
+      <div class="contato">
+        <span>Rua São Bento, 123, Centro, Mar Grande</span>
+        <span>Segunda a sexta, das 8h30 às 14h30</span>
+        <span>(71) 3633-1401</span>
+        <button type="button" class="btn copiar" data-copiar="(71) 3633-1401">Copiar telefone</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- NÚMEROS -->
+  <section class="tela" id="tela-numeros" aria-labelledby="h-num" hidden>
+    <div class="titulo">
+      <span class="rot" style="color:var(--tinta-2)">Jiribatuba em Números</span>
+      <h1 id="h-num">Por que Jiribatuba não elegeu vereador em 2024</h1>
+    </div>
+    <div class="bloco">
+      <div class="kpis">
+        <div class="kpi"><b>2.954</b><span>eleitores</span></div>
+        <div class="kpi"><b>8</b><span>seções em 3 escolas</span></div>
+        <div class="kpi"><b>2.338</b><span>votos em nomes p/ vereador</span></div>
+      </div>
+      <p class="nota">Escola Narciso de Pinho, Nova Creche Municipal e Escola Presidente Médici.</p>
+    </div>
+    <div class="bloco">
+      <h2>Para onde foram os votos daqui</h2>
+      <div class="divisao" role="img" aria-label="76% para candidatos de Jiribatuba, 24% para candidatos de fora">
+        <div class="c-sol" style="width:76%;color:var(--sol-texto)">76% daqui</div>
+        <div class="c-mar" style="width:24%;color:var(--sobre-cor)">24%</div>
+      </div>
+      <div class="legenda"><span><i class="c-sol"></i>candidatos de Jiribatuba (1.774)</span><span><i class="c-mar"></i>candidatos de fora (564)</span></div>
+      <p class="sub">A maioria já vota em gente daqui. O problema foi outro.</p>
+    </div>
+    <div class="bloco">
+      <h2>10 candidatos daqui, 0 eleitos</h2>
+      <p class="sub">Votos de cada um em toda Vera Cruz. A linha é o vereador eleito com menos votos (584).</p>
+      <div class="barras" id="barras"></div>
+      <p class="nota">Roquinho Muniz teve 603 votos, mais que um eleito. Ficou de fora porque o partido dele só conquistou 2 cadeiras e havia 2 colegas de partido na frente.</p>
+    </div>
+    <div class="bloco sim">
+      <h2>Simulador: e se os votos se juntassem?</h2>
+      <label for="qtd">Quantos candidatos de Jiribatuba: <span id="qtd-v">10</span></label>
+      <input type="range" id="qtd" min="1" max="10" value="10">
+      <div class="simres">
+        <span class="sub">Cada um teria, em média</span>
+        <div class="grande" id="media">244 votos</div>
+        <div class="regua" id="regua" aria-hidden="true"></div>
+        <span id="veredito" class="status nao">Ninguém se elege</span>
+      </div>
+      <p class="nota">Conta simples: 2.437 votos divididos igualmente. Na eleição real também conta o total do partido (quociente eleitoral de cerca de 2.272 votos em 2024).</p>
+    </div>
+  </section>
+
+  <!-- PAUTA -->
+  <section class="tela" id="tela-pauta" aria-labelledby="h-pauta" hidden>
+    <div class="titulo">
+      <span class="rot t-roxo">Pauta de Jiribatuba</span>
+      <h1 id="h-pauta">O que deve vir primeiro?</h1>
+      <p>A comunidade escolhe as prioridades. Em 2028, todos os candidatos serão convidados a assinar esta pauta.</p>
+    </div>
+    <div class="bloco">
+      <span class="exemplo">Exemplo de enquete</span>
+      <h2>Qual a maior necessidade do distrito hoje?</h2>
+      <div class="opcoes" id="opcoes"></div>
+      <p class="nota">Enquete sem valor científico. No protótipo, os números são de exemplo e seu toque fica só no seu aparelho.</p>
+    </div>
+    <div class="alerta">
+      <h2>Voto não se vende</h2>
+      <p>Oferecer ou aceitar dinheiro, cesta, material ou favor em troca de voto é crime para os dois lados. Denuncie pelo app oficial da Justiça Eleitoral.</p>
+      <a class="btn" href="https://www.tse.jus.br/eleicoes/pardal" target="_blank" rel="noopener">Conhecer o Pardal</a>
+    </div>
+  </section>
+  </main>
+</div>
+
+<nav class="baixo" aria-label="Seções">
+  <ul>
+    <li><a href="#inicio" data-tela="inicio" style="--cor:var(--fita-rosa)"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6h-6v6H4a1 1 0 0 1-1-1z"/></svg></span>Início</a></li>
+    <li><a href="#camara" data-tela="camara" style="--cor:var(--fita-mar)"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-5 9 5M5 10v8M9.5 10v8M14.5 10v8M19 10v8M3 21h18"/></svg></span>Câmara</a></li>
+    <li><a href="#prefeitura" data-tela="prefeitura" style="--cor:var(--fita-coral)"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M9 7h2M13 7h2M9 11h2M13 11h2M10 21v-5h4v5"/></svg></span>Prefeitura</a></li>
+    <li><a href="#numeros" data-tela="numeros" style="--cor:var(--fita-sol)"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></span>Números</a></li>
+    <li><a href="#pauta" data-tela="pauta" style="--cor:var(--fita-roxo)"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 13V9a1 1 0 0 1 1-1h3l8-4v16l-8-4H5a1 1 0 0 1-1-1zM8 16l1 5"/></svg></span>Pauta</a></li>
+  </ul>
+</nav>
+
+<script>
+// Dados oficiais: TSE, eleições municipais 2024 (votação por seção), Vera Cruz/BA.
+const VEREADORES = [
+  ["Tatinho","MDB",1294,"Gamboa",18],["Jorge Rasta","PDT",1154,"Barra Grande",34],
+  ["Olimpio Lima","PDT",1038,"Duro",8],["Fabio Costa","PSD",963,"Duro",9],
+  ["Elton Castro","UNIÃO",917,"Ilhota",10],["Apollo","PSB",827,"Coroa",4],
+  ["Neto Mola","REPUBLICANOS",782,"Barra do Gil",9],["Niraldo","UNIÃO",780,"Ilhota",13],
+  ["Jeovah Família","PODE",734,"Duro",5],["Val da Caçamba","PSD",726,"Tairu",19],
+  ["Marquinhos","PODE",725,"Coroa",12],["Ivan Filho","MDB",705,"Duro",23],
+  ["João do PT","PT",584,"Barra do Gil",5]
+];
+const LOCAIS = [
+  ["Roquinho Muniz",603],["Marcelo Silveira",444],["Well",315],["Luiz Washington",276],
+  ["Arenilson da Conceição",198],["Curió",170],["Nido Correria",156],
+  ["Aildes Amiga do Povo",127],["Ni",100],["Vaval",48]
+];
+const TOTAL_LOCAL = 2437, MENOR_ELEITO = 584;
+const CORES = ["c-mar","c-coral","c-roxo","c-rosa"];
+
+function iniciais(n){return n.replace(/[^A-Za-zÀ-ú ]/g,"").split(" ").filter(Boolean).slice(0,2).map(p=>p[0]).join("").toUpperCase()}
+const fmt = n => n.toLocaleString("pt-BR");
+
+function desenhaVereadores(campo){
+  const el = document.getElementById("lista-ver");
+  const lista = [...VEREADORES].sort((a,b)=>b[campo]-a[campo]);
+  el.innerHTML = lista.map(([n,p,v,b,j],i)=>`
+    <div class="ver"><div class="av ${CORES[VEREADORES.findIndex(x=>x[0]===n)%4]}">${iniciais(n)}</div>
+      <div><b>${n}</b><small><span class="chip">${p}</span> · base: ${b}</small></div>
+      <div class="v">${campo===2?fmt(v):fmt(j)}<small>${campo===2?"votos":"em Jiribatuba"}</small></div></div>`).join("");
+}
+const bT = document.getElementById("ord-total"), bJ = document.getElementById("ord-jiri");
+bT.onclick = ()=>{bT.setAttribute("aria-pressed","true");bJ.setAttribute("aria-pressed","false");desenhaVereadores(2)};
+bJ.onclick = ()=>{bJ.setAttribute("aria-pressed","true");bT.setAttribute("aria-pressed","false");desenhaVereadores(4)};
+desenhaVereadores(2);
+
+// barras dos candidatos locais
+(function(){
+  const max = 1294;
+  const el = document.getElementById("barras");
+  el.innerHTML = LOCAIS.map(([n,v])=>`
+    <div class="barra"><span class="nm">${n}</span>
+      <span class="tr" style="position:relative"><i class="${v>=MENOR_ELEITO?'c-mar':'c-sol'}" style="width:${v/max*100}%"></i>
+      <b style="position:absolute;top:-3px;bottom:-3px;left:${MENOR_ELEITO/max*100}%;border-left:2px dashed var(--fita-coral)"></b></span>
+      <span class="n">${fmt(v)}</span></div>`).join("");
+})();
+
+// simulador
+(function(){
+  const r = document.getElementById("qtd"), regua = document.getElementById("regua");
+  const QE = 2272, topo = 2600;
+  function atualiza(){
+    const n = +r.value, media = Math.round(TOTAL_LOCAL/n);
+    document.getElementById("qtd-v").textContent = n;
+    document.getElementById("media").textContent = fmt(media) + " votos";
+    const ver = document.getElementById("veredito");
+    if (media >= QE){ver.textContent="Elege sozinho, mesmo com partido fraco";ver.className="status ok"}
+    else if (media >= MENOR_ELEITO){ver.textContent="Chance real de eleger, num partido forte";ver.className="status ok"}
+    else {ver.textContent="Votos divididos demais: ninguém se elege";ver.className="status nao"}
+    regua.innerHTML = `
+      <div class="col c-sol" style="left:8%;height:${Math.min(media/topo,1)*100}%"></div>
+      <div class="linha t-coral" style="bottom:${MENOR_ELEITO/topo*100}%"><span>menor eleito: 584</span></div>
+      <div class="linha t-mar" style="bottom:${QE/topo*100}%"><span>quociente: 2.272</span></div>`;
+  }
+  r.addEventListener("input",atualiza); atualiza();
+})();
+
+// enquete de exemplo
+(function(){
+  const base = [["Saúde: posto com médico todo dia",38],["Estrada e transporte",27],["Escola e creche",16],["Emprego, pesca e turismo",12],["Água e saneamento",7]];
+  let meu = null; try{ meu = localStorage.getItem("jnm-voto"); }catch(e){}
+  const el = document.getElementById("opcoes");
+  function desenha(){
+    const votos = base.map(([t,v])=>v+(meu===t?1:0)); const tot = votos.reduce((a,b)=>a+b,0);
+    el.innerHTML = base.map(([t],i)=>{const p=Math.round(votos[i]/tot*100);return `
+      <button type="button" class="opcao" aria-pressed="${meu===t}" data-t="${t}"><span>${t}</span><span class="p">${p}%</span><span class="fill"><i style="width:${p}%"></i></span></button>`}).join("");
+    el.querySelectorAll(".opcao").forEach(b=>b.onclick=()=>{meu=b.dataset.t;try{localStorage.setItem("jnm-voto",meu)}catch(e){};desenha()});
+  }
+  desenha();
+})();
+
+// copiar telefone
+document.querySelectorAll("[data-copiar]").forEach(b=>b.addEventListener("click",()=>{
+  const t=b.dataset.copiar;
+  const ok=()=>{b.textContent="Copiado";setTimeout(()=>b.textContent="Copiar telefone",1800)};
+  try{navigator.clipboard.writeText(t).then(ok,()=>{b.textContent=t})}catch(e){b.textContent=t}
+}));
+
+// navegação por #
+const TELAS = ["inicio","camara","prefeitura","numeros","pauta"];
+function mostra(){
+  const h = location.hash.slice(1), atual = TELAS.includes(h)?h:"inicio";
+  TELAS.forEach(t=>document.getElementById("tela-"+t).hidden = t!==atual);
+  document.querySelectorAll("nav.baixo a").forEach(a=>a.dataset.tela===atual?a.setAttribute("aria-current","page"):a.removeAttribute("aria-current"));
+  window.scrollTo(0,0);
+}
+window.addEventListener("hashchange",mostra); mostra();
+</script>
