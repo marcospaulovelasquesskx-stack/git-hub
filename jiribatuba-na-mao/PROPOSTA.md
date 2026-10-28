@@ -124,6 +124,9 @@ Consequências práticas para Jiribatuba:
 - Ação fora do app: lideranças de Jiribatuba precisam negociar com partidos com chance real de
   atingir o quociente em Vera Cruz.
 
+> **Confirmado pelos dados de 2024** (ver `LEVANTAMENTO.md`): 10 candidatos de Jiribatuba somaram
+> 2.437 votos, mais que o quociente eleitoral (≈ 2.272), e nenhum foi eleito.
+
 ## 6. Segurança, privacidade e confiabilidade
 
 - **LGPD:** opinião política é **dado pessoal sensível** (art. 5º, II). Coletar o mínimo,
