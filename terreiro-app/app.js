@@ -166,12 +166,20 @@
   /* ---------- Cantigas ---------- */
   const cantigasDe = (id) => (window.CANTIGAS && CANTIGAS[id]) || [];
 
-  function cartaoCantiga(c) {
+  // Busca a melodia no YouTube pelo começo da letra e pelo nome do inkice.
+  function linkMelodia(c, grupo) {
+    const comeco = c.letra.split("\n")[0].replace(/\((\^|bis|BIS)\)|[(),]/g, " ").split(/\s+/).filter(Boolean).slice(0, 7).join(" ");
+    const busca = `${comeco} ${grupo || ""} cantiga angola`.replace(/\s+/g, " ").trim();
+    return `<a class="link-melodia" href="https://www.youtube.com/results?search_query=${encodeURIComponent(busca)}" target="_blank" rel="noopener">&#9654; Procurar a melodia no YouTube</a>`;
+  }
+
+  function cartaoCantiga(c, grupo) {
     return `<div class="cantiga${c.casa ? " da-casa" : ""}">
       ${c.titulo ? `<h3>${esc(c.titulo)}</h3>` : ""}
       ${c.casa ? '<em class="selo">Cantada na nossa casa</em>' : ""}
       <p class="letra">${esc(c.letra).replace(/\n/g, "<br>")}</p>
       ${c.nota ? `<p class="cantiga-nota">${esc(c.nota)}</p>` : ""}
+      ${linkMelodia(c, grupo)}
     </div>`;
   }
 
@@ -183,11 +191,11 @@
     }
     const casa = lista.filter((c) => c.casa);
     const outras = lista.filter((c) => !c.casa);
-    return `${casa.length ? casa.map(cartaoCantiga).join("") : `<p>Ainda não marcamos quais destas cantigas são cantadas na nossa casa.</p>`}
+    return `${casa.length ? casa.map((c) => cartaoCantiga(c, item.nome)).join("") : `<p>Ainda não marcamos quais destas cantigas são cantadas na nossa casa.</p>`}
       ${outras.length ? `<details class="mais-cantigas"${casa.length ? "" : " open"}>
         <summary>${casa.length ? "Mais" : "Ver as"} ${outras.length} cantigas da coletânea de Angola</summary>
         <p class="aviso">Da coletânea "Cantigas de Angola". Ainda não confirmadas como cantadas na nossa casa.</p>
-        ${outras.map(cartaoCantiga).join("")}
+        ${outras.map((c) => cartaoCantiga(c, item.nome)).join("")}
       </details>` : ""}`;
   }
 
@@ -514,6 +522,7 @@
           <a href="#/nacao"><span>&#127757;</span>A nação Angola</a>
           <a href="#/dicionario"><span>&#128172;</span>Dicionário Angola-Congo</a>
           <a href="#/cantigas"><span>&#127926;</span>Cantigas de Angola</a>
+          <a href="#/aprender-cantigas"><span>&#127891;</span>Aprender cantigas</a>
           <a href="#/casa"><span>&#127968;</span>Nossa casa</a>
           <a href="#/sobre"><span>&#9881;</span>Ajustes e ajuda</a>
         </div>
@@ -546,6 +555,26 @@
       </section>`;
     },
 
+    "aprender-cantigas"() {
+      const opcoes = INKICES.filter((i) => cantigasDe(i.id).length).map((i) => `<option value="${i.id}">${esc(i.nome)} (${esc(i.ketu.split(" (")[0])})</option>`).join("");
+      return `<section class="bloco">
+        <h1>Aprender cantigas</h1>
+        <p>Uma cantiga de cada vez. Leia a letra, procure a melodia, cante junto e marque quando aprender. O que você marcar fica guardado neste aparelho.</p>
+        <div class="caixa aprender-filtros">
+          <label for="ap-modo">Quais cantigas</label>
+          <select id="ap-modo">
+            <option value="novas">Novas para aprender (ainda não cantadas na casa)</option>
+            <option value="casa">As cantadas na nossa casa (para revisar)</option>
+            <option value="todas">Todas</option>
+          </select>
+          <label for="ap-inkice">De qual inkice</label>
+          <select id="ap-inkice"><option value="">Todos os inkices</option>${opcoes}</select>
+        </div>
+        <p class="contagem" id="ap-progresso" aria-live="polite"></p>
+        <div id="ap-cartao"></div>
+      </section>`;
+    },
+
     cantigas() {
       const nomes = { pemba: "Pemba e rezas da casa", lugano: "Mina Lugano (Obá)", aganji: "Mina Aganji (Ewá)" };
       const ordem = [...INKICES.map((i) => i.id), "lugano", "aganji", "pemba"].filter((id) => cantigasDe(id).length);
@@ -554,7 +583,11 @@
       return `<section class="bloco">
         <h1>Cantigas de Angola</h1>
         <p>${total} cantigas da coletânea "Cantigas de Angola", separadas por inkice. As ${daCasa} marcadas como <b>cantadas na nossa casa</b> aparecem primeiro.</p>
-        <div class="acoes-lista"><button class="botao" id="so-casa" aria-pressed="false">&#9733; Mostrar só as da nossa casa</button></div>
+        <div class="acoes-lista">
+          <a class="botao" href="#/aprender-cantigas">&#127891; Aprender cantigas novas</a>
+          <button class="botao" id="so-casa" aria-pressed="false">&#9733; Mostrar só as da nossa casa</button>
+        </div>
+        <p class="aviso">O botão "Procurar a melodia no YouTube" abre uma busca pelo começo da letra. A gravação que aparecer pode ser de outra casa, com outra melodia: confira sempre com os ogãs e os mais velhos.</p>
         <label class="busca"><span class="sr">Buscar na letra</span>
           <input type="search" id="busca-cantiga" placeholder="Buscar na letra: Matamba, Kitembu, pemba..." autocomplete="off"></label>
         <div id="lista-cantigas">
@@ -564,7 +597,7 @@
           return `<section class="grupo-cantigas" data-grupo="${id}">
             <h2>${esc(titulo)}</h2>
             ${ink ? `<p><a class="mais-link" href="#/inkices/${id}">Ver a página de ${esc(ink.nome)} &#8250;</a></p>` : ""}
-            ${cantigasDe(id).map(cartaoCantiga).join("")}
+            ${cantigasDe(id).map((c) => cartaoCantiga(c, ink ? ink.nome : nomes[id])).join("")}
           </section>`;
         }).join("")}
         </div>
@@ -628,6 +661,7 @@
     }
     if (!html) { aba = "inicio"; html = telas.inicio(); }
     if (["comparativo", "aprender"].includes(aba)) aba = "inkices";
+    if (aba === "aprender-cantigas") aba = "mais";
     if (aba === "galeria") aba = "inicio";
     if (["casa", "nacao", "dicionario", "cantigas", "sobre"].includes(aba)) aba = aba === "casa" ? "inicio" : "mais";
 
@@ -740,7 +774,53 @@
     };
   }
 
+  /* ---------- Aprender cantigas ---------- */
+  let aprendidas = {};
+  try { aprendidas = JSON.parse(localStorage.getItem("cantigas-aprendidas") || "{}"); } catch (e) { /* sem armazenamento */ }
+  const salvarAprendidas = () => { try { localStorage.setItem("cantigas-aprendidas", JSON.stringify(aprendidas)); } catch (e) { /* ignora */ } };
+
+  function ligarAprender() {
+    const caixa = $("#ap-cartao");
+    if (!caixa) return;
+    let pos = 0;
+    const listaAtual = () => {
+      const modo = $("#ap-modo").value;
+      const so = $("#ap-inkice").value;
+      return INKICES.filter((i) => !so || i.id === so).flatMap((i) =>
+        cantigasDe(i.id).map((c, n) => ({ c, ink: i, chave: `${i.id}-${n}` })))
+        .filter(({ c }) => modo === "todas" || (modo === "casa" ? c.casa : !c.casa));
+    };
+    const desenhar = () => {
+      const lista = listaAtual();
+      const feitas = lista.filter((x) => aprendidas[x.chave]).length;
+      $("#ap-progresso").textContent = lista.length ? `Você já aprendeu ${feitas} de ${lista.length} cantigas desta lista.` : "";
+      if (!lista.length) { caixa.innerHTML = '<p class="aviso">Nenhuma cantiga nesta lista.</p>'; return; }
+      pos = (pos + lista.length) % lista.length;
+      const { c, ink, chave } = lista[pos];
+      const sabe = !!aprendidas[chave];
+      caixa.innerHTML = `<div class="aprender-cartao" style="--c1:${cor(ink)};--c2:${cor2(ink)}">
+          <p class="aprender-de">Cantiga ${pos + 1} de ${lista.length} · <a href="#/inkices/${ink.id}">${esc(ink.nome)}</a></p>
+          ${cartaoCantiga(c, ink.nome)}
+          ${botaoOuvir(`Cantiga de ${ink.nome}`, "Ainda não há gravação da casa para esta cantiga. Procure a melodia ou peça aos ogãs.", `${chave}-cantiga`, "Ouvir gravação da casa")}
+          <button class="botao aprendi${sabe ? " ativo" : ""}" id="ap-sei" aria-pressed="${sabe}">${sabe ? "&#10003; Já aprendi" : "Marcar como aprendida"}</button>
+          <div class="aprender-nav">
+            <button class="botao" id="ap-ant">&#8249; Anterior</button>
+            <button class="botao" id="ap-sorte">Sortear</button>
+            <button class="botao" id="ap-prox">Próxima &#8250;</button>
+          </div>
+        </div>`;
+      $("#ap-sei").onclick = () => { if (sabe) delete aprendidas[chave]; else aprendidas[chave] = true; salvarAprendidas(); desenhar(); };
+      $("#ap-ant").onclick = () => { pos--; desenhar(); };
+      $("#ap-prox").onclick = () => { pos++; desenhar(); };
+      $("#ap-sorte").onclick = () => { pos = Math.floor(Math.random() * lista.length); desenhar(); };
+    };
+    $("#ap-modo").onchange = () => { pos = 0; desenhar(); };
+    $("#ap-inkice").onchange = () => { pos = 0; desenhar(); };
+    desenhar();
+  }
+
   function ligarEventos() {
+    ligarAprender();
     ligarDicionario();
     ligarCantigas();
     if ($("#quiz")) novaPergunta();
