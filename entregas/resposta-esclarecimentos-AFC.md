@@ -1,8 +1,9 @@
 # Resposta à AFC Representação e Serviços Ltda. — Esclarecimentos técnicos (AEP, riscos psicossociais, PGR e PCMSO)
 
-> **RASCUNHO INTERNO — revisar antes de enviar.**
-> Trechos entre **[colchetes]** precisam ser preenchidos com os dados reais da AFC (nº de respondentes, scores, GSEs, datas).
-> Itens marcados com ⚠️ são pontos que a SKX deve conferir internamente antes de responder (ver "Notas internas" no final).
+> **RASCUNHO INTERNO (v2, com os dados reais da pesquisa) — revisar antes de enviar.**
+> Os trechos entre **[colchetes]** dependem de informação que só a SKX tem.
+> Os itens marcados com ⚠️ precisam de conferência interna (ver "Notas internas" no final).
+> Anexos B e C: `entregas/Anexos-B-C-AFC-resultados-e-memoria-de-calculo.xlsx`.
 
 ---
 
@@ -10,239 +11,211 @@
 
 Prezada Sra. Fabiane e Direção da AFC,
 
-Agradecemos a análise cuidadosa dos documentos e a disposição da empresa em compreender o diagnóstico e agir sobre ele. Questionamentos técnicos como estes fortalecem o gerenciamento de riscos, e respondemos abaixo a cada item, na mesma ordem do e-mail recebido. Os documentos complementares citados seguem em anexo.
+Agradecemos a análise cuidadosa dos documentos e a disposição da empresa em compreender o diagnóstico e agir sobre ele. Respondemos abaixo a cada item, na ordem do e-mail recebido. Ao revisar a memória de cálculo para esta resposta, identificamos pontos do relatório que serão **retificados**. Eles estão indicados ao longo do texto.
 
-Antes, um esclarecimento geral que vale para todo o e-mail: **a avaliação psicossocial é uma etapa de identificação e priorização de riscos dentro do PGR (NR-01, itens 1.5.3 e 1.5.4), não um laudo ou uma apuração de fatos.** Ela mede a *percepção coletiva* dos trabalhadores sobre fatores da organização do trabalho, com base em instrumento padronizado, e indica onde a empresa deve olhar primeiro. A confirmação das causas concretas e a escolha das medidas são feitas junto com a empresa, que é exatamente o que este diálogo permite.
+Antes, um esclarecimento geral: **a avaliação psicossocial é uma etapa de identificação e priorização de riscos dentro do PGR (NR-01, itens 1.5.3 e 1.5.4), não um laudo nem uma apuração de fatos.** Ela mede a *percepção coletiva* dos trabalhadores sobre a organização do trabalho e indica onde a empresa deve olhar primeiro. A confirmação das causas e a escolha das medidas são feitas em conjunto com a empresa.
 
 ---
 
 ## 1. Metodologia utilizada na avaliação psicossocial
 
-**Metodologia técnica.** A avaliação foi processada no sistema **MPVS – Gestão Integrada de NR-01**, desenvolvido pela SKX, que consolida os resultados em **16 dimensões psicossociais** derivadas do **COPSOQ – Copenhagen Psychosocial Questionnaire** (versão portuguesa validada do COPSOQ II, Silva et al., 2011, e referências do COPSOQ III). A classificação de risco segue a mesma lógica usada para os demais riscos do PGR (Grau de Efeito à Saúde × Grau de Exposição), com parâmetros de severidade baseados em:
+**Instrumentos e coleta.** A coleta foi feita em fevereiro de 2026 (e-mail de 11/02/2026) com **dois instrumentos distintos**:
 
-- NR-01 (itens 1.5.3.1.4, 1.5.3.2.1 e 1.5.4.4.5.3) e Guia de Informações sobre os Fatores de Riscos Psicossociais Relacionados ao Trabalho (MTE);
-- ISO 45003:2021 – Gestão de saúde e segurança psicológica no trabalho;
-- Modelo Demanda-Controle (Karasek) e Modelo Esforço-Recompensa (Siegrist);
-- Caracterização de Grupos Similares de Exposição (GSE) conforme a metodologia AIHA (*A Strategy for Assessing and Managing Occupational Exposure*), já adotada no PGR.
+1. **Checklist organizacional respondido pelo RH** (PDF/Word, assinado), sobre políticas e práticas da empresa como um todo; e
+2. **Formulário eletrônico anônimo** (Google Forms), respondido individualmente pelos colaboradores entre 23 e 25/02/2026.
 
-As 16 dimensões são: Exigências Quantitativas; Ritmo de Trabalho; Exigências Emocionais; Influência no Trabalho; Desenvolvimento e Crescimento; Sentido do Trabalho; Apoio dos Colegas; Apoio da Liderança; Qualidade da Liderança; Clareza de Papéis; Reconhecimento; Conflito Trabalho-Família; Insegurança no Trabalho; Justiça Organizacional; Confiança Organizacional; Estresse e Exaustão.
+Portanto, o checklist disponibilizado à AFC **não é o mesmo** formulário aplicado aos colaboradores. Os dois seguem na íntegra no **Anexo A**. ⚠️ [Confirmar de qual instrumento vieram as expressões "autonomia suficiente", "suporte adequado", "reconhecimento justo" e "metas irreais", que não constam do formulário dos colaboradores.]
 
-**Correspondência entre o checklist e o formulário eletrônico.** ⚠️ A coleta da AFC foi feita em duas frentes, conforme nosso e-mail de 11/02/2026:
-1. **Checklist respondido pelo RH** (PDF/Word, assinado), sobre a organização da empresa como um todo; e
-2. **Formulário eletrônico anônimo** respondido individualmente pelos colaboradores.
+**Desenvolvimento do formulário.** O formulário dos colaboradores foi **elaborado pela SKX em conjunto com uma psicóloga organizacional**. Ele tem **30 afirmações** organizadas em 7 blocos:
+- organização e carga de trabalho;
+- autonomia e participação;
+- relações e liderança;
+- reconhecimento e desenvolvimento;
+- gestão de SST;
+- estabilidade e segurança psicológica;
+- saúde e bem-estar.
 
-[Confirmar: o checklist enviado à AFC é / não é idêntico ao formulário eletrônico. Se não for, dizer: "O checklist disponibilizado é o instrumento do RH; o formulário dos colaboradores segue em anexo na íntegra (Anexo A)".]
-As respostas foram convertidas em scores de 0 a 100 por dimensão e lançadas no MPVS, que aplicou a matriz de risco descrita no item 3.
+As respostas seguem escala de 1 (Nunca) a 5 (Sempre). Há também uma pergunta de indicação da empresa (0 a 10) e um campo aberto de comentários. Os temas foram escolhidos a partir dos fatores psicossociais apontados pelo Guia do MTE sobre fatores de riscos psicossociais, pela ISO 45003:2021 e pelos modelos Demanda-Controle (Karasek), Esforço-Recompensa (Siegrist) e COPSOQ.
 
-**Desenvolvimento do instrumento.** O instrumento é uma **adaptação** feita pela SKX a partir do COPSOQ e das referências acima, com linguagem simplificada para a realidade de pequenas e médias empresas. Não se trata de instrumento criado sem base: cada pergunta está ligada a uma dimensão do COPSOQ, e a classificação de severidade de cada dimensão foi definida a partir da literatura (ver item 3).
+**Conversão para a metodologia MPVS.** Posteriormente, os resultados foram processados no sistema **MPVS – Gestão Integrada de NR-01**, desenvolvido pela SKX. O sistema classifica os riscos em **16 dimensões psicossociais derivadas do COPSOQ** (Copenhagen Psychosocial Questionnaire). Para isso, cada afirmação do formulário foi associada à dimensão COPSOQ correspondente. O mapeamento, item a item e com a justificativa de cada associação, está no **Anexo C**. Duas dimensões (Exigências Emocionais e Sentido do Trabalho) **não foram avaliadas**, porque o formulário não tem itens que as meçam. Elas serão incluídas na reaplicação.
 
-**Critérios de formulação e interpretação.**
-- Cada pergunta é associada a uma única dimensão.
-- As respostas usam escala Likert de 5 pontos (Sempre, Frequentemente, Às vezes, Raramente, Nunca).
-- As perguntas "positivas" (ex.: autonomia, apoio, reconhecimento) são invertidas, de forma que **em todas as dimensões score maior = maior exposição ao risco**.
-- O score da dimensão é a média dos itens convertidos para 0–100 (cada ponto da escala = 25 pontos).
-- Um fator só é classificado como risco relevante quando a média do grupo indica exposição. Respostas isoladas não geram classificação.
+**Critérios de interpretação.**
+- Todas as afirmações do formulário são positivas (5 = condição favorável). Por isso, o score de risco de cada item é calculado como (5 − média) × 25, em escala de 0 a 100, em que **maior valor = maior exposição**.
+- O score da dimensão é a média dos itens associados a ela.
+- A classificação considera a **média do grupo**. Respostas isoladas não geram conclusão.
+- Itens que medem a **existência de programas** da empresa (apoio psicológico, programas de saúde mental) e itens de **gestão de SST** não entram no score das dimensões. Eles indicam ausência de controle e são tratados no plano de ação e no PGR.
 
-**Participação.** [Preencher: X colaboradores de um quadro de Y (Z% de adesão), distribuídos em: GSE 01 – ___ (n = __); GSE 02 – ___ (n = __); ...]
-Por regra interna de confidencialidade, **grupos com menos de 5 respostas não são apresentados isoladamente**. Eles são agrupados com outro setor para impedir que alguém seja identificado.
+**Participação.** Responderam **13 colaboradores**: 10 do setor Operacional (estoquista, motorista, vendedor, consultor externo e técnico de manutenção) e 3 do Administrativo. [O quadro na época era de __ colaboradores, o que corresponde a __% de adesão.] Pela regra de confidencialidade da SKX, grupos com **menos de 5 respostas não são apresentados isoladamente**. Como o Administrativo teve 3 respostas, os resultados são apresentados **apenas de forma consolidada**.
 
-**Verificações complementares.** [Ajustar à realidade: "Além do questionário, foram considerados o checklist do RH, os indicadores fornecidos pela empresa (absenteísmo, turnover, afastamentos, CATs, canal de denúncia) e a reunião de apresentação com o RH. Não foram realizadas entrevistas individuais nem observação sistemática das atividades nesta etapa."]
-Reconhecemos que esta é uma etapa de **triagem**. Propomos complementá-la com uma **validação qualitativa** (rodas de conversa ou entrevistas curtas por setor, conduzidas de forma confidencial) para confirmar as causas concretas das dimensões classificadas como Moderado ou acima, antes de fechar as prioridades do plano (ver item 9).
+**Verificações complementares.** Além do formulário, foram considerados o checklist do RH, [os indicadores fornecidos pela empresa] e a reunião de apresentação com o RH. **Não houve entrevistas individuais nem observação sistemática das atividades** nesta etapa. Por isso, propomos complementar a avaliação com uma validação qualitativa por setor (ver item 9).
 
-**Resultados consolidados.** Seguem no **Anexo B**: os resultados anonimizados com score por dimensão e por GSE e a distribuição percentual das respostas por pergunta. Para manter a confidencialidade, não aparecem grupos com menos de 5 respondentes.
+**Resultados.** O **Anexo B** traz a distribuição das respostas por pergunta (contagem de 1 a 5, média, score de risco e % de respostas desfavoráveis), de forma consolidada e anonimizada.
 
 ---
 
 ## 2. Interpretação das respostas e fundamentação das conclusões
 
-Concordamos com a observação: expressões como "autonomia" ou "apoio" podem ser lidas de formas diferentes. Esclarecemos como foram tratadas.
+**Definição dos conceitos.** Usamos as definições operacionais do COPSOQ. "Influência no trabalho (autonomia)" significa a possibilidade de o trabalhador influenciar **como** executa e organiza as próprias tarefas e de ter suas sugestões consideradas. O formulário perguntou exatamente isso:
+- "No seu local de trabalho tem autonomia para organizar o modo de realização das suas tarefas?"
+- "Minhas sugestões e opiniões são valorizadas."
+- "Posso organizar meu trabalho de acordo com minhas prioridades."
 
-**Definição dos conceitos.** Os conceitos seguem as definições operacionais do COPSOQ:
-- **Influência no Trabalho (autonomia):** possibilidade de o trabalhador influenciar *como* executa as próprias tarefas, a ordem, o ritmo e a forma de organizá-las, e de opinar sobre mudanças que o afetam diretamente.
-  **Não mede** autoridade para tomar decisões comerciais ou financeiras da empresa.
-- **Apoio da Liderança / dos Colegas:** possibilidade de obter ajuda, orientação e retorno quando necessário.
-- **Reconhecimento:** percepção de que o esforço e os resultados são vistos e valorizados.
-- **Exigências Quantitativas / Ritmo:** relação entre volume de trabalho, tempo disponível e velocidade exigida.
+**Nenhuma pergunta trata de autoridade para decisões comerciais ou financeiras.** A AFC tem razão: alçadas de aprovação para descontos, margens e crédito são mecanismos legítimos de governança e não constituem fator de risco psicossocial.
 
-**Limitações legítimas x limitações prejudiciais.** A empresa tem toda razão: **alçadas de aprovação para descontos, margens, prazos e crédito são mecanismos legítimos de governança e não constituem, por si, fator de risco.** O COPSOQ não considera essas limitações um problema. O risco aparece quando a restrição gera efeitos sobre o trabalho, como:
-- espera prolongada por aprovação que trava a execução e gera retrabalho ou pressão do cliente sobre o trabalhador;
-- regras pouco claras ou que mudam sem comunicação;
-- responsabilização pelo resultado sem meios de influenciar o processo.
+**Confronto entre as conclusões apresentadas e os dados.** Revisamos cada conclusão citada pela AFC:
 
-O questionário capta a *percepção*, mas não a causa. Por isso, a distinção que a AFC propõe deve ser feita na validação qualitativa. Se ficar confirmado que a percepção se refere às alçadas comerciais e que elas funcionam de forma clara e ágil, a medida adequada será **comunicação e clareza dos fluxos de aprovação**, e não ampliar a autonomia financeira.
+| Conclusão citada | O que os dados mostram (n = 13) | Posição da SKX |
+|---|---|---|
+| Baixa autonomia | 10 de 13 (77%) respondem "sempre" ou "frequentemente" à pergunta sobre autonomia. A dimensão Influência no Trabalho fica em score 28,2, classificada como **Baixo** (GR 4). | **Retificar.** Não há base para classificar como risco relevante. |
+| Baixa participação nas decisões | 4 de 13 (31%) respondem "às vezes" ou "nunca" sobre valorização de sugestões. | Ponto de atenção, não risco Moderado. Retificar a redação. |
+| Dependência excessiva da liderança | Nenhum item do formulário mede isso. | **Retirar** do relatório. |
+| Falta de apoio | O apoio da liderança tem 13 de 13 respostas "sempre" ou "frequentemente". O apoio dos colegas tem 12 de 13. A falta apontada é de **apoio psicológico e programas de saúde mental**: 11 de 13 (85%) dizem não ter acesso a apoio psicológico, e 12 de 13 (92%) dizem que a empresa não oferece programas de saúde mental. | **Retificar a redação:** "ausência de recursos de apoio psicológico e de programas de promoção da saúde mental", e não "falta de apoio" da liderança ou dos colegas. |
+| Interrupções constantes | 6 de 13 (46%) dizem que só "às vezes" ou "raramente" conseguem trabalhar sem interrupções. A dimensão Ritmo de Trabalho fica em **Baixo** (GR 3). | Ajustar para "interrupções frequentes relatadas por parte da equipe", como ponto de atenção. |
 
-**Evidências das conclusões.** As conclusões de [baixa autonomia, baixa participação, dependência da liderança, falta de apoio e interrupções] decorrem dos scores das dimensões [Influência no Trabalho, Apoio da Liderança, Exigências Quantitativas/Ritmo] nos GSEs [__], que ficaram na faixa [__] (Anexo B). [Se houver: citar também respostas abertas ou indicadores que reforcem.]
-Esclarecemos com transparência que **essas conclusões representam a percepção agregada dos trabalhadores e ainda não foram confirmadas por observação de situações concretas das rotinas**. Elas indicam *onde* investigar, e a investigação faz parte da próxima etapa.
+**Contextualização.** Essas conclusões representam percepção agregada e ainda **não foram confirmadas por observação das rotinas**. Nos pontos de atenção (interrupções, valorização de sugestões), a validação com os setores vai indicar se a causa está, por exemplo, em fluxos de atendimento ou de aprovação, e não na política de alçadas.
 
-**Diferenças entre setores.** A análise é feita por GSE. Cada setor tem seu próprio score e sua própria classificação, e as medidas do plano são vinculadas aos GSEs em que o fator ficou Moderado ou acima (Anexo B, quadro por GSE). [Confirmar se o relatório da AFC foi gerado por setor ou em visão geral; se foi geral, informar que será reemitido por GSE.]
+**Diferenças entre setores.** O recorte por setor não pode ser apresentado sem expor os 3 respondentes administrativos. ⚠️ [Se o relatório entregue trouxe o Administrativo separado, ele será reemitido de forma consolidada.] A diferenciação por setor será feita na validação qualitativa e na reaplicação, com amostra maior.
 
 ---
 
 ## 3. Critérios de classificação e graduação dos riscos
 
-A memória de cálculo é a seguinte e permite reproduzir o enquadramento de cada dimensão.
+**Memória de cálculo (reproduzível no Anexo C):**
 
-**Etapa 1 – Score (0 a 100).** Média das respostas do grupo para a dimensão, convertida para 0–100 (maior = mais exposição).
+1. **Score (0–100)** = média dos itens da dimensão, com o score de cada item = (5 − média) × 25.
+2. **Grau de Exposição (GE, equivalente à probabilidade):** 1 para score de 0 a 25; 2 para mais de 25 até 50; 3 para mais de 50 até 75; 4 para mais de 75. É assim que a **frequência das respostas** entra no cálculo.
+3. **Grau de Efeito à Saúde (GES, equivalente à severidade):** é fixo por dimensão, com base na gravidade dos agravos associados na literatura (ISO 45003, guia MTE, Karasek, Siegrist):
+   - **1 Leve:** Desenvolvimento, Sentido do Trabalho;
+   - **2 Moderado:** Influência, Apoio dos Colegas, Apoio da Liderança, Qualidade da Liderança, Clareza de Papéis, Reconhecimento, Conflito Trabalho-Família, Justiça Organizacional, Confiança Organizacional;
+   - **3 Grave:** Exigências Quantitativas, Ritmo, Exigências Emocionais, Insegurança no Trabalho;
+   - **4 Crítico:** Estresse e Exaustão.
+4. **Grau de Risco: GR = GES × GE**, classificado como I Trivial (≤1), II Baixo (2–5), III Moderado (6–11), IV Alto (12–15) ou V Intolerável (16). Entram no inventário do PGR e no plano de ação apenas as dimensões **Moderado ou acima**.
+5. **GE corrigido:** cada controle já implantado e comprovado reduz 1 ponto do GE, com mínimo de 1.
 
-**Etapa 2 – Grau de Exposição (GE), equivalente à probabilidade**, obtido diretamente do score:
+**Resultado da AFC:**
 
-| GE | Score | Exposição |
-|---|---|---|
-| 1 | 0 a 25 | Baixa |
-| 2 | 26 a 50 | Moderada |
-| 3 | 51 a 75 | Alta |
-| 4 | 76 a 100 | Muito alta |
+| Dimensão | Score | GE | GES | GR | Classificação |
+|---|---|---|---|---|---|
+| **Estresse e Exaustão** | 36,5 | 2 | 4 | **8** | **III – Moderado** |
+| **Insegurança no Trabalho** | 28,8 | 2 | 3 | **6** | **III – Moderado** (no limite) |
+| Influência no Trabalho | 28,2 | 2 | 2 | 4 | II – Baixo |
+| Reconhecimento | 34,6 | 2 | 2 | 4 | II – Baixo |
+| Exigências Quantitativas | 17,3 | 1 | 3 | 3 | II – Baixo |
+| Ritmo de Trabalho | 21,8 | 1 | 3 | 3 | II – Baixo |
+| Desenvolvimento e Crescimento | 28,8 | 2 | 1 | 2 | II – Baixo |
+| Conflito Trabalho-Família | 21,2 | 1 | 2 | 2 | II – Baixo |
+| Apoio dos Colegas / Apoio da Liderança / Qualidade da Liderança / Clareza de Papéis / Justiça / Confiança Organizacional | 1,9 a 16,0 | 1 | 2 | 2 | II – Baixo |
+| Exigências Emocionais / Sentido do Trabalho | — | — | — | — | Não avaliadas |
 
-É assim que a **frequência das respostas** entra no cálculo: quanto mais trabalhadores relatam a condição "sempre/frequentemente", maior o score e maior o GE.
+**Leitura:** o resultado geral é **favorável**. 12 das 14 dimensões avaliadas ficaram em nível Baixo, e a média de indicação da empresa foi de **9,4 em 10**. Os dois fatores que exigem plano de ação são:
+- **Estresse e Exaustão:** 5 de 13 respondem "às vezes" ou menos sobre bem-estar físico e emocional; 6 de 13 sobre equilíbrio emocional sem ansiedade.
+- **Insegurança no Trabalho:** sobre a afirmação de que a empresa oferece estabilidade para a carreira, 5 de 13 respondem "às vezes", 5 "frequentemente" e 3 "sempre". Ninguém respondeu "raramente" ou "nunca".
 
-**GE corrigido:** quando a empresa já tem controle implantado e comprovado para aquela dimensão, cada controle reduz 1 ponto do GE, com mínimo de 1. **É aqui que entram os treinamentos, as políticas e as práticas que a AFC já possui** e que devem ser informados com evidência.
+**Ponderação.** Não há ponderação por função, intensidade ou duração, porque o número de respostas não permite recorte por função e a escala já mede frequência.
 
-**Etapa 3 – Grau de Efeito à Saúde (GES), equivalente à severidade.** Definido por dimensão, conforme a gravidade dos agravos associados na literatura (ISO 45003, guia MTE, Karasek, Siegrist):
-
-| GES | Nível | Dimensões |
-|---|---|---|
-| 1 | Leve | Desenvolvimento e Crescimento; Sentido do Trabalho |
-| 2 | Moderado | Influência no Trabalho; Apoio dos Colegas; Apoio da Liderança; Qualidade da Liderança; Clareza de Papéis; Reconhecimento; Conflito Trabalho-Família; Justiça Organizacional; Confiança Organizacional |
-| 3 | Grave | Exigências Quantitativas; Ritmo de Trabalho; Exigências Emocionais; Insegurança no Trabalho |
-| 4 | Crítico | Estresse e Exaustão |
-
-**Etapa 4 – Grau de Risco: GR = GES × GE corrigido**
-
-| GR | Classificação | Prioridade no plano |
-|---|---|---|
-| ≤ 1 | I – Trivial | Baixa |
-| 2 a 5 | II – Baixo | Baixa |
-| 6 a 11 | III – Moderado | Média |
-| 12 a 15 | IV – Alto | Alta |
-| 16 | V – Intolerável | Alta, ação imediata |
-
-Somente as dimensões com **GR ≥ 6 (Moderado ou acima)** entram no inventário de riscos do PGR e no plano de ação.
-
-*Exemplo:* para "Influência no Trabalho" (GES 2) ser classificada como Moderada, o grupo precisa ter score ≥ 51 (GE 3, resultando em GR 6). Ou seja, mais da metade da escala precisa apontar exposição, e não basta uma resposta isolada.
-
-**Ponderação.** A ponderação é feita por GSE, já que cada setor tem cálculo próprio. Não há ponderação adicional por intensidade ou duração da exposição, porque o instrumento já mede frequência ("sempre... nunca").
-
-**Relação entre a escala qualitativa de severidade e a escala de 1 a 5.** ⚠️ A legenda "Levemente Prejudicial / Prejudicial / Extremamente Prejudicial" que aparece no documento é a **legenda de severidade do PGR/AEP para os riscos ambientais e ergonômicos** e não pertence à metodologia psicossocial. Para os fatores psicossociais, vale a escala GES 1–4 acima. Reconhecemos que a presença das duas legendas no mesmo documento gerou confusão. [Se for o caso: "Reemitiremos o documento com a legenda correta e o quadro de cálculo de cada fator (score → GE → GES → GR)."]
-
-O **Anexo C** traz a tabela de enquadramento de cada fator da AFC, com score, GE, GES, GR e classificação.
+**Severidade qualitativa x escala numérica.** ⚠️ A legenda "Levemente Prejudicial / Prejudicial / Extremamente Prejudicial" é a legenda de severidade do PGR para riscos ambientais e ergonômicos e **não se aplica aos fatores psicossociais**, que usam a escala GES de 1 a 4 acima. Reconhecemos que a presença das duas legendas gerou confusão. [⚠️ Se o relatório entregue classificou mais fatores, ou com grau maior, do que a tabela acima: "O relatório será reemitido com esta classificação, que substitui a anterior."]
 
 ---
 
 ## 4. Treinamentos, capacitação e desenvolvimento profissional
 
-Agradecemos a informação e reconhecemos que a empresa realiza capacitações técnicas, inclusive com fabricantes, e treinamentos de SST.
+A conclusão veio de **percepção** registrada em dois itens do formulário, e não de análise documental:
+- "Recebo treinamento e orientação suficiente sobre segurança no trabalho": **7 de 13 (54%)** responderam "às vezes" ou "raramente".
+- "O meu local de trabalho proporciona oportunidades de crescimento, desenvolvimento profissional e pessoal, como treinamentos e palestras": **6 de 13 (46%)** responderam "às vezes".
 
-**Origem da conclusão.** A observação decorre de [score da dimensão "Desenvolvimento e Crescimento" (GES 1) no(s) GSE __ / resposta do checklist do RH ao item __ / ausência de registros de treinamentos do PGR entregues à SKX]. ⚠️ [Confirmar se a SKX recebeu e analisou os registros de treinamento. Se não recebeu, dizer isso com transparência.]
+⚠️ [Confirmar: os registros de treinamento da AFC **não foram analisados** nesta avaliação.] Por isso, a expressão "falta de prioridade para treinamentos previstos no PGR" **será retirada**. Ela será substituída por "percepção, por parte da equipe, de orientação insuficiente em segurança e de poucas oportunidades de desenvolvimento".
 
-**Distinção necessária**, que adotaremos na revisão:
-1. **Treinamentos obrigatórios de SST** previstos no PGR (NRs aplicáveis): conformidade legal, verificada por registro;
-2. **Capacitações técnicas da função** (fabricantes, equipamentos): necessárias à execução segura e eficiente;
-3. **Desenvolvimento profissional** (crescimento, aprendizado, perspectiva de carreira): é isto que a dimensão psicossocial mede.
+A distinção pedida pela AFC é procedente e será adotada:
+1. **Treinamentos obrigatórios de SST** são questão de conformidade do PGR, verificada por registro. **Não são fator psicossocial** (o item ficou fora do cálculo das dimensões, ver Anexo C).
+2. **Capacitações técnicas** (fabricantes, equipamentos) também são verificadas por registro.
+3. **Desenvolvimento profissional** é a dimensão psicossocial "Desenvolvimento e Crescimento", classificada como **Baixo** (GR 2).
 
-A existência de 1 e 2 não elimina uma percepção baixa em 3, e vice-versa. Por isso pedimos o envio dos **registros de treinamentos** (lista de presença/certificados por função dos últimos 12–24 meses). Com eles, (a) atualizaremos a matriz de treinamentos do PGR, (b) aplicaremos a correção do GE onde houver controle comprovado e (c) indicaremos por função apenas as lacunas efetivamente identificadas. [Se a frase "falta de prioridade para treinamentos previstos no PGR" não tiver evidência documental, retirá-la do relatório.]
+Solicitamos os **registros de treinamento por função** dos últimos 12 a 24 meses. Com eles, atualizaremos a matriz de treinamentos do PGR. Se os registros mostrarem que os treinamentos existem, a percepção de "orientação insuficiente" indica uma oportunidade de **comunicação e reforço** (ex.: DDS e integração), e não de treinamentos novos.
 
 ---
 
 ## 5. Correspondência entre atividades, riscos ocupacionais e PCMSO
 
-Este ponto é procedente e será tratado como **revisão técnica formal**.
+O ponto é procedente e será tratado como **revisão técnica formal**:
 
-- Os riscos físicos/ergonômicos do PCMSO (esforço físico, carregamento de materiais) vêm do **inventário de riscos do PGR por GSE**. Quando um cargo comercial ou administrativo aparece com "carregamento de materiais", isso pode decorrer (a) de atividade real e eventual (ex.: transporte de equipamentos, insumos ou mostruários, instalação/entrega técnica) ou (b) de **descrição padronizada por GSE que não reflete a função**.
-- **Providências:**
-  1. A SKX revisará, junto com a AFC, a descrição de atividades de cada cargo e o enquadramento em GSE, confirmando se há manuseio de cargas (peso, frequência, distância).
-  2. Onde a exposição não se confirmar, o risco será retirado do GSE no PGR e na AEP.
-  3. O PGR revisado será encaminhado ao **médico responsável pelo PCMSO** (Visa Ocupacional), com solicitação formal de revisão dos riscos e da justificativa de cada exame complementar por função. Essa justificativa é de responsabilidade do médico coordenador (NR-07, item 7.5.6 e seguintes).
-- Prazo proposto: [__ dias] após o recebimento das descrições de cargo validadas pela AFC.
+1. A SKX revisará com a AFC a descrição das atividades de cada cargo e o enquadramento em GSE, confirmando se há manuseio de cargas (peso, frequência, distância). Por exemplo, é possível que estoquista, motorista e técnico de manutenção manuseiem cargas, e que funções comerciais e administrativas não manuseiem.
+2. Onde a exposição não se confirmar, o risco será retirado do GSE no PGR e na AEP.
+3. O PGR revisado será encaminhado ao **médico coordenador do PCMSO**, com solicitação formal de revisão dos riscos e da justificativa de cada exame complementar por função. Essa justificativa é de responsabilidade técnica do médico (NR-07).
 
-[Se já houver inconsistência identificada, citar a função e o ajuste.]
+Prazo proposto: [__] dias após o recebimento das descrições de cargo validadas pela AFC.
 
 ---
 
 ## 6. Integração entre AEP, PGR e PCMSO
 
-- **Inclusão no PGR:** os fatores psicossociais com GR ≥ 6 (Moderado ou acima) [foram / serão] incluídos no **Inventário de Riscos por GSE** e no **Plano de Ação Consolidado** do PGR, como riscos ergonômicos/psicossociais (NR-01, 1.5.3.1.4; NR-17).
-- **Relação com os expostos:** cada fator é vinculado aos GSEs em que atingiu Moderado ou acima, e não à empresa inteira.
-- **Envio ao PCMSO:** [a versão do PGR com os fatores psicossociais foi / será encaminhada ao médico coordenador em __/__/____], para que ele avalie a inclusão de acompanhamento clínico (ex.: abordagem de saúde mental no exame periódico, atenção a atestados CID F e CID M).
-- **Correspondência entre documentos:** a AEP identifica, o PGR inventaria e planeja, e o PCMSO acompanha a saúde. Com as revisões dos itens 3, 4 e 5, os três documentos ficarão alinhados.
-- **Versões atualizadas:** [Listar: PGR rev. __ de __/__/____; PCMSO de 28/09/2026; AEP rev. __]. Seguem anexas as versões vigentes, e as revisadas serão enviadas após a reunião técnica.
+- **Inclusão no PGR:** apenas os fatores **Moderado ou acima** (Estresse e Exaustão; Insegurança no Trabalho) entram no Inventário de Riscos e no Plano de Ação. [⚠️ Ajustar se o PGR vigente incluiu outros fatores, que serão retirados na revisão.]
+- **Expostos:** como o recorte por setor não é possível sem quebrar a confidencialidade, os dois fatores são atribuídos a **todos os GSEs**, até a validação qualitativa ou a reaplicação permitir distinguir.
+- **PCMSO:** [o PGR com os fatores psicossociais será / foi encaminhado ao médico coordenador em __/__/____], para avaliar o acompanhamento de saúde mental nos exames ocupacionais e o monitoramento de atestados (CID F e CID M).
+- **Versões:** [PGR rev. __ de __/__/____; AEP rev. __; PCMSO de 28/09/2026]. As versões revisadas serão enviadas após a reunião técnica.
 
 ---
 
 ## 7. Fundamentação e eficácia das medidas do plano de ação
 
-Concordamos integralmente que **campanhas e apoio psicológico não substituem a correção da organização do trabalho**. Por isso, na revisão, cada ação terá a seguinte estrutura (o modelo segue no **Anexo D**):
+Concordamos que **campanhas e apoio psicológico não substituem a correção da organização do trabalho**. Com base nos dados, o plano será **enxugado e reorganizado** da seguinte forma:
 
-| Campo | Conteúdo |
-|---|---|
-| Fator / GSE | Dimensão e setor que motivam a ação (com GR) |
-| Evidência | Score, indicador ou situação concreta confirmada na validação |
-| Objetivo | Resultado esperado (ex.: reduzir score de Ritmo no GSE 02 de 62 para < 50) |
-| Prioridade | Pelo GR: Alto/Intolerável = Alta; Moderado = Média |
-| Tipo | **Obrigação normativa** ou **Recomendação de melhoria** |
-| Responsável / prazo | Definidos pela AFC |
-| Acompanhamento | Evidência de implementação (ata, procedimento, registro) |
-| Indicador de eficácia | Score na reaplicação, absenteísmo, turnover, atestados, horas extras |
+| Fator / evidência | Medida proposta | Tipo | Objetivo e indicador |
+|---|---|---|---|
+| **Estresse e Exaustão** (GR 8). Bem-estar: 38% desfavorável; equilíbrio emocional: 46% desfavorável. | Validação com a equipe para identificar as fontes (ex.: interrupções, picos de demanda, equilíbrio entre trabalho e vida pessoal); ajustes na organização do trabalho conforme o que for identificado. | **Obrigatório** (NR-01 1.5.5; NR-17): ter medida de controle para risco Moderado. A medida específica é escolha da AFC. | Score da dimensão abaixo de 26 na reaplicação. Indicadores: absenteísmo e atestados CID F. |
+| **Ausência de apoio psicológico e programas de saúde mental** (85% e 92% desfavorável; é controle ausente, não exposição) | Canal de escuta ou acolhimento (parceria, clínica-escola ou teleatendimento) e ações periódicas de promoção da saúde. Em comentários abertos, 4 colaboradores pediram plano de saúde e 3 pediram sala de descanso. | **Recomendação** de melhoria. Complementa a medida acima, não a substitui. | Implantação comprovada; reduz o GE de Estresse e Exaustão (GE corrigido). |
+| **Insegurança no Trabalho** (GR 6, no limite) | Comunicação periódica da Direção sobre a situação da empresa e os planos; critérios de carreira e avaliação claros (um comentário pede "organograma, sabendo onde cada um pode ir"). | **Obrigatório** ter controle (Moderado); a forma é escolha da AFC. | Score abaixo de 26 na reaplicação. Indicador: turnover. |
+| Pontos de atenção (Baixo): **feedback** (69% desfavorável, maior score entre os itens de exposição), equilíbrio vida-trabalho, interrupções, valorização de sugestões | Conversa de feedback periódica entre líder e colaborador; canal de sugestões. | **Recomendação** de melhoria. | Monitorar na reaplicação. |
+| Treinamento de SST (54% desfavorável) | Conferir registros e reforçar orientação (DDS e integração). | **Obrigatório** (NR-01 1.7), no PGR e não no psicossocial. | Matriz de treinamentos em dia. |
 
-**Obrigações normativas x recomendações:**
-- **Obrigatório:**
-  - identificar, avaliar e incluir os fatores psicossociais no PGR e ter plano de ação para os riscos que exigem controle (NR-01, 1.5.3 a 1.5.5);
-  - adequar a organização do trabalho às características psicofisiológicas dos trabalhadores (NR-17);
-  - tratar o assédio sexual e outras formas de violência, com canal de denúncia, procedimentos de apuração e capacitação (Lei 14.457/2022, para empresas com CIPA; NR-05);
-  - acompanhar a saúde dos trabalhadores no PCMSO (NR-07);
-  - reavaliar periodicamente.
-- **Recomendações de melhoria:** ações específicas como rodas de conversa, programas de reconhecimento, ginástica laboral, apoio psicológico, pesquisa de clima periódica etc. São meios escolhidos pela empresa para controlar o risco, e a AFC pode substituí-los por outros de efeito equivalente.
+Para cada ação, o plano revisado trará responsável, prazo, evidência de implementação e indicador. A **eficácia** será medida em três passos:
+- linha de base com os indicadores da AFC (absenteísmo, turnover, afastamentos, atestados);
+- **reaplicação do questionário em 6 e 12 meses**, já com os itens de Exigências Emocionais e Sentido do Trabalho;
+- meta de cada fator voltar ao nível Baixo.
 
-**Hierarquia das medidas:** a prioridade é **atuar na fonte**: dimensionamento, fluxos de aprovação, clareza de papéis, metas e prazos, comunicação da liderança. Ações individuais (acolhimento, campanhas) são complementares.
-
-**Eficácia:** linha de base nos primeiros 3 meses (indicadores fornecidos pela AFC) e **reaplicação do questionário em 6 e 12 meses**, com a meta de cada dimensão sair da faixa Moderada/Alta.
-
-Valorizamos que a AFC já tenha identificado oportunidades de melhoria por conta própria. Essas ações, quando implantadas e comprovadas, **contam como controle e reduzem o GR** no cálculo.
+Ações que a AFC já tenha implantado e comprovado **contam como controle** e reduzem o GR no cálculo (coluna "Controles comprovados" do Anexo C).
 
 ---
 
 ## 8. Esclarecimentos sobre possível relato de assédio
 
-> ⚠️ **Seção sensível: confirmar os fatos com quem conduziu a reunião antes de enviar.** Escolher a alternativa A, B ou C conforme o que realmente ocorreu e apagar as demais.
+> ⚠️ **Confirmar internamente antes de enviar.** O texto abaixo vale **se não houve nenhuma informação fora do formulário**. Se alguém relatou algo verbalmente à equipe da SKX, este item precisa ser reescrito.
 
-Agradecemos a forma cuidadosa como a empresa tratou o tema e concordamos que é essencial distinguir percepção de risco, relato de conduta e denúncia formal.
+Agradecemos o cuidado da empresa com o tema e concordamos com a distinção entre percepção de risco, relato de conduta e denúncia.
 
-**Natureza da informação:**
-- **[A – só questionário]** A referência decorre **exclusivamente das respostas ao questionário anônimo**, [na dimensão __ / pergunta sobre comportamentos ofensivos], no GSE __. Trata-se de **percepção de risco**. Não houve descrição de fatos concretos, identificação de pessoas nem denúncia formal.
-- **[B – relato espontâneo]** Durante a avaliação, houve **relato espontâneo** [em campo aberto do formulário / em contato com a equipe SKX] que descreve **comportamentos** potencialmente caracterizadores de assédio, sem identificação de autoria e sem formalização como denúncia.
-- **[C – denúncia]** Foi recebida **comunicação com fatos e pessoas específicos**, pelo canal [__].
+**Natureza da informação.** Nos dados da pesquisa, **não há indicação de assédio**:
+- "No meu local de trabalho todos se tratam com respeito e é livre de situações de discriminação, assédio ou violência": **12 de 13 responderam "sempre" e 1 respondeu "frequentemente"**.
+- "O meu ambiente de trabalho é respeitoso e livre de conflitos": **13 de 13 responderam "sempre" ou "frequentemente"**.
+- **Nenhum** comentário do campo aberto menciona assédio, conflito ou conduta inadequada. Os comentários tratam de benefícios (plano de saúde), sala de descanso, ações comemorativas e definição de cargos.
 
-**O que pode ser compartilhado.** Sem expor o respondente, podemos informar [o setor/GSE, a natureza da conduta descrita (ex.: tratamento desrespeitoso, exposição a constrangimento) e o período aproximado]. **Não identificaremos respondentes**, nem direta nem indiretamente.
+Assim, **não houve relato de fatos concretos, identificação de pessoas nem denúncia formal**. [A menção na reunião teve caráter **orientativo**: ressaltar que a NR-01 e a Lei 14.457/2022 exigem medidas de prevenção ao assédio, independentemente do resultado da pesquisa.] Não houve, portanto, procedimento de registro ou encaminhamento por parte da SKX.
 
-**Procedimento da SKX.** [Descrever: registro interno sigiloso da informação; nenhum encaminhamento externo.] Esclarecemos que **a SKX não realiza apuração de fatos**. Essa competência é da empresa, por procedimento interno, comissão ou profissional independente.
+**Relatório mencionado ao RH.** [Esclarecer: o documento previsto é o relatório psicossocial revisado com o plano de ação, a ser enviado após a reunião técnica, e não um relatório sobre situação específica de assédio.] Pedimos desculpas se a forma como o tema foi abordado na reunião gerou outra interpretação.
 
-**Relatório mencionado ao RH.** [Natureza: "nota técnica confidencial descrevendo a natureza da informação recebida, sem identificação de pessoas, com recomendações de prevenção e de procedimento". Previsão de envio: __/__/____, endereçada exclusivamente à Direção.]
-
-**Providências recomendadas de imediato:**
-1. Disponibilizar ou divulgar **canal de denúncia confidencial**, com possibilidade de anonimato e acesso por pessoa ou empresa externa à linha hierárquica envolvida;
-2. Formalizar **política de prevenção e enfrentamento ao assédio** (moral e sexual), com ciência de todos os colaboradores;
-3. Definir **procedimento de apuração** imparcial, com sigilo, direito de defesa e **proteção contra retaliação**;
-4. Realizar **comunicação da Direção** reafirmando a política de tolerância zero e o compromisso de não retaliação;
-5. Promover **capacitação de lideranças e equipes** sobre o tema (Lei 14.457/2022, para empresas com CIPA);
-6. Monitorar a dimensão na reaplicação do questionário.
-
-Essas medidas são preventivas, valem em qualquer cenário (A, B ou C) e não pressupõem a existência de culpados.
+**Providências preventivas recomendadas (não pressupõem ocorrência):**
+1. Política de prevenção ao assédio (moral e sexual), com ciência de todos os colaboradores;
+2. Canal de denúncia confidencial, com possibilidade de anonimato;
+3. Procedimento de apuração imparcial, com proteção contra retaliação;
+4. Capacitação periódica sobre o tema, que é obrigatória para empresas com CIPA (Lei 14.457/2022).
 
 ---
 
 ## 9. Reunião de esclarecimento técnico
 
-Concordamos com a reunião e consideramos que ela é a etapa natural de **validação do diagnóstico**. Propomos:
+Concordamos com a reunião e propomos:
 
-- **Pauta:** (1) apresentação da memória de cálculo (Anexo C); (2) validação, setor a setor, das causas concretas das dimensões Moderado+; (3) revisão de descrições de cargo, GSEs e riscos físicos (PGR/PCMSO); (4) levantamento dos controles já existentes (treinamentos, políticas) para correção do GE; (5) priorização conjunta do plano de ação; (6) encaminhamento do item 8.
-- **Participantes:** responsáveis técnicos da SKX; Direção e RH da AFC; se possível, representantes ou líderes dos setores.
-- **Sugestão de datas:** [__/__ às __h] ou [__/__ às __h], presencial ou online.
-- **Material prévio da AFC (se possível):** descrições de cargo, registros de treinamentos e indicadores dos últimos 12 meses (absenteísmo, turnover, afastamentos, atestados, CATs).
+- **Pauta:**
+  1. memória de cálculo e retificações (Anexo C);
+  2. validação, com representantes dos setores, das fontes dos dois fatores Moderados e dos pontos de atenção;
+  3. revisão das descrições de cargo, dos GSEs e dos riscos físicos (PGR e PCMSO);
+  4. levantamento dos controles já existentes (treinamentos, benefícios, práticas de gestão) para correção do GE;
+  5. priorização do plano de ação.
+- **Participantes:** responsáveis técnicos da SKX [e a psicóloga organizacional que participou da elaboração do instrumento]; Direção e RH da AFC; se possível, líderes dos setores.
+- **Datas sugeridas:** [__/__ às __h] ou [__/__ às __h].
+- **Material prévio da AFC:** descrições de cargo, registros de treinamento e indicadores dos últimos 12 meses.
 
-Após a reunião, emitiremos a **revisão do relatório psicossocial, do PGR e do plano de ação**, e solicitaremos ao médico coordenador a revisão do PCMSO.
+Depois da reunião, emitiremos o relatório psicossocial, o PGR e o plano de ação revisados, e solicitaremos ao médico coordenador a revisão do PCMSO.
 
-Reforçamos que entendemos a solicitação como cooperação técnica. A avaliação existe para ser útil à AFC, e ajustá-la à realidade do trabalho faz parte do processo de gerenciamento de riscos previsto na NR-01.
-
-Permanecemos à disposição.
+Reforçamos que entendemos a solicitação como cooperação técnica. Ela permitiu identificar ajustes de redação e de enquadramento que tornam o diagnóstico mais fiel à realidade da AFC.
 
 Atenciosamente,
 
@@ -251,19 +224,18 @@ Atenciosamente,
 SKX Engenharia – Segurança do Trabalho
 
 **Anexos:**
-- A – Formulário eletrônico aplicado aos colaboradores (íntegra) e checklist do RH
-- B – Resultados consolidados e anonimizados por dimensão, pergunta e GSE
-- C – Memória de cálculo do enquadramento de cada fator (score → GE → GES → GR)
-- D – Modelo revisado do plano de ação (fundamentação, prioridade, tipo, indicadores)
+- A – Formulário eletrônico dos colaboradores (íntegra) e checklist do RH
+- B – Distribuição das respostas por pergunta, consolidada (planilha, aba "Anexo B")
+- C – Memória de cálculo MPVS: mapeamento item → dimensão, score, GE, GES e GR (planilha, aba "Anexo C")
 - Versões vigentes do PGR, AEP e PCMSO
 
 ---
 
 ## Notas internas (não enviar)
 
-1. **Instrumento usado na AFC.** As expressões citadas pela AFC ("autonomia suficiente", "suporte adequado", "reconhecimento justo", "metas irreais") **não existem no questionário do MPVS** (nem na versão curta de 41 perguntas nem na versão média COPSOQ II de 76). A AFC foi avaliada pelo **checklist 2025 + Google Forms** (e-mail de 11/02/2026) e, ao que tudo indica, os scores foram lançados no MPVS como **dados externos**. A resposta precisa deixar isso claro e anexar o formulário real. Não convém dizer que foi aplicado "o questionário COPSOQ do MPVS" se não foi.
-2. **Legenda "Levemente Prejudicial / Prejudicial / Extremamente Prejudicial"** também não pertence ao MPVS, que usa GES 1–4 (Leve/Moderado/Grave/Crítico). Ela vem do modelo de PGR/AEP. Se possível, reemitir o documento com uma única legenda para os fatores psicossociais.
-3. **Item 4 (treinamentos):** verificar se a SKX recebeu os registros de treinamento. Se a afirmação não tiver evidência, admitir isso e retirá-la.
-4. **Item 5 (PCMSO):** é provável que haja descrição genérica por GSE. Vale revisar antes da reunião e levar a correção pronta.
-5. **Item 8 (assédio):** responder **por escrito somente o que de fato ocorreu**. Não prometer documento sem prazo definido. Não identificar respondentes. Não emitir juízo sobre culpa.
-6. Dados a preencher: nº de respondentes por GSE, scores, classificação de cada fator e datas das versões dos documentos.
+1. **Compare a tabela do item 3 com o que foi entregue à AFC.** Pelo recálculo com as regras do MPVS, apenas **2 fatores** chegam a Moderado. Se o relatório entregue apontou mais fatores ou grau maior, provavelmente (a) os itens de "existência de programas" (apoio psicológico, programas de saúde mental) entraram na dimensão Estresse e Exaustão, o que a leva a 61,1 e GR 12 (Alto) (ver "Teste de sensibilidade" no Anexo C), ou (b) foi usado outro mapeamento. Ajuste o texto conforme o caso.
+2. **Insegurança no Trabalho é limítrofe** (score 28,8; o limite é 25). Na reunião, vale apresentá-la como "Moderado no limite", e não como problema grave.
+3. **Confidencialidade:** a planilha bruta do Forms traz idade, gênero, função e escolaridade. Com 13 respostas (e apenas 1 coordenadora, 1 desenvolvedor etc.), dá para identificar pessoas. **Não envie a planilha bruta à AFC**, só os Anexos B e C.
+4. **Assédio:** os dados não sustentam nenhuma menção. Confirme com quem fez a reunião o que foi dito e o que é o "relatório" prometido ao RH.
+5. **Expressões citadas pela AFC** ("autonomia suficiente", "suporte adequado", "reconhecimento justo", "metas irreais") não estão no formulário dos colaboradores. Verifique se estão no checklist do RH ou no texto do relatório.
+6. **Mapeamento item → dimensão:** foi montado nesta revisão a partir das definições do COPSOQ. Vale a psicóloga organizacional validar antes do envio.
