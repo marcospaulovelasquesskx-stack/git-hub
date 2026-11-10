@@ -28,7 +28,9 @@ Portanto, o checklist disponibilizado à AFC **não é o mesmo** formulário apl
 
 As respostas seguem escala de 1 (Nunca) a 5 (Sempre). Há também uma pergunta de indicação da empresa (0 a 10) e um campo aberto de comentários. Os temas foram escolhidos a partir dos fatores psicossociais apontados pelo Guia do MTE sobre fatores de riscos psicossociais, pela ISO 45003:2021 e pelos modelos Demanda-Controle (Karasek), Esforço-Recompensa (Siegrist) e COPSOQ.
 
-**Conversão para a metodologia MPVS.** Posteriormente, os resultados foram processados no sistema **MPVS – Gestão Integrada de NR-01**, desenvolvido pela SKX. O sistema classifica os riscos em **16 dimensões psicossociais derivadas do COPSOQ** (Copenhagen Psychosocial Questionnaire). Para isso, cada afirmação do formulário foi associada à dimensão COPSOQ correspondente. O mapeamento, item a item e com a justificativa de cada associação, está no **Anexo C**. Duas dimensões (Exigências Emocionais e Sentido do Trabalho) **não foram avaliadas**, porque o formulário não tem itens que as meçam. Elas serão incluídas na reaplicação.
+**Por que houve mudança de metodologia.** Em fevereiro de 2026, quando a pesquisa foi aplicada, ainda havia pouca orientação oficial sobre como avaliar os fatores psicossociais. Por isso, a SKX usou um instrumento próprio. Depois disso, as orientações técnicas do Ministério do Trabalho e Emprego e a literatura passaram a recomendar o uso de **questionários validados cientificamente**. A SKX então adotou no MPVS o **COPSOQ** (Copenhagen Psychosocial Questionnaire), na versão validada para a língua portuguesa. Para não exigir que os colaboradores da AFC respondessem a um novo questionário logo em seguida, optamos por **reaproveitar** as respostas de fevereiro, convertendo-as para as dimensões do COPSOQ. Foi nessa conversão que ocorreu o erro descrito abaixo.
+
+**Conversão para a metodologia MPVS.** Os resultados foram processados no sistema **MPVS – Gestão Integrada de NR-01**, desenvolvido pela SKX. O sistema classifica os riscos em **16 dimensões psicossociais derivadas do COPSOQ** (Copenhagen Psychosocial Questionnaire). Para isso, cada afirmação do formulário foi associada à dimensão COPSOQ correspondente. O mapeamento, item a item e com a justificativa de cada associação, está no **Anexo C**. Duas dimensões (Exigências Emocionais e Sentido do Trabalho) **não foram avaliadas**, porque o formulário não tem itens que as meçam. Elas serão incluídas na reaplicação.
 
 **Correções em relação ao relatório de 06/11/2026.** Reconhecemos três falhas naquele documento:
 1. O texto informa que foi aplicada "a versão curta (41 perguntas) em todos os setores". **Essa informação está incorreta.** Os dados são as respostas do formulário de fevereiro (30 afirmações), convertidas para as dimensões do MPVS.
@@ -205,7 +207,7 @@ Além da reunião, **recomendamos uma nova aplicação do questionário**, agora
 - não cobrem duas das 16 dimensões;
 - não permitem recorte por setor.
 
-A nova aplicação terá controle de participação por setor e entrega dos resultados com o mínimo de 5 respostas por grupo. Ela servirá como **linha de base oficial** do plano de ação. A classificação do item 3 vale como diagnóstico provisório até lá. [Definir se a nova aplicação terá custo para a AFC.]
+A nova aplicação terá controle de participação por setor e entrega dos resultados com o mínimo de 5 respostas por grupo. Ela servirá como **linha de base oficial** do plano de ação. A classificação do item 3 vale como diagnóstico provisório até lá. A nova aplicação **não terá custo para a AFC**, já que a avaliação atual reaproveitou a pesquisa de fevereiro, e pode ser feita **quando a empresa preferir**.
 
 ### Reunião
 
@@ -217,7 +219,7 @@ Concordamos com a reunião e propomos:
   3. revisão das descrições de cargo, dos GSEs e dos riscos físicos (PGR e PCMSO);
   4. levantamento dos controles já existentes (treinamentos, benefícios, práticas de gestão) para correção do GE;
   5. priorização do plano de ação.
-- **Participantes:** responsáveis técnicos da SKX [e a psicóloga organizacional que participou da elaboração do instrumento]; Direção e RH da AFC; se possível, líderes dos setores.
+- **Participantes:** responsáveis técnicos da SKX; Direção e RH da AFC; se possível, líderes dos setores.
 - **Datas sugeridas:** quarta-feira, 18/11/2026, ou quinta-feira, 19/11/2026, no horário de melhor conveniência para vocês.
 - **Material prévio da AFC:** descrições de cargo, registros de treinamento e indicadores dos últimos 12 meses.
 
