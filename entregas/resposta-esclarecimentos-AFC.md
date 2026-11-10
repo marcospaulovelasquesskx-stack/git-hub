@@ -22,7 +22,7 @@ Antes, um esclarecimento geral: **a avaliação psicossocial é uma etapa de ide
 **Instrumentos e coleta.** A coleta foi feita em fevereiro de 2026 (e-mail de 11/02/2026) com **dois instrumentos distintos**:
 
 1. **Checklist organizacional respondido pelo RH** (PDF/Word, assinado), sobre políticas e práticas da empresa como um todo; e
-2. **Formulário eletrônico anônimo** (Google Forms), respondido individualmente pelos colaboradores entre 23 e 25/02/2026.
+2. **Formulário eletrônico anônimo** (Google Forms), respondido individualmente pelos colaboradores entre 23/02 e 02/03/2026.
 
 Portanto, o checklist disponibilizado à AFC **não é o mesmo** formulário aplicado aos colaboradores. Os dois seguem na íntegra no **Anexo A**. ⚠️ [Confirmar de qual instrumento vieram as expressões "autonomia suficiente", "suporte adequado", "reconhecimento justo" e "metas irreais", que não constam do formulário dos colaboradores.]
 
@@ -44,7 +44,7 @@ As respostas seguem escala de 1 (Nunca) a 5 (Sempre). Há também uma pergunta d
 2. O relatório atribuiu pontuação às dimensões Exigências Emocionais e Sentido do Trabalho, que o formulário de fevereiro não mede.
 3. O relatório separou os resultados em 4 setores com 2, 3, 3 e 5 respostas. Isso contraria a própria regra de confidencialidade da SKX (mínimo de 5 respostas por grupo apresentado), e com tão poucas respostas os scores por setor também não têm consistência estatística.
 
-Além disso, a conversão usada no relatório **não é reproduzível** a partir das respostas originais. Por isso, refizemos o enquadramento do zero, com o mapeamento documentado no Anexo C.
+A origem dessas falhas foi um **erro na conversão dos dados**. Para usar o formato do sistema, as respostas de fevereiro foram transcritas para o questionário de 41 perguntas do MPVS e os respondentes foram redistribuídos em 4 setores. Ao conferir essa transcrição pessoa a pessoa contra as respostas originais, verificamos que **ela não corresponde ao que os colaboradores responderam**. Por isso, refizemos o enquadramento a partir das respostas originais, com o mapeamento documentado no Anexo C. [Se a AFC também recebeu o relatório de 25/08/2026, que tem os mesmos números, citar que ele também fica substituído.]
 
 **Critérios de interpretação.**
 - Todas as afirmações do formulário são positivas (5 = condição favorável). Por isso, o score de risco de cada item é calculado como (5 − média) × 25, em escala de 0 a 100, em que **maior valor = maior exposição**.
@@ -243,6 +243,7 @@ SKX Engenharia – Segurança do Trabalho
 - A – Formulário eletrônico dos colaboradores (íntegra) e checklist do RH
 - B – Distribuição das respostas por pergunta, consolidada (planilha, aba "Anexo B")
 - C – Memória de cálculo MPVS: mapeamento item → dimensão, score, GE, GES e GR (planilha, aba "Anexo C")
+- D – Plano de ação revisado (planilha, aba "Plano de ação revisado")
 - Versões vigentes do PGR, AEP e PCMSO
 
 ---
@@ -252,6 +253,7 @@ SKX Engenharia – Segurança do Trabalho
 1. **O relatório de 06/11/2026 não se sustenta nos dados. Este é o ponto mais sério.**
    - **Instrumento:** o relatório diz "versão curta (41 perguntas) em todos os setores". Os dados são do Forms de fevereiro (30 perguntas). A AFC já desconfia disso (pergunta "o checklist corresponde ao formulário?").
    - **Dimensões sem pergunta:** o relatório dá score para Exigências Emocionais e Sentido do Trabalho, que nenhuma pergunta de fevereiro mede.
+   - **Conversão:** a análise completa está em `AFC-analise-da-conversao-e-plano-de-correcao.md`. A planilha convertida gerou respostas novas, que não acompanham as originais. Ela também é a base do relatório de 25/08, que tem os mesmos números.
    - **Conversão incoerente com as respostas.** Exemplo: o setor Estoque (2 respostas = os 2 estoquistas de fevereiro) aparece com **Estresse e Exaustão 66,7 (IV – Alto, o único Alto do relatório)**, Exigências Emocionais 70,8 e Conflito Trabalho-Família 66,7. Mas os 2 estoquistas responderam **"Sempre" (a resposta mais favorável) em quase tudo**, inclusive bem-estar, equilíbrio emocional, equilíbrio vida-trabalho e sono. Os únicos itens desfavoráveis deles são falta de apoio psicológico, falta de programas de saúde mental e, para um deles, feedback. Parece ter havido inversão de escala na conversão ou preenchimento manual sem regra. **Descubra como a conversão foi feita antes de falar com a AFC.**
    - **Confidencialidade:** os setores têm 3, 3, 5 e 2 respostas, e o Estoque com 2 pessoas praticamente identifica quem respondeu. A regra do próprio MPVS (mínimo de 5) foi furada, provavelmente porque os dados entraram como "dados manuais".
    - **Evidências de participação** no relatório: 0 colaboradores cadastrados e 0 confirmações. Isso não serve como comprovação para fiscalização.
