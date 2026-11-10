@@ -124,7 +124,7 @@ No relatório revisado, a tabela "Evidências de participação" mostra 0 respos
 
 **Ponderação.** Não há ponderação por função, intensidade ou duração, porque o número de respostas não permite recorte por função e a escala já mede frequência.
 
-**Severidade qualitativa x escala numérica.** ⚠️ A legenda "Levemente Prejudicial / Prejudicial / Extremamente Prejudicial" é a legenda de severidade do PGR para riscos ambientais e ergonômicos e **não se aplica aos fatores psicossociais**, que usam a escala GES de 1 a 4 acima. Reconhecemos que a presença das duas legendas gerou confusão. Para comparação: o relatório de 06/11/2026 apontava 22 classificações Moderado e 1 Alto, distribuídas em 4 setores. Pelos motivos explicados no item 1, essa classificação não se sustenta nos dados e será substituída pela tabela acima.
+**Severidade qualitativa x escala numérica.** A legenda "Levemente Prejudicial / Prejudicial / Extremamente Prejudicial" é a legenda de severidade do PGR para riscos ambientais e ergonômicos e **não se aplica aos fatores psicossociais**, que usam a escala GES de 1 a 4 acima. Reconhecemos que a presença das duas legendas gerou confusão. Para comparação: o relatório de 06/11/2026 apontava 22 classificações Moderado e 1 Alto, distribuídas em 4 setores. Pelos motivos explicados no item 1, essa classificação não se sustenta nos dados e será substituída pela tabela acima.
 
 ---
 
