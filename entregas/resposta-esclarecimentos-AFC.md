@@ -24,7 +24,7 @@ Antes, um esclarecimento geral: **a avaliação psicossocial é uma etapa de ide
 1. **Checklist organizacional respondido pelo RH** (PDF/Word, assinado), sobre políticas e práticas da empresa como um todo; e
 2. **Formulário eletrônico anônimo** (Google Forms), respondido individualmente pelos colaboradores entre 23/02 e 02/03/2026.
 
-Portanto, o checklist disponibilizado à AFC **não é o mesmo** formulário aplicado aos colaboradores. Os dois seguem na íntegra no **Anexo A**. ⚠️ [Confirmar de qual instrumento vieram as expressões "autonomia suficiente", "suporte adequado", "reconhecimento justo" e "metas irreais", que não constam do formulário dos colaboradores.]
+Portanto, o checklist disponibilizado à AFC **não é o mesmo** formulário aplicado aos colaboradores. Os dois seguem na íntegra no **Anexo A**.
 
 **Desenvolvimento do formulário.** O formulário dos colaboradores foi **elaborado pela SKX em conjunto com uma psicóloga organizacional**. Ele tem **30 afirmações** organizadas em 7 blocos:
 - organização e carga de trabalho;
@@ -44,7 +44,7 @@ As respostas seguem escala de 1 (Nunca) a 5 (Sempre). Há também uma pergunta d
 2. O relatório atribuiu pontuação às dimensões Exigências Emocionais e Sentido do Trabalho, que o formulário de fevereiro não mede.
 3. O relatório separou os resultados em 4 setores com 2, 3, 3 e 5 respostas. Isso contraria a própria regra de confidencialidade da SKX (mínimo de 5 respostas por grupo apresentado), e com tão poucas respostas os scores por setor também não têm consistência estatística.
 
-A origem dessas falhas foi um **erro na conversão dos dados**. Para usar o formato do sistema, as respostas de fevereiro foram transcritas para o questionário de 41 perguntas do MPVS e os respondentes foram redistribuídos em 4 setores. Ao conferir essa transcrição pessoa a pessoa contra as respostas originais, verificamos que **ela não corresponde ao que os colaboradores responderam**. Por isso, refizemos o enquadramento a partir das respostas originais, com o mapeamento documentado no Anexo C. [Se a AFC também recebeu o relatório de 25/08/2026, que tem os mesmos números, citar que ele também fica substituído.]
+A origem dessas falhas foi um **erro na conversão dos dados**. Para usar o formato do sistema, as respostas de fevereiro foram transcritas para o questionário de 41 perguntas do MPVS e os respondentes foram redistribuídos em 4 setores. Ao conferir essa transcrição pessoa a pessoa contra as respostas originais, verificamos que **ela não corresponde ao que os colaboradores responderam**. Por isso, refizemos o enquadramento a partir das respostas originais, com o mapeamento documentado no Anexo C.
 
 **Critérios de interpretação.**
 - Todas as afirmações do formulário são positivas (5 = condição favorável). Por isso, o score de risco de cada item é calculado como (5 − média) × 25, em escala de 0 a 100, em que **maior valor = maior exposição**.
@@ -52,9 +52,11 @@ A origem dessas falhas foi um **erro na conversão dos dados**. Para usar o form
 - A classificação considera a **média do grupo**. Respostas isoladas não geram conclusão.
 - Itens que medem a **existência de programas** da empresa (apoio psicológico, programas de saúde mental) e itens de **gestão de SST** não entram no score das dimensões. Eles indicam ausência de controle e são tratados no plano de ação e no PGR.
 
-**Participação.** Responderam **13 colaboradores** (a mesma base do relatório de 06/11/2026): 10 do setor Operacional (estoquista, motorista, vendedor, consultor externo e técnico de manutenção) e 3 do Administrativo. [O quadro na época era de __ colaboradores, o que corresponde a __% de adesão.] Pela regra de confidencialidade da SKX, grupos com **menos de 5 respostas não são apresentados isoladamente**. Como o Administrativo teve 3 respostas, os resultados são apresentados **apenas de forma consolidada**.
+**Participação.** Responderam **13 colaboradores** (a mesma base do relatório de 06/11/2026): 10 do setor Operacional (estoquista, motorista, vendedor, consultor externo e técnico de manutenção) e 3 do Administrativo. O quadro na época era de 13 colaboradores, ou seja, **100% de adesão** (hoje a empresa tem 14). Pela regra de confidencialidade da SKX, grupos com **menos de 5 respostas não são apresentados isoladamente**. Como o Administrativo teve 3 respostas, os resultados são apresentados **apenas de forma consolidada**.
 
-**Verificações complementares.** Além do formulário, foram considerados o checklist do RH, [os indicadores da empresa: o relatório de 06/11/2026 registra que **nenhum indicador foi considerado**; se a AFC enviá-los, serão incluídos na revisão] e a reunião de apresentação com o RH. **Não houve entrevistas individuais nem observação sistemática das atividades** nesta etapa. Por isso, propomos complementar a avaliação com uma validação qualitativa por setor (ver item 9).
+No relatório revisado, a tabela "Evidências de participação" mostra 0 respostas. Isso acontece porque o sistema só contabiliza ali as respostas ao questionário próprio do MPVS. A participação desta avaliação é a da pesquisa de fevereiro (13 de 13 colaboradores), comprovada pela distribuição das respostas no Anexo B.
+
+**Verificações complementares.** Além do formulário, foram considerados o checklist do RH, as informações prestadas pelo RH e a reunião de apresentação com o RH. **Não houve entrevistas individuais nem observação sistemática das atividades** nesta etapa. Por isso, propomos complementar a avaliação com uma validação qualitativa por setor (ver item 9). Os indicadores da empresa (absenteísmo, turnover, afastamentos, atestados) **não foram considerados** nesta etapa. Solicitamos o envio desses dados, para inclusão na revisão.
 
 **Resultados.** O **Anexo B** traz a distribuição das respostas por pergunta (contagem de 1 a 5, média, score de risco e % de respostas desfavoráveis), de forma consolidada e anonimizada.
 
@@ -130,7 +132,7 @@ A conclusão veio de **percepção** registrada em dois itens do formulário, e 
 - "Recebo treinamento e orientação suficiente sobre segurança no trabalho": **7 de 13 (54%)** responderam "às vezes" ou "raramente".
 - "O meu local de trabalho proporciona oportunidades de crescimento, desenvolvimento profissional e pessoal, como treinamentos e palestras": **6 de 13 (46%)** responderam "às vezes".
 
-⚠️ [Confirmar: os registros de treinamento da AFC **não foram analisados** nesta avaliação.] Por isso, a expressão "falta de prioridade para treinamentos previstos no PGR" **será retirada**. Ela será substituída por "percepção, por parte da equipe, de orientação insuficiente em segurança e de poucas oportunidades de desenvolvimento".
+Os registros de treinamento da AFC **não foram analisados** nesta avaliação. Por isso, a expressão "falta de prioridade para treinamentos previstos no PGR" **será retirada**. Ela será substituída por "percepção, por parte da equipe, de orientação insuficiente em segurança e de poucas oportunidades de desenvolvimento".
 
 A distinção pedida pela AFC é procedente e será adotada:
 1. **Treinamentos obrigatórios de SST** são questão de conformidade do PGR, verificada por registro. **Não são fator psicossocial** (o item ficou fora do cálculo das dimensões, ver Anexo C).
@@ -149,16 +151,16 @@ O ponto é procedente e será tratado como **revisão técnica formal**:
 2. Onde a exposição não se confirmar, o risco será retirado do GSE no PGR e na AEP.
 3. O PGR revisado será encaminhado ao **médico coordenador do PCMSO**, com solicitação formal de revisão dos riscos e da justificativa de cada exame complementar por função. Essa justificativa é de responsabilidade técnica do médico (NR-07).
 
-Prazo proposto: [__] dias após o recebimento das descrições de cargo validadas pela AFC.
+Prazo proposto: 30 dias após o recebimento das descrições de cargo validadas pela AFC.
 
 ---
 
 ## 6. Integração entre AEP, PGR e PCMSO
 
-- **Inclusão no PGR:** apenas os fatores **Moderado ou acima** (Estresse e Exaustão; Insegurança no Trabalho) entram no Inventário de Riscos e no Plano de Ação. Os demais fatores que constavam do plano de ação de 06/11/2026 deixam de ser riscos a controlar. Alguns permanecem apenas como pontos de atenção (ver item 7). [⚠️ Se o PGR vigente já incorporou o relatório de 06/11, informar que ele será revisado.]
+- **Inclusão no PGR:** apenas os fatores **Moderado ou acima** (Estresse e Exaustão; Insegurança no Trabalho) entram no Inventário de Riscos e no Plano de Ação. Os demais fatores que constavam do plano de ação de 06/11/2026 deixam de ser riscos a controlar. Alguns permanecem apenas como pontos de atenção (ver item 7). O PGR será revisado para refletir esta classificação.
 - **Expostos:** como o recorte por setor não é possível sem quebrar a confidencialidade, os dois fatores são atribuídos a **todos os GSEs**, até a validação qualitativa ou a reaplicação permitir distinguir.
-- **PCMSO:** [o PGR com os fatores psicossociais será / foi encaminhado ao médico coordenador em __/__/____], para avaliar o acompanhamento de saúde mental nos exames ocupacionais e o monitoramento de atestados (CID F e CID M).
-- **Versões:** [PGR rev. __ de __/__/____; AEP rev. __; PCMSO de 28/09/2026]. As versões revisadas serão enviadas após a reunião técnica.
+- **PCMSO:** o PGR revisado será encaminhado ao médico coordenador do PCMSO após a reunião técnica, para avaliar o acompanhamento de saúde mental nos exames ocupacionais e o monitoramento de atestados (CID F e CID M).
+- **Versões:** seguem anexas as versões vigentes do PGR, da AEP e do PCMSO (este de 28/09/2026). As versões revisadas serão enviadas após a reunião técnica.
 
 ---
 
@@ -201,7 +203,7 @@ Portanto, não houve relato de fatos, identificação de pessoas, denúncia form
 2. Política de prevenção ao assédio e à discriminação, com ciência dos colaboradores;
 3. Procedimento simples de apuração, com proteção contra retaliação.
 
-[⚠️ Conferir o enquadramento da AFC: a Lei 14.457/2022 torna obrigatórios o canal de denúncias, as regras de conduta e as capacitações sobre assédio para empresas **obrigadas a constituir CIPA**. Se a AFC não se enquadra, a recomendação é voluntária, como foi dito na reunião. Se se enquadra, incluir aqui: "para empresas obrigadas a constituir CIPA, essas medidas são exigidas pela Lei 14.457/2022".]
+Com grau de risco 3 e 14 empregados, a AFC **não é obrigada a constituir CIPA**. Por isso, as exigências da Lei 14.457/2022 sobre canal de denúncias e prevenção ao assédio não se aplicam a ela de forma obrigatória. A sugestão do canal é **preventiva**, como foi dito na reunião.
 
 ---
 
@@ -225,7 +227,7 @@ Concordamos com a reunião e propomos:
   4. levantamento dos controles já existentes (treinamentos, benefícios, práticas de gestão) para correção do GE;
   5. priorização do plano de ação.
 - **Participantes:** responsáveis técnicos da SKX [e a psicóloga organizacional que participou da elaboração do instrumento]; Direção e RH da AFC; se possível, líderes dos setores.
-- **Datas sugeridas:** [__/__ às __h] ou [__/__ às __h].
+- **Datas sugeridas:** quarta-feira, 18/11/2026, ou quinta-feira, 19/11/2026, no horário de melhor conveniência para vocês.
 - **Material prévio da AFC:** descrições de cargo, registros de treinamento e indicadores dos últimos 12 meses.
 
 Depois da reunião, emitiremos o relatório psicossocial, o PGR e o plano de ação revisados, e solicitaremos ao médico coordenador a revisão do PCMSO.
@@ -234,8 +236,8 @@ Reforçamos que entendemos a solicitação como cooperação técnica. Ela permi
 
 Atenciosamente,
 
-[Nome do(a) responsável técnico(a)]
-[Cargo / registro profissional]
+Ruan da Silva Oliveira
+Engenheiro de Segurança do Trabalho – CREA BA 88.720
 SKX Engenharia – Segurança do Trabalho
 
 **Anexos:**
