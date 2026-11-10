@@ -56,7 +56,7 @@ A origem dessas falhas foi um **erro na conversão dos dados**. Para usar o form
 
 No relatório revisado, a tabela "Evidências de participação" mostra 0 respostas. Isso acontece porque o sistema só contabiliza ali as respostas ao questionário próprio do MPVS. A participação desta avaliação é a da pesquisa de fevereiro (13 de 13 colaboradores), comprovada pela distribuição das respostas no Anexo B.
 
-**Verificações complementares.** Além do formulário, foram considerados o checklist do RH, as informações prestadas pelo RH e a reunião de apresentação com o RH. **Não houve entrevistas individuais nem observação sistemática das atividades** nesta etapa. Por isso, propomos complementar a avaliação com uma validação qualitativa por setor (ver item 9). Os indicadores da empresa (absenteísmo, turnover, afastamentos, atestados) **não foram considerados** nesta etapa. Solicitamos o envio desses dados, para inclusão na revisão.
+**Verificações complementares.** Além do formulário, foram considerados o checklist respondido pelo RH e a reunião de apresentação com o RH. **Não houve entrevistas individuais nem observação sistemática das atividades** nesta etapa. Por isso, propomos complementar a avaliação com uma validação qualitativa por setor (ver item 9). Os indicadores da empresa (absenteísmo, turnover, afastamentos, atestados) **não foram considerados** nesta etapa. Solicitamos o envio desses dados, para inclusão na revisão.
 
 **Resultados.** O **Anexo B** traz a distribuição das respostas por pergunta (contagem de 1 a 5, média, score de risco e % de respostas desfavoráveis), de forma consolidada e anonimizada.
 
