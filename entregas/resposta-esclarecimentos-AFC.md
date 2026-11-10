@@ -185,24 +185,23 @@ Ações que a AFC já tenha implantado e comprovado **contam como controle** e r
 
 ## 8. Esclarecimentos sobre possível relato de assédio
 
-> ⚠️ **Confirmar internamente antes de enviar.** O texto abaixo vale **se não houve nenhuma informação fora do formulário**. Se alguém relatou algo verbalmente à equipe da SKX, este item precisa ser reescrito.
+Agradecemos o cuidado da empresa com o tema e confirmamos: **não há relato, denúncia nem indício de assédio na AFC.**
 
-Agradecemos o cuidado da empresa com o tema e concordamos com a distinção entre percepção de risco, relato de conduta e denúncia.
+**Origem da menção.** Na reunião, o assédio foi citado apenas **como exemplo**, ao recomendarmos a implantação de um **canal de denúncia anônima**. Explicamos que esse canal é uma das principais ferramentas de prevenção ao assédio e à discriminação, e que se tratava de uma **recomendação, e não de resposta a um fato ocorrido na empresa**. Lamentamos se a forma como o exemplo foi colocado deu margem a outra interpretação.
 
-**Natureza da informação.** Nos dados da pesquisa, **não há indicação de assédio**:
+**O que os dados mostram.** A pesquisa confirma que não há sinal do problema:
 - "No meu local de trabalho todos se tratam com respeito e é livre de situações de discriminação, assédio ou violência": **12 de 13 responderam "sempre" e 1 respondeu "frequentemente"**.
 - "O meu ambiente de trabalho é respeitoso e livre de conflitos": **13 de 13 responderam "sempre" ou "frequentemente"**.
-- **Nenhum** comentário do campo aberto menciona assédio, conflito ou conduta inadequada. Os comentários tratam de benefícios (plano de saúde), sala de descanso, ações comemorativas e definição de cargos.
+- **Nenhum** comentário do campo aberto menciona assédio, conflito ou conduta inadequada.
 
-Assim, **não houve relato de fatos concretos, identificação de pessoas nem denúncia formal**. [A menção na reunião teve caráter **orientativo**: ressaltar que a NR-01 e a Lei 14.457/2022 exigem medidas de prevenção ao assédio, independentemente do resultado da pesquisa.] Não houve, portanto, procedimento de registro ou encaminhamento por parte da SKX.
+Portanto, não houve relato de fatos, identificação de pessoas, denúncia formal nem qualquer registro ou encaminhamento por parte da SKX. **Não existe relatório sobre situação de assédio.** O documento que será enviado após a reunião é o relatório psicossocial revisado, com o plano de ação.
 
-**Relatório mencionado ao RH.** [Esclarecer: o documento previsto é o relatório psicossocial revisado com o plano de ação, a ser enviado após a reunião técnica, e não um relatório sobre situação específica de assédio.] Pedimos desculpas se a forma como o tema foi abordado na reunião gerou outra interpretação.
+**Recomendação (preventiva).** Mantemos a sugestão, como boa prática e sem pressupor qualquer ocorrência:
+1. Canal de denúncia confidencial, com possibilidade de anonimato;
+2. Política de prevenção ao assédio e à discriminação, com ciência dos colaboradores;
+3. Procedimento simples de apuração, com proteção contra retaliação.
 
-**Providências preventivas recomendadas (não pressupõem ocorrência):**
-1. Política de prevenção ao assédio (moral e sexual), com ciência de todos os colaboradores;
-2. Canal de denúncia confidencial, com possibilidade de anonimato;
-3. Procedimento de apuração imparcial, com proteção contra retaliação;
-4. Capacitação periódica sobre o tema, que é obrigatória para empresas com CIPA (Lei 14.457/2022).
+[⚠️ Conferir o enquadramento da AFC: a Lei 14.457/2022 torna obrigatórios o canal de denúncias, as regras de conduta e as capacitações sobre assédio para empresas **obrigadas a constituir CIPA**. Se a AFC não se enquadra, a recomendação é voluntária, como foi dito na reunião. Se se enquadra, incluir aqui: "para empresas obrigadas a constituir CIPA, essas medidas são exigidas pela Lei 14.457/2022".]
 
 ---
 
