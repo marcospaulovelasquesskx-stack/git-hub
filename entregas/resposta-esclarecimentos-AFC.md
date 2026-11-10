@@ -11,7 +11,7 @@
 
 Prezada Sra. Fabiane e Direção da AFC,
 
-Agradecemos a análise cuidadosa dos documentos e a disposição da empresa em compreender o diagnóstico e agir sobre ele. Respondemos abaixo a cada item, na ordem do e-mail recebido. Ao revisar a memória de cálculo para esta resposta, identificamos pontos do relatório que serão **retificados**. Eles estão indicados ao longo do texto.
+Agradecemos a análise cuidadosa dos documentos e a disposição da empresa em compreender o diagnóstico e agir sobre ele. Respondemos abaixo a cada item, na ordem do e-mail recebido. Ao revisar a memória de cálculo para esta resposta, identificamos **inconsistências no Relatório de Riscos Psicossociais emitido em 06/11/2026**, descritas nos itens 1 a 3. Por isso, **aquele relatório será substituído**. A classificação válida é a apresentada no item 3 desta resposta, recalculada diretamente a partir das respostas originais e reproduzível nos Anexos B e C.
 
 Antes, um esclarecimento geral: **a avaliação psicossocial é uma etapa de identificação e priorização de riscos dentro do PGR (NR-01, itens 1.5.3 e 1.5.4), não um laudo nem uma apuração de fatos.** Ela mede a *percepção coletiva* dos trabalhadores sobre a organização do trabalho e indica onde a empresa deve olhar primeiro. A confirmação das causas e a escolha das medidas são feitas em conjunto com a empresa.
 
@@ -39,15 +39,22 @@ As respostas seguem escala de 1 (Nunca) a 5 (Sempre). Há também uma pergunta d
 
 **Conversão para a metodologia MPVS.** Posteriormente, os resultados foram processados no sistema **MPVS – Gestão Integrada de NR-01**, desenvolvido pela SKX. O sistema classifica os riscos em **16 dimensões psicossociais derivadas do COPSOQ** (Copenhagen Psychosocial Questionnaire). Para isso, cada afirmação do formulário foi associada à dimensão COPSOQ correspondente. O mapeamento, item a item e com a justificativa de cada associação, está no **Anexo C**. Duas dimensões (Exigências Emocionais e Sentido do Trabalho) **não foram avaliadas**, porque o formulário não tem itens que as meçam. Elas serão incluídas na reaplicação.
 
+**Correções em relação ao relatório de 06/11/2026.** Reconhecemos três falhas naquele documento:
+1. O texto informa que foi aplicada "a versão curta (41 perguntas) em todos os setores". **Essa informação está incorreta.** Os dados são as respostas do formulário de fevereiro (30 afirmações), convertidas para as dimensões do MPVS.
+2. O relatório atribuiu pontuação às dimensões Exigências Emocionais e Sentido do Trabalho, que o formulário de fevereiro não mede.
+3. O relatório separou os resultados em 4 setores com 2, 3, 3 e 5 respostas. Isso contraria a própria regra de confidencialidade da SKX (mínimo de 5 respostas por grupo apresentado), e com tão poucas respostas os scores por setor também não têm consistência estatística.
+
+Além disso, a conversão usada no relatório **não é reproduzível** a partir das respostas originais. Por isso, refizemos o enquadramento do zero, com o mapeamento documentado no Anexo C.
+
 **Critérios de interpretação.**
 - Todas as afirmações do formulário são positivas (5 = condição favorável). Por isso, o score de risco de cada item é calculado como (5 − média) × 25, em escala de 0 a 100, em que **maior valor = maior exposição**.
 - O score da dimensão é a média dos itens associados a ela.
 - A classificação considera a **média do grupo**. Respostas isoladas não geram conclusão.
 - Itens que medem a **existência de programas** da empresa (apoio psicológico, programas de saúde mental) e itens de **gestão de SST** não entram no score das dimensões. Eles indicam ausência de controle e são tratados no plano de ação e no PGR.
 
-**Participação.** Responderam **13 colaboradores**: 10 do setor Operacional (estoquista, motorista, vendedor, consultor externo e técnico de manutenção) e 3 do Administrativo. [O quadro na época era de __ colaboradores, o que corresponde a __% de adesão.] Pela regra de confidencialidade da SKX, grupos com **menos de 5 respostas não são apresentados isoladamente**. Como o Administrativo teve 3 respostas, os resultados são apresentados **apenas de forma consolidada**.
+**Participação.** Responderam **13 colaboradores** (a mesma base do relatório de 06/11/2026): 10 do setor Operacional (estoquista, motorista, vendedor, consultor externo e técnico de manutenção) e 3 do Administrativo. [O quadro na época era de __ colaboradores, o que corresponde a __% de adesão.] Pela regra de confidencialidade da SKX, grupos com **menos de 5 respostas não são apresentados isoladamente**. Como o Administrativo teve 3 respostas, os resultados são apresentados **apenas de forma consolidada**.
 
-**Verificações complementares.** Além do formulário, foram considerados o checklist do RH, [os indicadores fornecidos pela empresa] e a reunião de apresentação com o RH. **Não houve entrevistas individuais nem observação sistemática das atividades** nesta etapa. Por isso, propomos complementar a avaliação com uma validação qualitativa por setor (ver item 9).
+**Verificações complementares.** Além do formulário, foram considerados o checklist do RH, [os indicadores da empresa: o relatório de 06/11/2026 registra que **nenhum indicador foi considerado**; se a AFC enviá-los, serão incluídos na revisão] e a reunião de apresentação com o RH. **Não houve entrevistas individuais nem observação sistemática das atividades** nesta etapa. Por isso, propomos complementar a avaliação com uma validação qualitativa por setor (ver item 9).
 
 **Resultados.** O **Anexo B** traz a distribuição das respostas por pergunta (contagem de 1 a 5, média, score de risco e % de respostas desfavoráveis), de forma consolidada e anonimizada.
 
@@ -74,7 +81,7 @@ As respostas seguem escala de 1 (Nunca) a 5 (Sempre). Há também uma pergunta d
 
 **Contextualização.** Essas conclusões representam percepção agregada e ainda **não foram confirmadas por observação das rotinas**. Nos pontos de atenção (interrupções, valorização de sugestões), a validação com os setores vai indicar se a causa está, por exemplo, em fluxos de atendimento ou de aprovação, e não na política de alçadas.
 
-**Diferenças entre setores.** O recorte por setor não pode ser apresentado sem expor os 3 respondentes administrativos. ⚠️ [Se o relatório entregue trouxe o Administrativo separado, ele será reemitido de forma consolidada.] A diferenciação por setor será feita na validação qualitativa e na reaplicação, com amostra maior.
+**Diferenças entre setores.** Com 13 respostas, o recorte por setor não pode ser apresentado sem expor os respondentes. O relatório de 06/11/2026 separou 4 setores com 2 a 5 respostas cada, e essa separação será desfeita. A diferenciação por setor será feita na validação qualitativa e na nova aplicação do questionário (item 9), com participação suficiente para cada grupo.
 
 ---
 
@@ -92,7 +99,7 @@ As respostas seguem escala de 1 (Nunca) a 5 (Sempre). Há também uma pergunta d
 4. **Grau de Risco: GR = GES × GE**, classificado como I Trivial (≤1), II Baixo (2–5), III Moderado (6–11), IV Alto (12–15) ou V Intolerável (16). Entram no inventário do PGR e no plano de ação apenas as dimensões **Moderado ou acima**.
 5. **GE corrigido:** cada controle já implantado e comprovado reduz 1 ponto do GE, com mínimo de 1.
 
-**Resultado da AFC:**
+**Resultado da AFC (substitui a classificação do relatório de 06/11/2026):**
 
 | Dimensão | Score | GE | GES | GR | Classificação |
 |---|---|---|---|---|---|
@@ -113,7 +120,7 @@ As respostas seguem escala de 1 (Nunca) a 5 (Sempre). Há também uma pergunta d
 
 **Ponderação.** Não há ponderação por função, intensidade ou duração, porque o número de respostas não permite recorte por função e a escala já mede frequência.
 
-**Severidade qualitativa x escala numérica.** ⚠️ A legenda "Levemente Prejudicial / Prejudicial / Extremamente Prejudicial" é a legenda de severidade do PGR para riscos ambientais e ergonômicos e **não se aplica aos fatores psicossociais**, que usam a escala GES de 1 a 4 acima. Reconhecemos que a presença das duas legendas gerou confusão. [⚠️ Se o relatório entregue classificou mais fatores, ou com grau maior, do que a tabela acima: "O relatório será reemitido com esta classificação, que substitui a anterior."]
+**Severidade qualitativa x escala numérica.** ⚠️ A legenda "Levemente Prejudicial / Prejudicial / Extremamente Prejudicial" é a legenda de severidade do PGR para riscos ambientais e ergonômicos e **não se aplica aos fatores psicossociais**, que usam a escala GES de 1 a 4 acima. Reconhecemos que a presença das duas legendas gerou confusão. Para comparação: o relatório de 06/11/2026 apontava 22 classificações Moderado e 1 Alto, distribuídas em 4 setores. Pelos motivos explicados no item 1, essa classificação não se sustenta nos dados e será substituída pela tabela acima.
 
 ---
 
@@ -148,7 +155,7 @@ Prazo proposto: [__] dias após o recebimento das descrições de cargo validada
 
 ## 6. Integração entre AEP, PGR e PCMSO
 
-- **Inclusão no PGR:** apenas os fatores **Moderado ou acima** (Estresse e Exaustão; Insegurança no Trabalho) entram no Inventário de Riscos e no Plano de Ação. [⚠️ Ajustar se o PGR vigente incluiu outros fatores, que serão retirados na revisão.]
+- **Inclusão no PGR:** apenas os fatores **Moderado ou acima** (Estresse e Exaustão; Insegurança no Trabalho) entram no Inventário de Riscos e no Plano de Ação. Os demais fatores que constavam do plano de ação de 06/11/2026 deixam de ser riscos a controlar. Alguns permanecem apenas como pontos de atenção (ver item 7). [⚠️ Se o PGR vigente já incorporou o relatório de 06/11, informar que ele será revisado.]
 - **Expostos:** como o recorte por setor não é possível sem quebrar a confidencialidade, os dois fatores são atribuídos a **todos os GSEs**, até a validação qualitativa ou a reaplicação permitir distinguir.
 - **PCMSO:** [o PGR com os fatores psicossociais será / foi encaminhado ao médico coordenador em __/__/____], para avaliar o acompanhamento de saúde mental nos exames ocupacionais e o monitoramento de atestados (CID F e CID M).
 - **Versões:** [PGR rev. __ de __/__/____; AEP rev. __; PCMSO de 28/09/2026]. As versões revisadas serão enviadas após a reunião técnica.
@@ -199,7 +206,16 @@ Assim, **não houve relato de fatos concretos, identificação de pessoas nem de
 
 ---
 
-## 9. Reunião de esclarecimento técnico
+## 9. Reunião de esclarecimento técnico e nova aplicação
+
+Além da reunião, **recomendamos uma nova aplicação do questionário**, agora com o instrumento padronizado do MPVS (versão curta de 41 perguntas ou versão média COPSOQ II de 76 perguntas), aplicada diretamente pelo sistema. Os motivos são três:
+- os dados atuais são de fevereiro de 2026;
+- não cobrem duas das 16 dimensões;
+- não permitem recorte por setor.
+
+A nova aplicação terá controle de participação por setor e entrega dos resultados com o mínimo de 5 respostas por grupo. Ela servirá como **linha de base oficial** do plano de ação. A classificação do item 3 vale como diagnóstico provisório até lá. [Definir se a nova aplicação terá custo para a AFC.]
+
+### Reunião
 
 Concordamos com a reunião e propomos:
 
@@ -233,7 +249,14 @@ SKX Engenharia – Segurança do Trabalho
 
 ## Notas internas (não enviar)
 
-1. **Compare a tabela do item 3 com o que foi entregue à AFC.** Pelo recálculo com as regras do MPVS, apenas **2 fatores** chegam a Moderado. Se o relatório entregue apontou mais fatores ou grau maior, provavelmente (a) os itens de "existência de programas" (apoio psicológico, programas de saúde mental) entraram na dimensão Estresse e Exaustão, o que a leva a 61,1 e GR 12 (Alto) (ver "Teste de sensibilidade" no Anexo C), ou (b) foi usado outro mapeamento. Ajuste o texto conforme o caso.
+1. **O relatório de 06/11/2026 não se sustenta nos dados. Este é o ponto mais sério.**
+   - **Instrumento:** o relatório diz "versão curta (41 perguntas) em todos os setores". Os dados são do Forms de fevereiro (30 perguntas). A AFC já desconfia disso (pergunta "o checklist corresponde ao formulário?").
+   - **Dimensões sem pergunta:** o relatório dá score para Exigências Emocionais e Sentido do Trabalho, que nenhuma pergunta de fevereiro mede.
+   - **Conversão incoerente com as respostas.** Exemplo: o setor Estoque (2 respostas = os 2 estoquistas de fevereiro) aparece com **Estresse e Exaustão 66,7 (IV – Alto, o único Alto do relatório)**, Exigências Emocionais 70,8 e Conflito Trabalho-Família 66,7. Mas os 2 estoquistas responderam **"Sempre" (a resposta mais favorável) em quase tudo**, inclusive bem-estar, equilíbrio emocional, equilíbrio vida-trabalho e sono. Os únicos itens desfavoráveis deles são falta de apoio psicológico, falta de programas de saúde mental e, para um deles, feedback. Parece ter havido inversão de escala na conversão ou preenchimento manual sem regra. **Descubra como a conversão foi feita antes de falar com a AFC.**
+   - **Confidencialidade:** os setores têm 3, 3, 5 e 2 respostas, e o Estoque com 2 pessoas praticamente identifica quem respondeu. A regra do próprio MPVS (mínimo de 5) foi furada, provavelmente porque os dados entraram como "dados manuais".
+   - **Evidências de participação** no relatório: 0 colaboradores cadastrados e 0 confirmações. Isso não serve como comprovação para fiscalização.
+   - **Plano de ação genérico:** todas as ações têm "RH da empresa" como responsável e prazo de 06/12/2026, com textos padrão. Isso é exatamente o que o item 7 da AFC critica.
+   - **Decisão que é da SKX:** o rascunho assume a posição transparente (reconhecer, substituir o relatório e propor nova aplicação). É a que recomendo: a AFC já está fazendo as perguntas certas e vai notar as inconsistências se a resposta tentar sustentar o relatório.
 2. **Insegurança no Trabalho é limítrofe** (score 28,8; o limite é 25). Na reunião, vale apresentá-la como "Moderado no limite", e não como problema grave.
 3. **Confidencialidade:** a planilha bruta do Forms traz idade, gênero, função e escolaridade. Com 13 respostas (e apenas 1 coordenadora, 1 desenvolvedor etc.), dá para identificar pessoas. **Não envie a planilha bruta à AFC**, só os Anexos B e C.
 4. **Assédio:** os dados não sustentam nenhuma menção. Confirme com quem fez a reunião o que foi dito e o que é o "relatório" prometido ao RH.
