@@ -15,6 +15,10 @@ Agradecemos a análise cuidadosa dos documentos e a disposição da empresa em c
 
 Antes, um esclarecimento geral: **a avaliação psicossocial é uma etapa de identificação e priorização de riscos dentro do PGR (NR-01, itens 1.5.3 e 1.5.4), não um laudo nem uma apuração de fatos.** Ela mede a *percepção coletiva* dos trabalhadores sobre a organização do trabalho e indica onde a empresa deve olhar primeiro. A confirmação das causas e a escolha das medidas são feitas em conjunto com a empresa.
 
+**Caráter das recomendações.** Reforçamos um ponto que destacamos durante toda a reunião: **as medidas apresentadas, inclusive o plano de ação consolidado, são sugestões técnicas da assessoria**. Como consultoria externa, a SKX não conhece a fundo a rotina e a gestão interna da AFC. Por isso, as sugestões partem dos dados disponíveis e precisam ser validadas pela empresa. A NR-01 exige que os riscos classificados como Moderado ou acima tenham medidas de controle no PGR, mas **a escolha de quais medidas adotar, os responsáveis e os prazos cabe à AFC**. As sugestões servem de ponto de partida para essa decisão.
+
+**Fase inicial de implantação.** A inclusão dos fatores psicossociais no Gerenciamento de Riscos Ocupacionais é uma exigência recente da NR-01, ainda em fase inicial de implantação nas empresas e acompanhada de materiais orientativos do Ministério do Trabalho e Emprego. Nesse contexto, a SKX tem orientado os clientes a **começar de forma gradual e simplificada**: mapear os fatores, adotar as primeiras medidas e passar a acompanhar indicadores como absenteísmo, turnover, afastamentos e atestados. Esses indicadores **não nos foram enviados** e são necessários para uma avaliação completa. Por isso, a avaliação atual deve ser lida como um **diagnóstico inicial**. Com os indicadores e a nova aplicação do questionário, as próximas reavaliações serão mais precisas e assertivas.
+
 ---
 
 ## 1. Metodologia utilizada na avaliação psicossocial
@@ -58,7 +62,7 @@ A origem dessas falhas foi um **erro na conversão dos dados**. Para usar o form
 
 No relatório revisado, a tabela "Evidências de participação" mostra 0 respostas. Isso acontece porque o sistema só contabiliza ali as respostas ao questionário próprio do MPVS. A participação desta avaliação é a da pesquisa de fevereiro (13 de 13 colaboradores), comprovada pela distribuição das respostas no Anexo B.
 
-**Verificações complementares.** Além do formulário, foram considerados o checklist respondido pelo RH e a reunião de apresentação com o RH. **Não houve entrevistas individuais nem observação sistemática das atividades** nesta etapa. Por isso, propomos complementar a avaliação com uma validação qualitativa por setor (ver item 9). Os indicadores da empresa (absenteísmo, turnover, afastamentos, atestados) **não foram considerados** nesta etapa. Solicitamos o envio desses dados, para inclusão na revisão.
+**Verificações complementares.** Além do formulário, foram considerados o checklist respondido pelo RH e a reunião de apresentação com o RH. **Não houve entrevistas individuais nem observação sistemática das atividades** nesta etapa. Por isso, propomos complementar a avaliação com uma validação qualitativa por setor (ver item 9). Os indicadores da empresa (absenteísmo, turnover, afastamentos, atestados) **não foram fornecidos à SKX** e, por isso, não entraram nesta etapa. Solicitamos o envio desses dados, para que a próxima avaliação seja completa.
 
 **Resultados.** O **Anexo B** traz a distribuição das respostas por pergunta (contagem de 1 a 5, média, score de risco e % de respostas desfavoráveis), de forma consolidada e anonimizada.
 
@@ -161,14 +165,14 @@ Prazo proposto: 30 dias após o recebimento das descrições de cargo validadas 
 
 - **Inclusão no PGR:** apenas os fatores **Moderado ou acima** (Estresse e Exaustão; Insegurança no Trabalho) entram no Inventário de Riscos e no Plano de Ação. Os demais fatores que constavam do plano de ação de 06/11/2026 deixam de ser riscos a controlar. Alguns permanecem apenas como pontos de atenção (ver item 7). O PGR será revisado para refletir esta classificação.
 - **Expostos:** como o recorte por setor não é possível sem quebrar a confidencialidade, os dois fatores são atribuídos a **todos os GSEs**, até a validação qualitativa ou a reaplicação permitir distinguir.
-- **PCMSO:** o PGR revisado será encaminhado ao médico coordenador do PCMSO após a reunião técnica, para avaliar o acompanhamento de saúde mental nos exames ocupacionais e o monitoramento de atestados (CID F e CID M).
-- **Versões:** seguem anexas as versões vigentes do PGR, da AEP e do PCMSO (este de 28/09/2026). As versões revisadas serão enviadas após a reunião técnica.
+- **PCMSO:** os fatores psicossociais **não alteram** os riscos nem os exames previstos no PCMSO. O médico coordenador será informado da revisão do PGR.
+- **Versões:** seguem anexos o relatório psicossocial revisado e as versões vigentes da AEP e do PCMSO (este de 28/09/2026). O PGR revisado será encaminhado assim que concluída a revisão técnica do responsável pela sua elaboração.
 
 ---
 
 ## 7. Fundamentação e eficácia das medidas do plano de ação
 
-Concordamos que **campanhas e apoio psicológico não substituem a correção da organização do trabalho**. Com base nos dados, o plano será **enxugado e reorganizado** da seguinte forma:
+Concordamos que **campanhas e apoio psicológico não substituem a correção da organização do trabalho**. Com base nos dados, o plano foi **enxugado e reorganizado** como segue. Como dito acima, as medidas são **sugestões**: a AFC pode adotá-las, ajustá-las ou substituí-las por outras de efeito equivalente que conheça melhor a partir da sua realidade.
 
 | Fator / evidência | Medida proposta | Tipo | Objetivo e indicador |
 |---|---|---|---|
@@ -198,7 +202,7 @@ Agradecemos o cuidado da empresa com o tema e confirmamos: **não há relato, de
 - "O meu ambiente de trabalho é respeitoso e livre de conflitos": **13 de 13 responderam "sempre" ou "frequentemente"**.
 - **Nenhum** comentário do campo aberto menciona assédio, conflito ou conduta inadequada.
 
-Portanto, não houve relato de fatos, identificação de pessoas, denúncia formal nem qualquer registro ou encaminhamento por parte da SKX. **Não existe relatório sobre situação de assédio.** O documento que será enviado após a reunião é o relatório psicossocial revisado, com o plano de ação.
+Reforçamos: **a SKX não realizou nenhum estudo, investigação ou apuração que tenha identificado assédio no ambiente de trabalho da AFC**, e nenhuma etapa desta avaliação apontou essa situação. A menção ao assédio foi exclusivamente um exemplo de para que serve um canal de denúncia anônima, entre outros usos, como relatos de discriminação. Portanto, não houve relato de fatos, identificação de pessoas, denúncia formal nem qualquer registro ou encaminhamento por parte da SKX. **Não existe relatório sobre situação de assédio.** O documento que será enviado após a reunião é o relatório psicossocial revisado, com o plano de ação.
 
 **Recomendação (preventiva).** Mantemos a sugestão, como boa prática e sem pressupor qualquer ocorrência:
 1. Canal de denúncia confidencial, com possibilidade de anonimato;
@@ -232,9 +236,9 @@ Concordamos com a reunião e propomos:
 - **Datas sugeridas:** quarta-feira, 18/11/2026, ou quinta-feira, 19/11/2026, no horário de melhor conveniência para vocês.
 - **Material prévio da AFC:** descrições de cargo, registros de treinamento e indicadores dos últimos 12 meses.
 
-Depois da reunião, emitiremos o relatório psicossocial, o PGR e o plano de ação revisados, e solicitaremos ao médico coordenador a revisão do PCMSO.
+Depois da reunião, consolidaremos o plano de ação com as definições da AFC (medidas escolhidas, responsáveis e prazos) e atualizaremos o PGR.
 
-Reforçamos que entendemos a solicitação como cooperação técnica. Ela permitiu identificar ajustes de redação e de enquadramento que tornam o diagnóstico mais fiel à realidade da AFC.
+Reforçamos que entendemos a solicitação como cooperação técnica, e que nosso papel é de assessoria: apresentar o diagnóstico e sugerir caminhos, para que a AFC decida as medidas mais adequadas à sua realidade. Ela permitiu identificar ajustes de redação e de enquadramento que tornam o diagnóstico mais fiel à realidade da AFC.
 
 Atenciosamente,
 
