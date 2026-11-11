@@ -173,7 +173,7 @@ Concordamos que **campanhas e apoio psicológico não substituem a correção da
 | Pontos de atenção (Baixo): **feedback** (69% desfavorável, maior score entre os itens de exposição), equilíbrio vida-trabalho, interrupções, valorização de sugestões | Conversa de feedback periódica entre líder e colaborador; canal de sugestões. | **Recomendação** de melhoria. | Monitorar na reaplicação. |
 | Treinamento de SST (54% desfavorável) | Conferir registros e reforçar orientação (DDS e integração). | **Obrigatório** (NR-01 1.7), no PGR e não no psicossocial. | Matriz de treinamentos em dia. |
 
-Para cada ação, o plano revisado trará responsável, prazo, evidência de implementação e indicador. A **eficácia** será medida em três passos:
+O **Plano de Gestão Simplificado revisado (11/11/2026)**, anexo, detalha essas ações com evidências e indicadores; responsável e prazo estão provisórios até a reunião. A **eficácia** será medida em três passos:
 - linha de base com os indicadores da AFC (absenteísmo, turnover, afastamentos, atestados);
 - **reaplicação do questionário em 6 e 12 meses**, já com os itens de Exigências Emocionais e Sentido do Trabalho;
 - meta de cada fator voltar ao nível Baixo.
@@ -242,4 +242,5 @@ SKX Engenharia – Segurança do Trabalho
 - B – Distribuição das respostas por pergunta, consolidada (planilha, aba "Anexo B")
 - C – Memória de cálculo: mapeamento item → dimensão, score, GE, GES e GR (planilha, aba "Anexo C")
 - D – Plano de ação revisado (planilha, aba "Plano de ação revisado")
+- Plano de Gestão Simplificado revisado (11/11/2026), com o painel de indicadores
 - Versões vigentes da AEP e do PCMSO
