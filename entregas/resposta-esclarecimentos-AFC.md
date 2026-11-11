@@ -41,16 +41,16 @@ Portanto, o checklist disponibilizado à AFC **não é o mesmo** formulário apl
 
 As respostas seguem escala de 1 (Nunca) a 5 (Sempre). Há também uma pergunta de indicação da empresa (0 a 10) e um campo aberto de comentários. Os temas foram escolhidos a partir dos fatores psicossociais apontados pelo Guia do MTE sobre fatores de riscos psicossociais, pela ISO 45003:2021 e pelos modelos Demanda-Controle (Karasek), Esforço-Recompensa (Siegrist) e COPSOQ.
 
-**Por que houve mudança de metodologia.** Em fevereiro de 2026, quando a pesquisa foi aplicada, ainda havia pouca orientação oficial sobre como avaliar os fatores psicossociais. Por isso, a SKX usou um instrumento próprio. Depois disso, as orientações técnicas do Ministério do Trabalho e Emprego e a literatura passaram a recomendar o uso de **questionários validados cientificamente**. A SKX então adotou no MPVS o **COPSOQ** (Copenhagen Psychosocial Questionnaire), na versão validada para a língua portuguesa. Para não exigir que os colaboradores da AFC respondessem a um novo questionário logo em seguida, optamos por **reaproveitar** as respostas de fevereiro, convertendo-as para as dimensões do COPSOQ. Foi nessa conversão que ocorreu o erro descrito abaixo.
+**Por que houve mudança de metodologia.** Em fevereiro de 2026, quando a pesquisa foi aplicada, ainda havia pouca orientação oficial sobre como avaliar os fatores psicossociais. Por isso, a SKX usou um instrumento próprio. Depois disso, as orientações técnicas do Ministério do Trabalho e Emprego e a literatura passaram a recomendar o uso de **questionários validados cientificamente**. A SKX Engenharia então adotou em sua metodologia o **COPSOQ** (Copenhagen Psychosocial Questionnaire), na versão validada para a língua portuguesa. Para não exigir que os colaboradores da AFC respondessem a um novo questionário logo em seguida, optamos por **reaproveitar** as respostas de fevereiro, convertendo-as para as dimensões do COPSOQ. Foi nessa conversão que ocorreu o erro descrito abaixo.
 
-**Conversão para a metodologia MPVS.** Os resultados foram processados no sistema **MPVS – Gestão Integrada de NR-01**, desenvolvido pela SKX. O sistema classifica os riscos em **16 dimensões psicossociais derivadas do COPSOQ** (Copenhagen Psychosocial Questionnaire). Para isso, cada afirmação do formulário foi associada à dimensão COPSOQ correspondente. O mapeamento, item a item e com a justificativa de cada associação, está no **Anexo C**. Duas dimensões (Exigências Emocionais e Sentido do Trabalho) **não foram avaliadas**, porque o formulário não tem itens que as meçam. Elas serão incluídas na reaplicação.
+**Conversão para a metodologia atual.** A metodologia atual da SKX Engenharia classifica os riscos em **16 dimensões psicossociais derivadas do COPSOQ** (Copenhagen Psychosocial Questionnaire). Para isso, cada afirmação do formulário foi associada à dimensão COPSOQ correspondente. O mapeamento, item a item e com a justificativa de cada associação, está no **Anexo C**. Duas dimensões (Exigências Emocionais e Sentido do Trabalho) **não foram avaliadas**, porque o formulário não tem itens que as meçam. Elas serão incluídas na reaplicação.
 
 **Correções em relação ao relatório de 06/11/2026.** Reconhecemos três falhas naquele documento:
-1. O texto informa que foi aplicada "a versão curta (41 perguntas) em todos os setores". **Essa informação está incorreta.** Os dados são as respostas do formulário de fevereiro (30 afirmações), convertidas para as dimensões do MPVS.
+1. O texto informa que foi aplicada "a versão curta (41 perguntas) em todos os setores". **Essa informação está incorreta.** Os dados são as respostas do formulário de fevereiro (30 afirmações), convertidas para as dimensões do COPSOQ.
 2. O relatório atribuiu pontuação às dimensões Exigências Emocionais e Sentido do Trabalho, que o formulário de fevereiro não mede.
 3. O relatório separou os resultados em 4 setores com 2, 3, 3 e 5 respostas. Isso contraria a própria regra de confidencialidade da SKX (mínimo de 5 respostas por grupo apresentado), e com tão poucas respostas os scores por setor também não têm consistência estatística.
 
-A origem dessas falhas foi um **erro na conversão dos dados**. Para usar o formato do sistema, as respostas de fevereiro foram transcritas para o questionário de 41 perguntas do MPVS e os respondentes foram redistribuídos em 4 setores. Ao conferir essa transcrição pessoa a pessoa contra as respostas originais, verificamos que **ela não corresponde ao que os colaboradores responderam**. Por isso, refizemos o enquadramento a partir das respostas originais, com o mapeamento documentado no Anexo C.
+A origem dessas falhas foi um **erro na conversão dos dados**. Para usar o formato da metodologia atual, as respostas de fevereiro foram transcritas para o questionário de 41 perguntas da metodologia atual e os respondentes foram redistribuídos em 4 setores. Ao conferir essa transcrição pessoa a pessoa contra as respostas originais, verificamos que **ela não corresponde ao que os colaboradores responderam**. Por isso, refizemos o enquadramento a partir das respostas originais, com o mapeamento documentado no Anexo C.
 
 **Critérios de interpretação.**
 - Todas as afirmações do formulário são positivas (5 = condição favorável). Por isso, o score de risco de cada item é calculado como (5 − média) × 25, em escala de 0 a 100, em que **maior valor = maior exposição**.
@@ -60,7 +60,7 @@ A origem dessas falhas foi um **erro na conversão dos dados**. Para usar o form
 
 **Participação.** Responderam **13 colaboradores** (a mesma base do relatório de 06/11/2026): 10 do setor Operacional (estoquista, motorista, vendedor, consultor externo e técnico de manutenção) e 3 do Administrativo. O quadro na época era de 13 colaboradores, ou seja, **100% de adesão** (hoje a empresa tem 14). Pela regra de confidencialidade da SKX, grupos com **menos de 5 respostas não são apresentados isoladamente**. Como o Administrativo teve 3 respostas, os resultados são apresentados **apenas de forma consolidada**.
 
-No relatório revisado, a tabela "Evidências de participação" mostra 0 respostas. Isso acontece porque o sistema só contabiliza ali as respostas ao questionário próprio do MPVS. A participação desta avaliação é a da pesquisa de fevereiro (13 de 13 colaboradores), comprovada pela distribuição das respostas no Anexo B.
+No relatório revisado, a tabela "Evidências de participação" mostra 0 respostas. Isso acontece porque essa tabela só contabiliza as respostas ao questionário padronizado atual (COPSOQ). A participação desta avaliação é a da pesquisa de fevereiro (13 de 13 colaboradores), comprovada pela distribuição das respostas no Anexo B.
 
 **Verificações complementares.** Além do formulário, foram considerados o checklist respondido pelo RH e a reunião de apresentação com o RH. **Não houve entrevistas individuais nem observação sistemática das atividades** nesta etapa. Por isso, propomos complementar a avaliação com uma validação qualitativa por setor (ver item 9). Os indicadores da empresa (absenteísmo, turnover, afastamentos, atestados) **não foram fornecidos à SKX** e, por isso, não entraram nesta etapa. Solicitamos o envio desses dados, para que a próxima avaliação seja completa.
 
@@ -215,7 +215,7 @@ Com grau de risco 3 e 14 empregados, a AFC **não é obrigada a constituir CIPA*
 
 ## 9. Reunião de esclarecimento técnico e nova aplicação
 
-Além da reunião, **recomendamos uma nova aplicação do questionário**, agora com o instrumento padronizado do MPVS (versão curta de 41 perguntas ou versão média COPSOQ II de 76 perguntas), aplicada diretamente pelo sistema. Os motivos são três:
+Além da reunião, **recomendamos uma nova aplicação do questionário**, agora com o questionário padronizado da SKX Engenharia baseado no COPSOQ (versão curta de 41 perguntas ou versão média COPSOQ II de 76 perguntas), aplicada por link individual e anônimo. Os motivos são três:
 - os dados atuais são de fevereiro de 2026;
 - não cobrem duas das 16 dimensões;
 - não permitem recorte por setor.
@@ -249,7 +249,7 @@ SKX Engenharia – Segurança do Trabalho
 **Anexos:**
 - A – Formulário eletrônico dos colaboradores (íntegra) e checklist do RH
 - B – Distribuição das respostas por pergunta, consolidada (planilha, aba "Anexo B")
-- C – Memória de cálculo MPVS: mapeamento item → dimensão, score, GE, GES e GR (planilha, aba "Anexo C")
+- C – Memória de cálculo: mapeamento item → dimensão, score, GE, GES e GR (planilha, aba "Anexo C")
 - D – Plano de ação revisado (planilha, aba "Plano de ação revisado")
 - Versões vigentes da AEP e do PCMSO
 
