@@ -23,12 +23,12 @@ Antes, um esclarecimento geral: **a avaliação psicossocial é uma etapa de ide
 
 ## 1. Metodologia utilizada na avaliação psicossocial
 
-**Instrumentos e coleta.** A coleta foi feita em fevereiro de 2026 (e-mail de 11/02/2026) com **dois instrumentos distintos**:
+**Instrumentos e coleta.** A coleta foi planejada em fevereiro de 2026 (e-mail de 11/02/2026) com **dois instrumentos distintos**:
 
-1. **Checklist organizacional respondido pelo RH** (PDF/Word, assinado), sobre políticas e práticas da empresa como um todo; e
+1. **Checklist organizacional para o RH**, sobre políticas e práticas da empresa como um todo. Foi enviado em branco à AFC, mas **não foi devolvido preenchido** à SKX; e
 2. **Formulário eletrônico anônimo** (Google Forms), respondido individualmente pelos colaboradores entre 23/02 e 02/03/2026.
 
-Portanto, o checklist disponibilizado à AFC **não é o mesmo** formulário aplicado aos colaboradores. Os dois seguem na íntegra no **Anexo A**.
+Portanto, o checklist disponibilizado à AFC **não é o mesmo** formulário aplicado aos colaboradores. Como o checklist não retornou, **a avaliação foi feita apenas com as respostas do formulário dos colaboradores**, que segue na íntegra no **Anexo A**.
 
 **Desenvolvimento do formulário.** O formulário dos colaboradores foi **elaborado pela SKX em conjunto com uma psicóloga organizacional**. Ele tem **30 afirmações** organizadas em 7 blocos:
 - organização e carga de trabalho;
@@ -62,7 +62,7 @@ A origem dessas falhas foi um **erro na conversão dos dados**. Para usar o form
 
 No relatório revisado, a tabela "Evidências de participação" mostra 0 respostas. Isso acontece porque essa tabela só contabiliza as respostas ao questionário padronizado atual (COPSOQ). A participação desta avaliação é a da pesquisa de fevereiro (13 de 13 colaboradores), comprovada pela distribuição das respostas no Anexo B.
 
-**Verificações complementares.** Além do formulário, foram considerados o checklist respondido pelo RH e a reunião de apresentação com o RH. **Não houve entrevistas individuais nem observação sistemática das atividades** nesta etapa. Por isso, propomos complementar a avaliação com uma validação qualitativa por setor (ver item 9). Os indicadores da empresa (absenteísmo, turnover, afastamentos, atestados) **não foram fornecidos à SKX** e, por isso, não entraram nesta etapa. Solicitamos o envio desses dados, para que a próxima avaliação seja completa.
+**Verificações complementares.** Além do formulário, foi considerada a reunião de apresentação com o RH. O checklist organizacional não foi devolvido preenchido e, por isso, não entrou nesta etapa. **Não houve entrevistas individuais nem observação sistemática das atividades** nesta etapa. Por isso, propomos complementar a avaliação com uma validação qualitativa por setor (ver item 9). Os indicadores da empresa (absenteísmo, turnover, afastamentos, atestados) **não foram fornecidos à SKX** e, por isso, não entraram nesta etapa. Solicitamos o envio desses dados, para que a próxima avaliação seja completa.
 
 **Resultados.** O **Anexo B** traz a distribuição das respostas por pergunta (contagem de 1 a 5, média, score de risco e % de respostas desfavoráveis), de forma consolidada e anonimizada.
 
@@ -215,7 +215,7 @@ Com grau de risco 3 e 14 empregados, a AFC **não é obrigada a constituir CIPA*
 
 ## 9. Reunião de esclarecimento técnico e nova aplicação
 
-Além da reunião, **recomendamos uma nova aplicação do questionário**, agora com o questionário padronizado da SKX Engenharia baseado no COPSOQ (versão curta de 41 perguntas ou versão média COPSOQ II de 76 perguntas), aplicada por link individual e anônimo. Os motivos são três:
+Além da reunião, **recomendamos uma nova aplicação do questionário**, agora com o questionário padronizado da SKX Engenharia baseado no COPSOQ (versão curta de 41 perguntas ou versão média COPSOQ II de 76 perguntas), aplicada por link individual e anônimo. Os motivos são:
 - os dados atuais são de fevereiro de 2026;
 - não cobrem duas das 16 dimensões;
 - não permitem recorte por setor.
@@ -247,7 +247,7 @@ Engenheiro de Segurança do Trabalho – CREA BA 88.720
 SKX Engenharia – Segurança do Trabalho
 
 **Anexos:**
-- A – Formulário eletrônico dos colaboradores (íntegra) e checklist do RH
+- A – Formulário eletrônico dos colaboradores (íntegra)
 - B – Distribuição das respostas por pergunta, consolidada (planilha, aba "Anexo B")
 - C – Memória de cálculo: mapeamento item → dimensão, score, GE, GES e GR (planilha, aba "Anexo C")
 - D – Plano de ação revisado (planilha, aba "Plano de ação revisado")
