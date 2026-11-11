@@ -202,7 +202,7 @@ Agradecemos o cuidado da empresa com o tema e confirmamos: **não há relato, de
 - "O meu ambiente de trabalho é respeitoso e livre de conflitos": **13 de 13 responderam "sempre" ou "frequentemente"**.
 - **Nenhum** comentário do campo aberto menciona assédio, conflito ou conduta inadequada.
 
-Reforçamos: **a SKX não realizou nenhum estudo, investigação ou apuração que tenha identificado assédio no ambiente de trabalho da AFC**, e nenhuma etapa desta avaliação apontou essa situação. A menção ao assédio foi exclusivamente um exemplo de para que serve um canal de denúncia anônima, entre outros usos, como relatos de discriminação. Portanto, não houve relato de fatos, identificação de pessoas, denúncia formal nem qualquer registro ou encaminhamento por parte da SKX. **Não existe relatório sobre situação de assédio.** O documento que será enviado após a reunião é o relatório psicossocial revisado, com o plano de ação.
+Reforçamos: **a SKX não realizou nenhum estudo, investigação ou apuração que tenha identificado assédio no ambiente de trabalho da AFC**, e nenhuma etapa desta avaliação apontou essa situação. A menção ao assédio foi exclusivamente um exemplo de para que serve um canal de denúncia anônima, entre outros usos, como relatos de discriminação. Portanto, não houve relato de fatos, identificação de pessoas, denúncia formal nem qualquer registro ou encaminhamento por parte da SKX. **Não existe relatório sobre situação de assédio.** O único documento relacionado a esta avaliação é o relatório psicossocial revisado, anexo a este e-mail.
 
 **Recomendação (preventiva).** Mantemos a sugestão, como boa prática e sem pressupor qualquer ocorrência:
 1. Canal de denúncia confidencial, com possibilidade de anonimato;
@@ -238,7 +238,7 @@ Concordamos com a reunião e propomos:
 
 Depois da reunião, consolidaremos o plano de ação com as definições da AFC (medidas escolhidas, responsáveis e prazos) e atualizaremos o PGR.
 
-Reforçamos que entendemos a solicitação como cooperação técnica, e que nosso papel é de assessoria: apresentar o diagnóstico e sugerir caminhos, para que a AFC decida as medidas mais adequadas à sua realidade. Ela permitiu identificar ajustes de redação e de enquadramento que tornam o diagnóstico mais fiel à realidade da AFC.
+Reforçamos que entendemos a solicitação como cooperação técnica: ela permitiu identificar ajustes de redação e de enquadramento que tornam o diagnóstico mais fiel à realidade da AFC. Nosso papel é de assessoria: apresentar o diagnóstico e sugerir caminhos, para que a AFC decida as medidas mais adequadas à sua realidade.
 
 Atenciosamente,
 
@@ -251,7 +251,7 @@ SKX Engenharia – Segurança do Trabalho
 - B – Distribuição das respostas por pergunta, consolidada (planilha, aba "Anexo B")
 - C – Memória de cálculo MPVS: mapeamento item → dimensão, score, GE, GES e GR (planilha, aba "Anexo C")
 - D – Plano de ação revisado (planilha, aba "Plano de ação revisado")
-- Versões vigentes do PGR, AEP e PCMSO
+- Versões vigentes da AEP e do PCMSO
 
 ---
 
